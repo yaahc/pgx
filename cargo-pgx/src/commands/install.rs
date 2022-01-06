@@ -2,18 +2,17 @@
 // governed by the MIT license that can be found in the LICENSE file.
 
 use crate::commands::get::{find_control_file, get_property};
-use crate::commands::schema::read_load_order;
+use cargo_metadata::MetadataCommand;
 use colored::Colorize;
 use pgx_utils::pg_config::PgConfig;
 use pgx_utils::{exit_with_error, get_target_dir, handle_result};
-use std::io::Write;
 use std::path::PathBuf;
 use std::process::{Command, Stdio};
-use std::str::FromStr;
 
 pub(crate) fn install_extension(
     pg_config: &PgConfig,
     is_release: bool,
+    no_schema: bool,
     base_directory: Option<PathBuf>,
     additional_features: Vec<&str>,
 ) -> Result<(), std::io::Error> {
@@ -40,30 +39,45 @@ pub(crate) fn install_extension(
         let mut dest = base_directory.clone();
         dest.push(&extdir);
         dest.push(&control_file);
-        copy_file(control_file, dest, "control file");
+        copy_file(&control_file, &dest, "control file", true);
     }
 
     {
         let mut dest = base_directory.clone();
         dest.push(&pkgdir);
         dest.push(format!("{}.so", extname));
-        copy_file(shlibpath, dest, "shared library");
+
+        if cfg!(target_os = "macos") {
+            // Remove the existing .so if present. This is a workaround for an
+            // issue highlighted by the following apple documentation:
+            // https://developer.apple.com/documentation/security/updating_mac_software
+            if dest.exists() {
+                handle_result!(
+                std::fs::remove_file(&dest),
+                format!("unable to remove existing file {}", dest.display())
+            )
+            }
+        }
+        copy_file(&shlibpath, &dest, "shared library", false);
     }
 
-    {
-        handle_result!(
-            crate::generate_schema(&*additional_features),
-            "failed to generate SQL schema"
-        );
+    if !no_schema || !get_target_sql_file(&extdir, &base_directory).exists() {
+        copy_sql_files(
+            pg_config,
+            is_release,
+            additional_features,
+            &extdir,
+            &base_directory,
+        )?;
+    } else {
+        println!("{} schema generation", "    Skipping".bold().yellow());
     }
 
-    copy_sql_files(&extdir, &extname, &base_directory);
-
-    println!("{} installing {}", "     Finished".bold().green(), extname);
+    println!("{} installing {}", "    Finished".bold().green(), extname);
     Ok(())
 }
 
-fn copy_file(src: PathBuf, dest: PathBuf, msg: &str) {
+fn copy_file(src: &PathBuf, dest: &PathBuf, msg: &str, do_filter: bool) {
     if !dest.parent().unwrap().exists() {
         handle_result!(
             std::fs::create_dir_all(dest.parent().unwrap()),
@@ -76,18 +90,32 @@ fn copy_file(src: PathBuf, dest: PathBuf, msg: &str) {
 
     println!(
         "{} {} to `{}`",
-        "      Copying".bold().green(),
+        "     Copying".bold().green(),
         msg,
         format_display_path(&dest)
     );
 
-    handle_result!(
-        std::fs::copy(&src, &dest),
-        format!("failed copying `{}` to `{}`", src.display(), dest.display())
-    );
+    if do_filter {
+        // we want to filter the contents of the file we're to copy
+        let input = handle_result!(
+            std::fs::read_to_string(&src),
+            format!("failed to read `{}`", src.display())
+        );
+        let input = filter_contents(input);
+
+        handle_result!(
+            std::fs::write(&dest, &input),
+            format!("failed writing `{}` to `{}`", src.display(), dest.display())
+        );
+    } else {
+        handle_result!(
+            std::fs::copy(&src, &dest),
+            format!("failed copying `{}` to `{}`", src.display(), dest.display())
+        );
+    }
 }
 
-fn build_extension(major_version: u16, is_release: bool, additional_features: &[&str]) {
+pub(crate) fn build_extension(major_version: u16, is_release: bool, additional_features: &[&str]) {
     let mut features =
         std::env::var("PGX_BUILD_FEATURES").unwrap_or(format!("pg{}", major_version));
     let flags = std::env::var("PGX_BUILD_FLAGS").unwrap_or_default();
@@ -128,67 +156,60 @@ fn build_extension(major_version: u16, is_release: bool, additional_features: &[
     }
 }
 
-pub(crate) fn write_full_schema_file(dir: &PathBuf, extdir: Option<&PathBuf>) {
-    let (_, extname) = find_control_file();
-    let load_order = read_load_order(&PathBuf::from_str("./sql/load-order.txt").unwrap());
-    let mut target_filename = dir.clone();
-    if extdir.is_some() {
-        target_filename.push(extdir.unwrap());
-    }
-    target_filename.push(format!("{}--{}.sql", extname, get_version()));
+fn get_target_sql_file(extdir: &PathBuf, base_directory: &PathBuf) -> PathBuf {
+    let mut dest = base_directory.clone();
+    dest.push(extdir);
 
-    let mut sql = std::fs::File::create(&target_filename).unwrap();
-    println!(
-        "{} extension schema to `{}`",
-        "      Writing".bold().green(),
-        format_display_path(&target_filename)
-    );
+    let (_, extname) = crate::commands::get::find_control_file();
+    let version = get_version();
+    dest.push(format!("{}--{}.sql", extname, version));
 
-    // write each sql file from load-order.txt to the version.sql file
-    for file in load_order {
-        let file = PathBuf::from_str(&format!("sql/{}", file)).unwrap();
-        let pwd = std::env::current_dir().expect("no current directory");
-        let contents = std::fs::read_to_string(&file).expect(&format!(
-            "could not open {}/{}",
-            pwd.display(),
-            file.display()
-        ));
-
-        let contents = filter_contents(contents);
-
-        sql.write_all(b"--\n")
-            .expect("couldn't write version SQL file");
-        sql.write_all(format!("-- {}\n", file.display()).as_bytes())
-            .expect("couldn't write version SQL file");
-        sql.write_all(b"--\n")
-            .expect("couldn't write version SQL file");
-        sql.write_all(contents.as_bytes())
-            .expect("couldn't write version SQL file");
-        sql.write_all(b"\n\n\n")
-            .expect("couldn't write version SQL file");
-    }
+    dest
 }
 
-fn copy_sql_files(extdir: &PathBuf, extname: &str, base_directory: &PathBuf) {
-    write_full_schema_file(&base_directory, Some(extdir));
+fn copy_sql_files(
+    pg_config: &PgConfig,
+    is_release: bool,
+    additional_features: Vec<&str>,
+    extdir: &PathBuf,
+    base_directory: &PathBuf,
+) -> Result<(), std::io::Error> {
+    let dest = get_target_sql_file(extdir, base_directory);
+    let (_, extname) = crate::commands::get::find_control_file();
+
+    crate::schema::generate_schema(
+        pg_config,
+        is_release,
+        &*additional_features,
+        &dest,
+        Option::<String>::None,
+        None,
+        false,
+        true,
+        true,
+    )?;
+    copy_file(&dest, &dest, "extension schema file", true);
 
     // now copy all the version upgrade files too
-    for sql in handle_result!(std::fs::read_dir("sql/"), "failed to read ./sql/ directory") {
-        if let Ok(sql) = sql {
-            let filename = sql.file_name().into_string().unwrap();
+    if let Ok(dir) = std::fs::read_dir("sql/") {
+        for sql in dir {
+            if let Ok(sql) = sql {
+                let filename = sql.file_name().into_string().unwrap();
 
-            if filename.starts_with(&format!("{}--", extname)) && filename.ends_with(".sql") {
-                let mut dest = base_directory.clone();
-                dest.push(extdir);
-                dest.push(filename);
+                if filename.starts_with(&format!("{}--", extname)) && filename.ends_with(".sql") {
+                    let mut dest = base_directory.clone();
+                    dest.push(extdir);
+                    dest.push(filename);
 
-                copy_file(sql.path(), dest, "extension schema file");
+                    copy_file(&sql.path(), &dest, "extension schema upgrade file", true);
+                }
             }
         }
     }
+    Ok(())
 }
 
-fn find_library_file(extname: &str, is_release: bool) -> PathBuf {
+pub(crate) fn find_library_file(extname: &str, is_release: bool) -> PathBuf {
     let mut target_dir = get_target_dir();
     target_dir.push(if is_release { "release" } else { "debug" });
 
@@ -221,9 +242,18 @@ fn find_library_file(extname: &str, is_release: bool) -> PathBuf {
     }
 }
 
-fn get_version() -> String {
+pub(crate) fn get_version() -> String {
     match get_property("default_version") {
-        Some(v) => v,
+        Some(v) => {
+            if v == "@CARGO_VERSION@" {
+                let metadata = MetadataCommand::new()
+                    .exec()
+                    .expect("failed to parse Cargo.toml");
+                metadata.root_package().unwrap().version.to_string()
+            } else {
+                v
+            }
+        },
         None => exit_with_error!("cannot determine extension version number.  Is the `default_version` property declared in the control file?"),
     }
 }
@@ -265,7 +295,7 @@ fn filter_contents(mut input: String) -> String {
         input = input.replace("@GIT_HASH@", &get_git_hash());
     }
 
-    input = input.replace("@DEFAULT_VERSION@", &get_version());
+    input = input.replace("@CARGO_VERSION@", &get_version());
 
     input
 }

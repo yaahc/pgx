@@ -2,7 +2,7 @@
 // governed by the MIT license that can be found in the LICENSE file.
 
 //! Provides a safe wrapper around Postgres' `pg_sys::TupleDescData` struct
-use crate::{pg_sys, void_mut_ptr, FromDatum, PgBox, PgRelation};
+use crate::{pg_sys, void_mut_ptr, AllocatedByRust, FromDatum, PgBox, PgRelation};
 
 use std::ops::Deref;
 
@@ -40,7 +40,7 @@ use std::ops::Deref;
 pub struct PgTupleDesc<'a> {
     tupdesc: PgBox<pg_sys::TupleDescData>,
     parent: Option<&'a PgRelation>,
-    data: Option<PgBox<pg_sys::HeapTupleData>>,
+    data: Option<PgBox<pg_sys::HeapTupleData, AllocatedByRust>>,
     need_release: bool,
     need_pfree: bool,
 }
@@ -70,9 +70,15 @@ impl<'a> PgTupleDesc<'a> {
     /// allocated in the `CurrentMemoryContext`
     ///
     /// When this instance is dropped, the copied TupleDesc is `pfree()`'d
-    pub fn from_pg_copy<'b>(ptr: pg_sys::TupleDesc) -> PgTupleDesc<'b> {
+    ///
+    /// ## Safety
+    ///
+    /// This method is unsafe as we cannot validate that the provided `pg_sys::TupleDesc` is valid
+    /// or requires reference counting.
+    pub unsafe fn from_pg_copy<'b>(ptr: pg_sys::TupleDesc) -> PgTupleDesc<'b> {
         PgTupleDesc {
-            tupdesc: PgBox::from_pg(unsafe { pg_sys::CreateTupleDescCopyConstr(ptr) }),
+            // SAFETY:  pg_sys::CreateTupleDescCopyConstr will be returning a valid pointer
+            tupdesc: PgBox::from_pg(pg_sys::CreateTupleDescCopyConstr(ptr)),
             parent: None,
             data: None,
             need_release: false,
@@ -116,7 +122,8 @@ impl<'a> PgTupleDesc<'a> {
     /// wrap the `pg_sys::TupleDesc` contained by the specified `PgRelation`
     pub fn from_relation(parent: &PgRelation) -> PgTupleDesc {
         PgTupleDesc {
-            tupdesc: PgBox::from_pg(parent.rd_att),
+            // SAFETY:  `parent` is a Rust reference, and as such its rd_att attribute will be property initialized
+            tupdesc: unsafe { PgBox::from_pg(parent.rd_att) },
             parent: Some(parent),
             data: None,
             need_release: false,
@@ -246,7 +253,7 @@ fn tupdesc_get_attr(
 }
 
 /// `attno` is 0-based
-#[cfg(any(feature = "pg11", feature = "pg12", feature = "pg13"))]
+#[cfg(any(feature = "pg11", feature = "pg12", feature = "pg13", feature = "pg14"))]
 #[inline]
 fn tupdesc_get_attr(
     tupdesc: &PgBox<pg_sys::TupleDescData>,

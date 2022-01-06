@@ -3,7 +3,7 @@
 
 //! Helper functions for working with Postgres `ItemPointerData` (`tid`) type
 
-use crate::{pg_sys, PgBox};
+use crate::{pg_sys, AllocatedByRust, PgBox};
 
 /// ## Safety
 ///
@@ -103,11 +103,11 @@ pub fn u64_to_item_pointer_parts(value: u64) -> (pg_sys::BlockNumber, pg_sys::Of
 
 #[allow(clippy::not_unsafe_ptr_arg_deref)] // this is okay b/c we guard against ctid being null
 #[inline]
-pub fn item_pointer_is_valid(ctid: *const pg_sys::ItemPointerData) -> bool {
+pub unsafe fn item_pointer_is_valid(ctid: *const pg_sys::ItemPointerData) -> bool {
     if ctid.is_null() {
         false
     } else {
-        unsafe { *ctid }.ip_posid != pg_sys::InvalidOffsetNumber
+        (*ctid).ip_posid != pg_sys::InvalidOffsetNumber
     }
 }
 
@@ -115,7 +115,7 @@ pub fn item_pointer_is_valid(ctid: *const pg_sys::ItemPointerData) -> bool {
 pub fn new_item_pointer(
     blockno: pg_sys::BlockNumber,
     offno: pg_sys::OffsetNumber,
-) -> PgBox<pg_sys::ItemPointerData> {
+) -> PgBox<pg_sys::ItemPointerData, AllocatedByRust> {
     let mut tid = PgBox::<pg_sys::ItemPointerData>::alloc();
     tid.ip_blkid.bi_hi = (blockno >> 16) as u16;
     tid.ip_blkid.bi_lo = (blockno & 0xffff) as u16;

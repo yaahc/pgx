@@ -228,6 +228,7 @@ pub fn client() -> (postgres::Client, String) {
 fn install_extension() {
     eprintln!("installing extension");
     let is_release = std::env::var("PGX_BUILD_PROFILE").unwrap_or("debug".into()) == "release";
+    let no_schema = std::env::var("PGX_NO_SCHEMA").unwrap_or("false".into()) == "true";
 
     let mut command = Command::new("cargo");
     command
@@ -250,6 +251,9 @@ fn install_extension() {
 
     if is_release {
         command.arg("--release");
+    }
+    if no_schema {
+        command.arg("--no-schema");
     }
 
     let mut child = command.spawn().unwrap();
@@ -301,9 +305,14 @@ fn modify_postgresql_conf(pgdata: PathBuf, postgresql_conf: Vec<&'static str>) {
     }
 
     postgresql_conf_file
-        .write_all(format!("unix_socket_directories = '{}'", Pgx::home().unwrap().display()).as_bytes())
+        .write_all(
+            format!(
+                "unix_socket_directories = '{}'",
+                Pgx::home().unwrap().display()
+            )
+            .as_bytes(),
+        )
         .expect("couldn't append `unix_socket_directories` setting to postgresql.conf");
-    
 }
 
 fn start_pg(loglines: LogLines) -> String {
@@ -470,7 +479,10 @@ fn create_extension() {
     let (mut client, _) = client();
 
     client
-        .simple_query(&format!("CREATE EXTENSION {};", get_extension_name()))
+        .simple_query(&format!(
+            "CREATE EXTENSION {} CASCADE;",
+            get_extension_name()
+        ))
         .unwrap();
 }
 

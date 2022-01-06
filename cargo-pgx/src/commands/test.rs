@@ -9,7 +9,10 @@ use std::process::{Command, Stdio};
 pub fn test_extension(
     pg_config: &PgConfig,
     is_release: bool,
+    no_schema: bool,
+    test_workspace: bool,
     additional_features: Vec<&str>,
+    testname: Option<&str>,
 ) -> Result<(), std::io::Error> {
     let major_version = pg_config.major_version()?;
     let target_dir = get_target_dir();
@@ -23,7 +26,7 @@ pub fn test_extension(
         .stdout(Stdio::inherit())
         .stderr(Stdio::inherit())
         .arg("test")
-        .arg("--all")
+        .arg("--lib")
         .arg("--features")
         .arg(features)
         .arg("--no-default-features")
@@ -31,10 +34,19 @@ pub fn test_extension(
         .env(
             "PGX_BUILD_PROFILE",
             if is_release { "release" } else { "debug" },
-        );
+        )
+        .env("PGX_NO_SCHEMA", if no_schema { "true" } else { "false" });
 
     if is_release {
         command.arg("--release");
+    }
+
+    if test_workspace {
+        command.arg("--all");
+    }
+
+    if let Some(testname) = testname {
+        command.arg(testname);
     }
 
     eprintln!("{:?}", command);

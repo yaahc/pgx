@@ -178,9 +178,9 @@ pub const ALIGNOF_LONG: u32 = 8;
 pub const ALIGNOF_PG_INT128_TYPE: u32 = 16;
 pub const ALIGNOF_SHORT: u32 = 2;
 pub const BLCKSZ: u32 = 8192;
-pub const CONFIGURE_ARGS : & 'static [u8 ; 842usize] = b" '--prefix=/home/ana/.pgx/13.3/pgx-install' '--with-pgport=28813' '--enable-debug' '--enable-cassert' 'CC=gcc' 'CXX=g++' 'PKG_CONFIG=pkg-config' 'PKG_CONFIG_PATH=/nix/store/5z0vv6rbmlczvknq2p71sxazcmpbg9f1-zlib-1.2.11-dev/lib/pkgconfig:/nix/store/cbirv52y96q6rv36pjri90d1bfd5kc9a-ncurses-6.2-dev/lib/pkgconfig:/nix/store/7s3a455z5njyikf5c51kzbwsddiy76d1-openssl-1.1.1k-dev/lib/pkgconfig:/nix/store/nj194lg1jjijv4hnrpkmm125dmdfpwii-libxml2-2.9.10-dev/lib/pkgconfig:/nix/store/34q0wvlgk8p4mc5f4k0l9v7p5npsc96q-icu4c-67.1-dev/lib/pkgconfig:/nix/store/lwlkjx615g96k0qc9rlzf2k3gqsc6mcr-systemd-247.6-dev/lib/pkgconfig:/nix/store/lwlkjx615g96k0qc9rlzf2k3gqsc6mcr-systemd-247.6-dev/share/pkgconfig:/nix/store/r6znp59md2s75xw7kk1vlnrxlk92r14q-libossp-uuid-1.6.2/lib/pkgconfig:/nix/store/hp3zaqfq3c4rmh26z2ybyh4cwfybb73r-icu4c-68.2-dev/lib/pkgconfig'\0" ;
+pub const CONFIGURE_ARGS : & [u8 ; 107usize] = b" '--prefix=/Users/e_ridge/.pgx/13.4/pgx-install' '--with-pgport=28813' '--enable-debug' '--enable-cassert'\0" ;
 pub const DEF_PGPORT: u32 = 28813;
-pub const DEF_PGPORT_STR: &'static [u8; 6usize] = b"28813\0";
+pub const DEF_PGPORT_STR: &[u8; 6usize] = b"28813\0";
 pub const ENABLE_THREAD_SAFETY: u32 = 1;
 pub const HAVE_APPEND_HISTORY: u32 = 1;
 pub const HAVE_ATOMICS: u32 = 1;
@@ -253,9 +253,7 @@ pub const HAVE_RL_COMPLETION_APPEND_CHARACTER: u32 = 1;
 pub const HAVE_RL_COMPLETION_MATCHES: u32 = 1;
 pub const HAVE_RL_COMPLETION_SUPPRESS_QUOTE: u32 = 1;
 pub const HAVE_RL_FILENAME_COMPLETION_FUNCTION: u32 = 1;
-pub const HAVE_RL_FILENAME_QUOTE_CHARACTERS: u32 = 1;
-pub const HAVE_RL_FILENAME_QUOTING_FUNCTION: u32 = 1;
-pub const HAVE_RL_RESET_SCREEN_SIZE: u32 = 1;
+pub const HAVE_SETENV: u32 = 1;
 pub const HAVE_SETSID: u32 = 1;
 pub const HAVE_SHM_OPEN: u32 = 1;
 pub const HAVE_SPINLOCKS: u32 = 1;
@@ -309,24 +307,24 @@ pub const HAVE__BUILTIN_POPCOUNT: u32 = 1;
 pub const HAVE__BUILTIN_TYPES_COMPATIBLE_P: u32 = 1;
 pub const HAVE__BUILTIN_UNREACHABLE: u32 = 1;
 pub const HAVE__STATIC_ASSERT: u32 = 1;
-pub const INT64_MODIFIER: &'static [u8; 2usize] = b"l\0";
+pub const INT64_MODIFIER: &[u8; 2usize] = b"l\0";
+pub const LOCALE_T_IN_XLOCALE: u32 = 1;
 pub const MAXIMUM_ALIGNOF: u32 = 8;
 pub const MEMSET_LOOP_LIMIT: u32 = 1024;
-pub const PACKAGE_BUGREPORT: &'static [u8; 32usize] = b"pgsql-bugs@lists.postgresql.org\0";
-pub const PACKAGE_NAME: &'static [u8; 11usize] = b"PostgreSQL\0";
-pub const PACKAGE_STRING: &'static [u8; 16usize] = b"PostgreSQL 13.3\0";
-pub const PACKAGE_TARNAME: &'static [u8; 11usize] = b"postgresql\0";
-pub const PACKAGE_URL: &'static [u8; 28usize] = b"https://www.postgresql.org/\0";
-pub const PACKAGE_VERSION: &'static [u8; 5usize] = b"13.3\0";
-pub const PG_KRB_SRVNAM: &'static [u8; 9usize] = b"postgres\0";
-pub const PG_MAJORVERSION: &'static [u8; 3usize] = b"13\0";
+pub const PACKAGE_BUGREPORT: &[u8; 32usize] = b"pgsql-bugs@lists.postgresql.org\0";
+pub const PACKAGE_NAME: &[u8; 11usize] = b"PostgreSQL\0";
+pub const PACKAGE_STRING: &[u8; 16usize] = b"PostgreSQL 13.4\0";
+pub const PACKAGE_TARNAME: &[u8; 11usize] = b"postgresql\0";
+pub const PACKAGE_URL: &[u8; 28usize] = b"https://www.postgresql.org/\0";
+pub const PACKAGE_VERSION: &[u8; 5usize] = b"13.4\0";
+pub const PG_KRB_SRVNAM: &[u8; 9usize] = b"postgres\0";
+pub const PG_MAJORVERSION: &[u8; 3usize] = b"13\0";
 pub const PG_MAJORVERSION_NUM: u32 = 13;
-pub const PG_MINORVERSION_NUM: u32 = 3;
+pub const PG_MINORVERSION_NUM: u32 = 4;
 pub const PG_USE_STDBOOL: u32 = 1;
-pub const PG_VERSION: &'static [u8; 5usize] = b"13.3\0";
-pub const PG_VERSION_NUM: u32 = 130003;
-pub const PG_VERSION_STR: &'static [u8; 82usize] =
-    b"PostgreSQL 13.3 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 9.3.0, 64-bit\0";
+pub const PG_VERSION: &[u8; 5usize] = b"13.4\0";
+pub const PG_VERSION_NUM: u32 = 130004;
+pub const PG_VERSION_STR : & [u8 ; 113usize] = b"PostgreSQL 13.4 on x86_64-apple-darwin20.4.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.3), 64-bit\0" ;
 pub const RELSEG_SIZE: u32 = 131072;
 pub const SIZEOF_BOOL: u32 = 1;
 pub const SIZEOF_LONG: u32 = 8;
@@ -357,75 +355,245 @@ pub const DEFAULT_BACKEND_FLUSH_AFTER: u32 = 0;
 pub const DEFAULT_BGWRITER_FLUSH_AFTER: u32 = 64;
 pub const DEFAULT_CHECKPOINT_FLUSH_AFTER: u32 = 32;
 pub const WRITEBACK_MAX_PENDING_FLUSHES: u32 = 256;
-pub const DEFAULT_PGSOCKET_DIR: &'static [u8; 5usize] = b"/tmp\0";
-pub const DEFAULT_EVENT_SOURCE: &'static [u8; 11usize] = b"PostgreSQL\0";
+pub const DEFAULT_PGSOCKET_DIR: &[u8; 5usize] = b"/tmp\0";
+pub const DEFAULT_EVENT_SOURCE: &[u8; 11usize] = b"PostgreSQL\0";
 pub const PG_CACHE_LINE_SIZE: u32 = 128;
 pub const TRACE_SORT: u32 = 1;
-pub const _STDIO_H: u32 = 1;
-pub const _FEATURES_H: u32 = 1;
-pub const _DEFAULT_SOURCE: u32 = 1;
-pub const __GLIBC_USE_ISOC2X: u32 = 0;
-pub const __USE_ISOC11: u32 = 1;
-pub const __USE_ISOC99: u32 = 1;
-pub const __USE_ISOC95: u32 = 1;
-pub const __USE_POSIX_IMPLICITLY: u32 = 1;
-pub const _POSIX_SOURCE: u32 = 1;
-pub const _POSIX_C_SOURCE: u32 = 200809;
-pub const __USE_POSIX: u32 = 1;
-pub const __USE_POSIX2: u32 = 1;
-pub const __USE_POSIX199309: u32 = 1;
-pub const __USE_POSIX199506: u32 = 1;
-pub const __USE_XOPEN2K: u32 = 1;
-pub const __USE_XOPEN2K8: u32 = 1;
-pub const _ATFILE_SOURCE: u32 = 1;
-pub const __USE_MISC: u32 = 1;
-pub const __USE_ATFILE: u32 = 1;
-pub const __USE_FORTIFY_LEVEL: u32 = 0;
-pub const __GLIBC_USE_DEPRECATED_GETS: u32 = 0;
-pub const __GLIBC_USE_DEPRECATED_SCANF: u32 = 0;
-pub const _STDC_PREDEF_H: u32 = 1;
-pub const __STDC_IEC_559__: u32 = 1;
-pub const __STDC_IEC_559_COMPLEX__: u32 = 1;
-pub const __STDC_ISO_10646__: u32 = 201706;
-pub const __GNU_LIBRARY__: u32 = 6;
-pub const __GLIBC__: u32 = 2;
-pub const __GLIBC_MINOR__: u32 = 32;
-pub const _SYS_CDEFS_H: u32 = 1;
-pub const __glibc_c99_flexarr_available: u32 = 1;
-pub const __WORDSIZE: u32 = 64;
-pub const __WORDSIZE_TIME64_COMPAT32: u32 = 0;
-pub const __LDOUBLE_REDIRECTS_TO_FLOAT128_ABI: u32 = 0;
-pub const __HAVE_GENERIC_SELECTION: u32 = 1;
-pub const __GLIBC_USE_LIB_EXT2: u32 = 0;
-pub const __GLIBC_USE_IEC_60559_BFP_EXT: u32 = 0;
-pub const __GLIBC_USE_IEC_60559_BFP_EXT_C2X: u32 = 0;
-pub const __GLIBC_USE_IEC_60559_FUNCS_EXT: u32 = 0;
-pub const __GLIBC_USE_IEC_60559_FUNCS_EXT_C2X: u32 = 0;
-pub const __GLIBC_USE_IEC_60559_TYPES_EXT: u32 = 0;
-pub const __GNUC_VA_LIST: u32 = 1;
-pub const _BITS_TYPES_H: u32 = 1;
-pub const __TIMESIZE: u32 = 64;
-pub const _BITS_TYPESIZES_H: u32 = 1;
-pub const __OFF_T_MATCHES_OFF64_T: u32 = 1;
-pub const __INO_T_MATCHES_INO64_T: u32 = 1;
-pub const __RLIM_T_MATCHES_RLIM64_T: u32 = 1;
-pub const __STATFS_MATCHES_STATFS64: u32 = 1;
-pub const __FD_SETSIZE: u32 = 1024;
-pub const _BITS_TIME64_H: u32 = 1;
-pub const _____fpos_t_defined: u32 = 1;
-pub const ____mbstate_t_defined: u32 = 1;
-pub const _____fpos64_t_defined: u32 = 1;
-pub const ____FILE_defined: u32 = 1;
-pub const __FILE_defined: u32 = 1;
-pub const __struct_FILE_defined: u32 = 1;
-pub const _IO_EOF_SEEN: u32 = 16;
-pub const _IO_ERR_SEEN: u32 = 32;
-pub const _IO_USER_LOCK: u32 = 32768;
+pub const __darwin__: u32 = 1;
+pub const __DARWIN_ONLY_64_BIT_INO_T: u32 = 0;
+pub const __DARWIN_ONLY_UNIX_CONFORMANCE: u32 = 1;
+pub const __DARWIN_ONLY_VERS_1050: u32 = 0;
+pub const __DARWIN_UNIX03: u32 = 1;
+pub const __DARWIN_64_BIT_INO_T: u32 = 1;
+pub const __DARWIN_VERS_1050: u32 = 1;
+pub const __DARWIN_NON_CANCELABLE: u32 = 0;
+pub const __DARWIN_SUF_64_BIT_INO_T: &[u8; 9usize] = b"$INODE64\0";
+pub const __DARWIN_SUF_1050: &[u8; 6usize] = b"$1050\0";
+pub const __DARWIN_SUF_EXTSN: &[u8; 14usize] = b"$DARWIN_EXTSN\0";
+pub const __DARWIN_C_ANSI: u32 = 4096;
+pub const __DARWIN_C_FULL: u32 = 900000;
+pub const __DARWIN_C_LEVEL: u32 = 900000;
+pub const __STDC_WANT_LIB_EXT1__: u32 = 1;
+pub const __DARWIN_NO_LONG_LONG: u32 = 0;
+pub const _DARWIN_FEATURE_64_BIT_INODE: u32 = 1;
+pub const _DARWIN_FEATURE_ONLY_UNIX_CONFORMANCE: u32 = 1;
+pub const _DARWIN_FEATURE_UNIX_CONFORMANCE: u32 = 3;
+pub const __API_TO_BE_DEPRECATED: u32 = 100000;
+pub const __MAC_10_0: u32 = 1000;
+pub const __MAC_10_1: u32 = 1010;
+pub const __MAC_10_2: u32 = 1020;
+pub const __MAC_10_3: u32 = 1030;
+pub const __MAC_10_4: u32 = 1040;
+pub const __MAC_10_5: u32 = 1050;
+pub const __MAC_10_6: u32 = 1060;
+pub const __MAC_10_7: u32 = 1070;
+pub const __MAC_10_8: u32 = 1080;
+pub const __MAC_10_9: u32 = 1090;
+pub const __MAC_10_10: u32 = 101000;
+pub const __MAC_10_10_2: u32 = 101002;
+pub const __MAC_10_10_3: u32 = 101003;
+pub const __MAC_10_11: u32 = 101100;
+pub const __MAC_10_11_2: u32 = 101102;
+pub const __MAC_10_11_3: u32 = 101103;
+pub const __MAC_10_11_4: u32 = 101104;
+pub const __MAC_10_12: u32 = 101200;
+pub const __MAC_10_12_1: u32 = 101201;
+pub const __MAC_10_12_2: u32 = 101202;
+pub const __MAC_10_12_4: u32 = 101204;
+pub const __MAC_10_13: u32 = 101300;
+pub const __MAC_10_13_1: u32 = 101301;
+pub const __MAC_10_13_2: u32 = 101302;
+pub const __MAC_10_13_4: u32 = 101304;
+pub const __MAC_10_14: u32 = 101400;
+pub const __MAC_10_14_1: u32 = 101401;
+pub const __MAC_10_14_4: u32 = 101404;
+pub const __MAC_10_14_6: u32 = 101406;
+pub const __MAC_10_15: u32 = 101500;
+pub const __MAC_10_15_1: u32 = 101501;
+pub const __MAC_10_15_4: u32 = 101504;
+pub const __MAC_10_16: u32 = 101600;
+pub const __MAC_11_0: u32 = 110000;
+pub const __MAC_11_1: u32 = 110100;
+pub const __MAC_11_3: u32 = 110300;
+pub const __IPHONE_2_0: u32 = 20000;
+pub const __IPHONE_2_1: u32 = 20100;
+pub const __IPHONE_2_2: u32 = 20200;
+pub const __IPHONE_3_0: u32 = 30000;
+pub const __IPHONE_3_1: u32 = 30100;
+pub const __IPHONE_3_2: u32 = 30200;
+pub const __IPHONE_4_0: u32 = 40000;
+pub const __IPHONE_4_1: u32 = 40100;
+pub const __IPHONE_4_2: u32 = 40200;
+pub const __IPHONE_4_3: u32 = 40300;
+pub const __IPHONE_5_0: u32 = 50000;
+pub const __IPHONE_5_1: u32 = 50100;
+pub const __IPHONE_6_0: u32 = 60000;
+pub const __IPHONE_6_1: u32 = 60100;
+pub const __IPHONE_7_0: u32 = 70000;
+pub const __IPHONE_7_1: u32 = 70100;
+pub const __IPHONE_8_0: u32 = 80000;
+pub const __IPHONE_8_1: u32 = 80100;
+pub const __IPHONE_8_2: u32 = 80200;
+pub const __IPHONE_8_3: u32 = 80300;
+pub const __IPHONE_8_4: u32 = 80400;
+pub const __IPHONE_9_0: u32 = 90000;
+pub const __IPHONE_9_1: u32 = 90100;
+pub const __IPHONE_9_2: u32 = 90200;
+pub const __IPHONE_9_3: u32 = 90300;
+pub const __IPHONE_10_0: u32 = 100000;
+pub const __IPHONE_10_1: u32 = 100100;
+pub const __IPHONE_10_2: u32 = 100200;
+pub const __IPHONE_10_3: u32 = 100300;
+pub const __IPHONE_11_0: u32 = 110000;
+pub const __IPHONE_11_1: u32 = 110100;
+pub const __IPHONE_11_2: u32 = 110200;
+pub const __IPHONE_11_3: u32 = 110300;
+pub const __IPHONE_11_4: u32 = 110400;
+pub const __IPHONE_12_0: u32 = 120000;
+pub const __IPHONE_12_1: u32 = 120100;
+pub const __IPHONE_12_2: u32 = 120200;
+pub const __IPHONE_12_3: u32 = 120300;
+pub const __IPHONE_12_4: u32 = 120400;
+pub const __IPHONE_13_0: u32 = 130000;
+pub const __IPHONE_13_1: u32 = 130100;
+pub const __IPHONE_13_2: u32 = 130200;
+pub const __IPHONE_13_3: u32 = 130300;
+pub const __IPHONE_13_4: u32 = 130400;
+pub const __IPHONE_13_5: u32 = 130500;
+pub const __IPHONE_13_6: u32 = 130600;
+pub const __IPHONE_13_7: u32 = 130700;
+pub const __IPHONE_14_0: u32 = 140000;
+pub const __IPHONE_14_1: u32 = 140100;
+pub const __IPHONE_14_2: u32 = 140200;
+pub const __IPHONE_14_3: u32 = 140300;
+pub const __IPHONE_14_5: u32 = 140500;
+pub const __TVOS_9_0: u32 = 90000;
+pub const __TVOS_9_1: u32 = 90100;
+pub const __TVOS_9_2: u32 = 90200;
+pub const __TVOS_10_0: u32 = 100000;
+pub const __TVOS_10_0_1: u32 = 100001;
+pub const __TVOS_10_1: u32 = 100100;
+pub const __TVOS_10_2: u32 = 100200;
+pub const __TVOS_11_0: u32 = 110000;
+pub const __TVOS_11_1: u32 = 110100;
+pub const __TVOS_11_2: u32 = 110200;
+pub const __TVOS_11_3: u32 = 110300;
+pub const __TVOS_11_4: u32 = 110400;
+pub const __TVOS_12_0: u32 = 120000;
+pub const __TVOS_12_1: u32 = 120100;
+pub const __TVOS_12_2: u32 = 120200;
+pub const __TVOS_12_3: u32 = 120300;
+pub const __TVOS_12_4: u32 = 120400;
+pub const __TVOS_13_0: u32 = 130000;
+pub const __TVOS_13_2: u32 = 130200;
+pub const __TVOS_13_3: u32 = 130300;
+pub const __TVOS_13_4: u32 = 130400;
+pub const __TVOS_14_0: u32 = 140000;
+pub const __TVOS_14_1: u32 = 140100;
+pub const __TVOS_14_2: u32 = 140200;
+pub const __TVOS_14_3: u32 = 140300;
+pub const __TVOS_14_5: u32 = 140500;
+pub const __WATCHOS_1_0: u32 = 10000;
+pub const __WATCHOS_2_0: u32 = 20000;
+pub const __WATCHOS_2_1: u32 = 20100;
+pub const __WATCHOS_2_2: u32 = 20200;
+pub const __WATCHOS_3_0: u32 = 30000;
+pub const __WATCHOS_3_1: u32 = 30100;
+pub const __WATCHOS_3_1_1: u32 = 30101;
+pub const __WATCHOS_3_2: u32 = 30200;
+pub const __WATCHOS_4_0: u32 = 40000;
+pub const __WATCHOS_4_1: u32 = 40100;
+pub const __WATCHOS_4_2: u32 = 40200;
+pub const __WATCHOS_4_3: u32 = 40300;
+pub const __WATCHOS_5_0: u32 = 50000;
+pub const __WATCHOS_5_1: u32 = 50100;
+pub const __WATCHOS_5_2: u32 = 50200;
+pub const __WATCHOS_5_3: u32 = 50300;
+pub const __WATCHOS_6_0: u32 = 60000;
+pub const __WATCHOS_6_1: u32 = 60100;
+pub const __WATCHOS_6_2: u32 = 60200;
+pub const __WATCHOS_7_0: u32 = 70000;
+pub const __WATCHOS_7_1: u32 = 70100;
+pub const __WATCHOS_7_2: u32 = 70200;
+pub const __WATCHOS_7_3: u32 = 70300;
+pub const __WATCHOS_7_4: u32 = 70400;
+pub const MAC_OS_X_VERSION_10_0: u32 = 1000;
+pub const MAC_OS_X_VERSION_10_1: u32 = 1010;
+pub const MAC_OS_X_VERSION_10_2: u32 = 1020;
+pub const MAC_OS_X_VERSION_10_3: u32 = 1030;
+pub const MAC_OS_X_VERSION_10_4: u32 = 1040;
+pub const MAC_OS_X_VERSION_10_5: u32 = 1050;
+pub const MAC_OS_X_VERSION_10_6: u32 = 1060;
+pub const MAC_OS_X_VERSION_10_7: u32 = 1070;
+pub const MAC_OS_X_VERSION_10_8: u32 = 1080;
+pub const MAC_OS_X_VERSION_10_9: u32 = 1090;
+pub const MAC_OS_X_VERSION_10_10: u32 = 101000;
+pub const MAC_OS_X_VERSION_10_10_2: u32 = 101002;
+pub const MAC_OS_X_VERSION_10_10_3: u32 = 101003;
+pub const MAC_OS_X_VERSION_10_11: u32 = 101100;
+pub const MAC_OS_X_VERSION_10_11_2: u32 = 101102;
+pub const MAC_OS_X_VERSION_10_11_3: u32 = 101103;
+pub const MAC_OS_X_VERSION_10_11_4: u32 = 101104;
+pub const MAC_OS_X_VERSION_10_12: u32 = 101200;
+pub const MAC_OS_X_VERSION_10_12_1: u32 = 101201;
+pub const MAC_OS_X_VERSION_10_12_2: u32 = 101202;
+pub const MAC_OS_X_VERSION_10_12_4: u32 = 101204;
+pub const MAC_OS_X_VERSION_10_13: u32 = 101300;
+pub const MAC_OS_X_VERSION_10_13_1: u32 = 101301;
+pub const MAC_OS_X_VERSION_10_13_2: u32 = 101302;
+pub const MAC_OS_X_VERSION_10_13_4: u32 = 101304;
+pub const MAC_OS_X_VERSION_10_14: u32 = 101400;
+pub const MAC_OS_X_VERSION_10_14_1: u32 = 101401;
+pub const MAC_OS_X_VERSION_10_14_4: u32 = 101404;
+pub const MAC_OS_X_VERSION_10_14_6: u32 = 101406;
+pub const MAC_OS_X_VERSION_10_15: u32 = 101500;
+pub const MAC_OS_X_VERSION_10_15_1: u32 = 101501;
+pub const MAC_OS_X_VERSION_10_16: u32 = 101600;
+pub const MAC_OS_VERSION_11_0: u32 = 110000;
+pub const __DRIVERKIT_19_0: u32 = 190000;
+pub const __DRIVERKIT_20_0: u32 = 200000;
+pub const __MAC_OS_X_VERSION_MAX_ALLOWED: u32 = 110300;
+pub const __ENABLE_LEGACY_MAC_AVAILABILITY: u32 = 1;
+pub const __PTHREAD_SIZE__: u32 = 8176;
+pub const __PTHREAD_ATTR_SIZE__: u32 = 56;
+pub const __PTHREAD_MUTEXATTR_SIZE__: u32 = 8;
+pub const __PTHREAD_MUTEX_SIZE__: u32 = 56;
+pub const __PTHREAD_CONDATTR_SIZE__: u32 = 8;
+pub const __PTHREAD_COND_SIZE__: u32 = 40;
+pub const __PTHREAD_ONCE_SIZE__: u32 = 8;
+pub const __PTHREAD_RWLOCK_SIZE__: u32 = 192;
+pub const __PTHREAD_RWLOCKATTR_SIZE__: u32 = 16;
+pub const __DARWIN_WCHAR_MIN: i32 = -2147483648;
+pub const _FORTIFY_SOURCE: u32 = 2;
+pub const RENAME_SECLUDE: u32 = 1;
+pub const RENAME_SWAP: u32 = 2;
+pub const RENAME_EXCL: u32 = 4;
+pub const __SLBF: u32 = 1;
+pub const __SNBF: u32 = 2;
+pub const __SRD: u32 = 4;
+pub const __SWR: u32 = 8;
+pub const __SRW: u32 = 16;
+pub const __SEOF: u32 = 32;
+pub const __SERR: u32 = 64;
+pub const __SMBF: u32 = 128;
+pub const __SAPP: u32 = 256;
+pub const __SSTR: u32 = 512;
+pub const __SOPT: u32 = 1024;
+pub const __SNPT: u32 = 2048;
+pub const __SOFF: u32 = 4096;
+pub const __SMOD: u32 = 8192;
+pub const __SALC: u32 = 16384;
+pub const __SIGN: u32 = 32768;
 pub const _IOFBF: u32 = 0;
 pub const _IOLBF: u32 = 1;
 pub const _IONBF: u32 = 2;
 pub const BUFSIZ: u32 = 8192;
 pub const EOF: i32 = -1;
+pub const FOPEN_MAX: u32 = 20;
+pub const FILENAME_MAX: u32 = 1024;
+pub const P_tmpdir: &[u8; 10usize] = b"/var/tmp/\0";
+pub const L_tmpnam: u32 = 1024;
+pub const TMP_MAX: u32 = 308915776;
 pub const SEEK_SET: u32 = 0;
 pub const SEEK_CUR: u32 = 1;
 pub const SEEK_END: u32 = 2;
@@ -552,11 +720,111 @@ pub const PTRDIFF_MIN: i64 = -9223372036854775808;
 pub const PTRDIFF_MAX: u64 = 9223372036854775807;
 pub const SIG_ATOMIC_MIN: i32 = -2147483648;
 pub const SIG_ATOMIC_MAX: u32 = 2147483647;
-pub const SIZE_MAX: i32 = -1;
-pub const WINT_MIN: u32 = 0;
-pub const WINT_MAX: u32 = 4294967295;
-pub const _ERRNO_H: u32 = 1;
-pub const _BITS_ERRNO_H: u32 = 1;
+pub const PRIO_PROCESS: u32 = 0;
+pub const PRIO_PGRP: u32 = 1;
+pub const PRIO_USER: u32 = 2;
+pub const PRIO_DARWIN_THREAD: u32 = 3;
+pub const PRIO_DARWIN_PROCESS: u32 = 4;
+pub const PRIO_MIN: i32 = -20;
+pub const PRIO_MAX: u32 = 20;
+pub const PRIO_DARWIN_BG: u32 = 4096;
+pub const PRIO_DARWIN_NONUI: u32 = 4097;
+pub const RUSAGE_SELF: u32 = 0;
+pub const RUSAGE_CHILDREN: i32 = -1;
+pub const RUSAGE_INFO_V0: u32 = 0;
+pub const RUSAGE_INFO_V1: u32 = 1;
+pub const RUSAGE_INFO_V2: u32 = 2;
+pub const RUSAGE_INFO_V3: u32 = 3;
+pub const RUSAGE_INFO_V4: u32 = 4;
+pub const RUSAGE_INFO_V5: u32 = 5;
+pub const RUSAGE_INFO_CURRENT: u32 = 5;
+pub const RU_PROC_RUNS_RESLIDE: u32 = 1;
+pub const RLIMIT_CPU: u32 = 0;
+pub const RLIMIT_FSIZE: u32 = 1;
+pub const RLIMIT_DATA: u32 = 2;
+pub const RLIMIT_STACK: u32 = 3;
+pub const RLIMIT_CORE: u32 = 4;
+pub const RLIMIT_AS: u32 = 5;
+pub const RLIMIT_RSS: u32 = 5;
+pub const RLIMIT_MEMLOCK: u32 = 6;
+pub const RLIMIT_NPROC: u32 = 7;
+pub const RLIMIT_NOFILE: u32 = 8;
+pub const RLIM_NLIMITS: u32 = 9;
+pub const _RLIMIT_POSIX_FLAG: u32 = 4096;
+pub const RLIMIT_WAKEUPS_MONITOR: u32 = 1;
+pub const RLIMIT_CPU_USAGE_MONITOR: u32 = 2;
+pub const RLIMIT_THREAD_CPULIMITS: u32 = 3;
+pub const RLIMIT_FOOTPRINT_INTERVAL: u32 = 4;
+pub const WAKEMON_ENABLE: u32 = 1;
+pub const WAKEMON_DISABLE: u32 = 2;
+pub const WAKEMON_GET_PARAMS: u32 = 4;
+pub const WAKEMON_SET_DEFAULTS: u32 = 8;
+pub const WAKEMON_MAKE_FATAL: u32 = 16;
+pub const CPUMON_MAKE_FATAL: u32 = 4096;
+pub const FOOTPRINT_INTERVAL_RESET: u32 = 1;
+pub const IOPOL_TYPE_DISK: u32 = 0;
+pub const IOPOL_TYPE_VFS_ATIME_UPDATES: u32 = 2;
+pub const IOPOL_TYPE_VFS_MATERIALIZE_DATALESS_FILES: u32 = 3;
+pub const IOPOL_TYPE_VFS_STATFS_NO_DATA_VOLUME: u32 = 4;
+pub const IOPOL_TYPE_VFS_TRIGGER_RESOLVE: u32 = 5;
+pub const IOPOL_TYPE_VFS_IGNORE_CONTENT_PROTECTION: u32 = 6;
+pub const IOPOL_TYPE_VFS_IGNORE_PERMISSIONS: u32 = 7;
+pub const IOPOL_TYPE_VFS_SKIP_MTIME_UPDATE: u32 = 8;
+pub const IOPOL_SCOPE_PROCESS: u32 = 0;
+pub const IOPOL_SCOPE_THREAD: u32 = 1;
+pub const IOPOL_SCOPE_DARWIN_BG: u32 = 2;
+pub const IOPOL_DEFAULT: u32 = 0;
+pub const IOPOL_IMPORTANT: u32 = 1;
+pub const IOPOL_PASSIVE: u32 = 2;
+pub const IOPOL_THROTTLE: u32 = 3;
+pub const IOPOL_UTILITY: u32 = 4;
+pub const IOPOL_STANDARD: u32 = 5;
+pub const IOPOL_APPLICATION: u32 = 5;
+pub const IOPOL_NORMAL: u32 = 1;
+pub const IOPOL_ATIME_UPDATES_DEFAULT: u32 = 0;
+pub const IOPOL_ATIME_UPDATES_OFF: u32 = 1;
+pub const IOPOL_MATERIALIZE_DATALESS_FILES_DEFAULT: u32 = 0;
+pub const IOPOL_MATERIALIZE_DATALESS_FILES_OFF: u32 = 1;
+pub const IOPOL_MATERIALIZE_DATALESS_FILES_ON: u32 = 2;
+pub const IOPOL_VFS_STATFS_NO_DATA_VOLUME_DEFAULT: u32 = 0;
+pub const IOPOL_VFS_STATFS_FORCE_NO_DATA_VOLUME: u32 = 1;
+pub const IOPOL_VFS_TRIGGER_RESOLVE_DEFAULT: u32 = 0;
+pub const IOPOL_VFS_TRIGGER_RESOLVE_OFF: u32 = 1;
+pub const IOPOL_VFS_CONTENT_PROTECTION_DEFAULT: u32 = 0;
+pub const IOPOL_VFS_CONTENT_PROTECTION_IGNORE: u32 = 1;
+pub const IOPOL_VFS_IGNORE_PERMISSIONS_OFF: u32 = 0;
+pub const IOPOL_VFS_IGNORE_PERMISSIONS_ON: u32 = 1;
+pub const IOPOL_VFS_SKIP_MTIME_UPDATE_OFF: u32 = 0;
+pub const IOPOL_VFS_SKIP_MTIME_UPDATE_ON: u32 = 1;
+pub const WNOHANG: u32 = 1;
+pub const WUNTRACED: u32 = 2;
+pub const WCOREFLAG: u32 = 128;
+pub const _WSTOPPED: u32 = 127;
+pub const WEXITED: u32 = 4;
+pub const WSTOPPED: u32 = 8;
+pub const WCONTINUED: u32 = 16;
+pub const WNOWAIT: u32 = 32;
+pub const WAIT_ANY: i32 = -1;
+pub const WAIT_MYPGRP: u32 = 0;
+pub const _QUAD_HIGHWORD: u32 = 1;
+pub const _QUAD_LOWWORD: u32 = 0;
+pub const __DARWIN_LITTLE_ENDIAN: u32 = 1234;
+pub const __DARWIN_BIG_ENDIAN: u32 = 4321;
+pub const __DARWIN_PDP_ENDIAN: u32 = 3412;
+pub const __DARWIN_BYTE_ORDER: u32 = 1234;
+pub const LITTLE_ENDIAN: u32 = 1234;
+pub const BIG_ENDIAN: u32 = 4321;
+pub const PDP_ENDIAN: u32 = 3412;
+pub const BYTE_ORDER: u32 = 1234;
+pub const EXIT_FAILURE: u32 = 1;
+pub const EXIT_SUCCESS: u32 = 0;
+pub const RAND_MAX: u32 = 2147483647;
+pub const __HAS_FIXED_CHK_PROTOTYPES: u32 = 1;
+pub const __GNUC_VA_LIST: u32 = 1;
+pub const __DARWIN_FD_SETSIZE: u32 = 1024;
+pub const __DARWIN_NBBY: u32 = 8;
+pub const NBBY: u32 = 8;
+pub const FD_SETSIZE: u32 = 1024;
 pub const EPERM: u32 = 1;
 pub const ENOENT: u32 = 2;
 pub const ESRCH: u32 = 3;
@@ -736,8 +1004,8 @@ pub const HAVE_PG_ATTRIBUTE_NORETURN: u32 = 1;
 pub const true_: u32 = 1;
 pub const false_: u32 = 0;
 pub const __bool_true_false_are_defined: u32 = 1;
-pub const INT64_FORMAT: &'static [u8; 4usize] = b"%ld\0";
-pub const UINT64_FORMAT: &'static [u8; 4usize] = b"%lu\0";
+pub const INT64_FORMAT: &[u8; 4usize] = b"%ld\0";
+pub const UINT64_FORMAT: &[u8; 4usize] = b"%lu\0";
 pub const HAVE_INT128: u32 = 1;
 pub const PG_INT8_MIN: i32 = -128;
 pub const PG_INT8_MAX: u32 = 127;
@@ -758,14 +1026,191 @@ pub const STATUS_ERROR: i32 = -1;
 pub const STATUS_EOF: i32 = -2;
 pub const STATUS_WAITING: u32 = 2;
 pub const PG_BINARY: u32 = 0;
-pub const PG_BINARY_A: &'static [u8; 2usize] = b"a\0";
-pub const PG_BINARY_R: &'static [u8; 2usize] = b"r\0";
-pub const PG_BINARY_W: &'static [u8; 2usize] = b"w\0";
-pub const _CTYPE_H: u32 = 1;
-pub const _NETDB_H: u32 = 1;
-pub const _NETINET_IN_H: u32 = 1;
-pub const _SYS_SOCKET_H: u32 = 1;
-pub const __iovec_defined: u32 = 1;
+pub const PG_BINARY_A: &[u8; 2usize] = b"a\0";
+pub const PG_BINARY_R: &[u8; 2usize] = b"r\0";
+pub const PG_BINARY_W: &[u8; 2usize] = b"w\0";
+pub const _CACHED_RUNES: u32 = 256;
+pub const _CRMASK: i32 = -256;
+pub const _RUNE_MAGIC_A: &[u8; 9usize] = b"RuneMagA\0";
+pub const _CTYPE_A: u32 = 256;
+pub const _CTYPE_C: u32 = 512;
+pub const _CTYPE_D: u32 = 1024;
+pub const _CTYPE_G: u32 = 2048;
+pub const _CTYPE_L: u32 = 4096;
+pub const _CTYPE_P: u32 = 8192;
+pub const _CTYPE_S: u32 = 16384;
+pub const _CTYPE_U: u32 = 32768;
+pub const _CTYPE_X: u32 = 65536;
+pub const _CTYPE_B: u32 = 131072;
+pub const _CTYPE_R: u32 = 262144;
+pub const _CTYPE_I: u32 = 524288;
+pub const _CTYPE_T: u32 = 1048576;
+pub const _CTYPE_Q: u32 = 2097152;
+pub const _CTYPE_SW0: u32 = 536870912;
+pub const _CTYPE_SW1: u32 = 1073741824;
+pub const _CTYPE_SW2: u32 = 2147483648;
+pub const _CTYPE_SW3: u32 = 3221225472;
+pub const _CTYPE_SWM: u32 = 3758096384;
+pub const _CTYPE_SWS: u32 = 30;
+pub const KEV_INET_SUBCLASS: u32 = 1;
+pub const KEV_INET_NEW_ADDR: u32 = 1;
+pub const KEV_INET_CHANGED_ADDR: u32 = 2;
+pub const KEV_INET_ADDR_DELETED: u32 = 3;
+pub const KEV_INET_SIFDSTADDR: u32 = 4;
+pub const KEV_INET_SIFBRDADDR: u32 = 5;
+pub const KEV_INET_SIFNETMASK: u32 = 6;
+pub const KEV_INET_ARPCOLLISION: u32 = 7;
+pub const KEV_INET_PORTINUSE: u32 = 8;
+pub const KEV_INET_ARPRTRFAILURE: u32 = 9;
+pub const KEV_INET_ARPRTRALIVE: u32 = 10;
+pub const KEV_DL_SUBCLASS: u32 = 2;
+pub const KEV_DL_SIFFLAGS: u32 = 1;
+pub const KEV_DL_SIFMETRICS: u32 = 2;
+pub const KEV_DL_SIFMTU: u32 = 3;
+pub const KEV_DL_SIFPHYS: u32 = 4;
+pub const KEV_DL_SIFMEDIA: u32 = 5;
+pub const KEV_DL_SIFGENERIC: u32 = 6;
+pub const KEV_DL_ADDMULTI: u32 = 7;
+pub const KEV_DL_DELMULTI: u32 = 8;
+pub const KEV_DL_IF_ATTACHED: u32 = 9;
+pub const KEV_DL_IF_DETACHING: u32 = 10;
+pub const KEV_DL_IF_DETACHED: u32 = 11;
+pub const KEV_DL_LINK_OFF: u32 = 12;
+pub const KEV_DL_LINK_ON: u32 = 13;
+pub const KEV_DL_PROTO_ATTACHED: u32 = 14;
+pub const KEV_DL_PROTO_DETACHED: u32 = 15;
+pub const KEV_DL_LINK_ADDRESS_CHANGED: u32 = 16;
+pub const KEV_DL_WAKEFLAGS_CHANGED: u32 = 17;
+pub const KEV_DL_IF_IDLE_ROUTE_REFCNT: u32 = 18;
+pub const KEV_DL_IFCAP_CHANGED: u32 = 19;
+pub const KEV_DL_LINK_QUALITY_METRIC_CHANGED: u32 = 20;
+pub const KEV_DL_NODE_PRESENCE: u32 = 21;
+pub const KEV_DL_NODE_ABSENCE: u32 = 22;
+pub const KEV_DL_MASTER_ELECTED: u32 = 23;
+pub const KEV_DL_ISSUES: u32 = 24;
+pub const KEV_DL_IFDELEGATE_CHANGED: u32 = 25;
+pub const KEV_DL_AWDL_RESTRICTED: u32 = 26;
+pub const KEV_DL_AWDL_UNRESTRICTED: u32 = 27;
+pub const KEV_DL_RRC_STATE_CHANGED: u32 = 28;
+pub const KEV_DL_QOS_MODE_CHANGED: u32 = 29;
+pub const KEV_DL_LOW_POWER_MODE_CHANGED: u32 = 30;
+pub const KEV_INET6_SUBCLASS: u32 = 6;
+pub const KEV_INET6_NEW_USER_ADDR: u32 = 1;
+pub const KEV_INET6_CHANGED_ADDR: u32 = 2;
+pub const KEV_INET6_ADDR_DELETED: u32 = 3;
+pub const KEV_INET6_NEW_LL_ADDR: u32 = 4;
+pub const KEV_INET6_NEW_RTADV_ADDR: u32 = 5;
+pub const KEV_INET6_DEFROUTER: u32 = 6;
+pub const KEV_INET6_REQUEST_NAT64_PREFIX: u32 = 7;
+pub const SOCK_STREAM: u32 = 1;
+pub const SOCK_DGRAM: u32 = 2;
+pub const SOCK_RAW: u32 = 3;
+pub const SOCK_RDM: u32 = 4;
+pub const SOCK_SEQPACKET: u32 = 5;
+pub const SO_DEBUG: u32 = 1;
+pub const SO_ACCEPTCONN: u32 = 2;
+pub const SO_REUSEADDR: u32 = 4;
+pub const SO_KEEPALIVE: u32 = 8;
+pub const SO_DONTROUTE: u32 = 16;
+pub const SO_BROADCAST: u32 = 32;
+pub const SO_USELOOPBACK: u32 = 64;
+pub const SO_LINGER: u32 = 128;
+pub const SO_OOBINLINE: u32 = 256;
+pub const SO_REUSEPORT: u32 = 512;
+pub const SO_TIMESTAMP: u32 = 1024;
+pub const SO_TIMESTAMP_MONOTONIC: u32 = 2048;
+pub const SO_DONTTRUNC: u32 = 8192;
+pub const SO_WANTMORE: u32 = 16384;
+pub const SO_WANTOOBFLAG: u32 = 32768;
+pub const SO_SNDBUF: u32 = 4097;
+pub const SO_RCVBUF: u32 = 4098;
+pub const SO_SNDLOWAT: u32 = 4099;
+pub const SO_RCVLOWAT: u32 = 4100;
+pub const SO_SNDTIMEO: u32 = 4101;
+pub const SO_RCVTIMEO: u32 = 4102;
+pub const SO_ERROR: u32 = 4103;
+pub const SO_TYPE: u32 = 4104;
+pub const SO_LABEL: u32 = 4112;
+pub const SO_PEERLABEL: u32 = 4113;
+pub const SO_NREAD: u32 = 4128;
+pub const SO_NKE: u32 = 4129;
+pub const SO_NOSIGPIPE: u32 = 4130;
+pub const SO_NOADDRERR: u32 = 4131;
+pub const SO_NWRITE: u32 = 4132;
+pub const SO_REUSESHAREUID: u32 = 4133;
+pub const SO_NOTIFYCONFLICT: u32 = 4134;
+pub const SO_UPCALLCLOSEWAIT: u32 = 4135;
+pub const SO_LINGER_SEC: u32 = 4224;
+pub const SO_RANDOMPORT: u32 = 4226;
+pub const SO_NP_EXTENSIONS: u32 = 4227;
+pub const SO_NUMRCVPKT: u32 = 4370;
+pub const SO_NET_SERVICE_TYPE: u32 = 4374;
+pub const SO_NETSVC_MARKING_LEVEL: u32 = 4377;
+pub const NET_SERVICE_TYPE_BE: u32 = 0;
+pub const NET_SERVICE_TYPE_BK: u32 = 1;
+pub const NET_SERVICE_TYPE_SIG: u32 = 2;
+pub const NET_SERVICE_TYPE_VI: u32 = 3;
+pub const NET_SERVICE_TYPE_VO: u32 = 4;
+pub const NET_SERVICE_TYPE_RV: u32 = 5;
+pub const NET_SERVICE_TYPE_AV: u32 = 6;
+pub const NET_SERVICE_TYPE_OAM: u32 = 7;
+pub const NET_SERVICE_TYPE_RD: u32 = 8;
+pub const NETSVC_MRKNG_UNKNOWN: u32 = 0;
+pub const NETSVC_MRKNG_LVL_L2: u32 = 1;
+pub const NETSVC_MRKNG_LVL_L3L2_ALL: u32 = 2;
+pub const NETSVC_MRKNG_LVL_L3L2_BK: u32 = 3;
+pub const SAE_ASSOCID_ANY: u32 = 0;
+pub const SAE_CONNID_ANY: u32 = 0;
+pub const CONNECT_RESUME_ON_READ_WRITE: u32 = 1;
+pub const CONNECT_DATA_IDEMPOTENT: u32 = 2;
+pub const CONNECT_DATA_AUTHENTICATED: u32 = 4;
+pub const SONPX_SETOPTSHUT: u32 = 1;
+pub const SOL_SOCKET: u32 = 65535;
+pub const AF_UNSPEC: u32 = 0;
+pub const AF_UNIX: u32 = 1;
+pub const AF_LOCAL: u32 = 1;
+pub const AF_INET: u32 = 2;
+pub const AF_IMPLINK: u32 = 3;
+pub const AF_PUP: u32 = 4;
+pub const AF_CHAOS: u32 = 5;
+pub const AF_NS: u32 = 6;
+pub const AF_ISO: u32 = 7;
+pub const AF_OSI: u32 = 7;
+pub const AF_ECMA: u32 = 8;
+pub const AF_DATAKIT: u32 = 9;
+pub const AF_CCITT: u32 = 10;
+pub const AF_SNA: u32 = 11;
+pub const AF_DECnet: u32 = 12;
+pub const AF_DLI: u32 = 13;
+pub const AF_LAT: u32 = 14;
+pub const AF_HYLINK: u32 = 15;
+pub const AF_APPLETALK: u32 = 16;
+pub const AF_ROUTE: u32 = 17;
+pub const AF_LINK: u32 = 18;
+pub const pseudo_AF_XTP: u32 = 19;
+pub const AF_COIP: u32 = 20;
+pub const AF_CNT: u32 = 21;
+pub const pseudo_AF_RTIP: u32 = 22;
+pub const AF_IPX: u32 = 23;
+pub const AF_SIP: u32 = 24;
+pub const pseudo_AF_PIP: u32 = 25;
+pub const AF_NDRV: u32 = 27;
+pub const AF_ISDN: u32 = 28;
+pub const AF_E164: u32 = 28;
+pub const pseudo_AF_KEY: u32 = 29;
+pub const AF_INET6: u32 = 30;
+pub const AF_NATM: u32 = 31;
+pub const AF_SYSTEM: u32 = 32;
+pub const AF_NETBIOS: u32 = 33;
+pub const AF_PPP: u32 = 34;
+pub const pseudo_AF_HDRCMPLT: u32 = 35;
+pub const AF_RESERVED_36: u32 = 36;
+pub const AF_IEEE80211: u32 = 37;
+pub const AF_UTUN: u32 = 38;
+pub const AF_VSOCK: u32 = 40;
+pub const AF_MAX: u32 = 41;
+pub const SOCK_MAXADDRLEN: u32 = 255;
+pub const _SS_MAXSIZE: u32 = 128;
 pub const PF_UNSPEC: u32 = 0;
 pub const PF_LOCAL: u32 = 1;
 pub const PF_UNIX: u32 = 1;
@@ -1123,14 +1568,201 @@ pub const IN_CLASSC_NSHIFT: u32 = 8;
 pub const IN_CLASSC_HOST: u32 = 255;
 pub const IN_LOOPBACKNET: u32 = 127;
 pub const INET_ADDRSTRLEN: u32 = 16;
+pub const IP_OPTIONS: u32 = 1;
+pub const IP_HDRINCL: u32 = 2;
+pub const IP_TOS: u32 = 3;
+pub const IP_TTL: u32 = 4;
+pub const IP_RECVOPTS: u32 = 5;
+pub const IP_RECVRETOPTS: u32 = 6;
+pub const IP_RECVDSTADDR: u32 = 7;
+pub const IP_RETOPTS: u32 = 8;
+pub const IP_MULTICAST_IF: u32 = 9;
+pub const IP_MULTICAST_TTL: u32 = 10;
+pub const IP_MULTICAST_LOOP: u32 = 11;
+pub const IP_ADD_MEMBERSHIP: u32 = 12;
+pub const IP_DROP_MEMBERSHIP: u32 = 13;
+pub const IP_MULTICAST_VIF: u32 = 14;
+pub const IP_RSVP_ON: u32 = 15;
+pub const IP_RSVP_OFF: u32 = 16;
+pub const IP_RSVP_VIF_ON: u32 = 17;
+pub const IP_RSVP_VIF_OFF: u32 = 18;
+pub const IP_PORTRANGE: u32 = 19;
+pub const IP_RECVIF: u32 = 20;
+pub const IP_IPSEC_POLICY: u32 = 21;
+pub const IP_FAITH: u32 = 22;
+pub const IP_STRIPHDR: u32 = 23;
+pub const IP_RECVTTL: u32 = 24;
+pub const IP_BOUND_IF: u32 = 25;
+pub const IP_PKTINFO: u32 = 26;
+pub const IP_RECVPKTINFO: u32 = 26;
+pub const IP_RECVTOS: u32 = 27;
+pub const IP_DONTFRAG: u32 = 28;
+pub const IP_FW_ADD: u32 = 40;
+pub const IP_FW_DEL: u32 = 41;
+pub const IP_FW_FLUSH: u32 = 42;
+pub const IP_FW_ZERO: u32 = 43;
+pub const IP_FW_GET: u32 = 44;
+pub const IP_FW_RESETLOG: u32 = 45;
+pub const IP_OLD_FW_ADD: u32 = 50;
+pub const IP_OLD_FW_DEL: u32 = 51;
+pub const IP_OLD_FW_FLUSH: u32 = 52;
+pub const IP_OLD_FW_ZERO: u32 = 53;
+pub const IP_OLD_FW_GET: u32 = 54;
+pub const IP_NAT__XXX: u32 = 55;
+pub const IP_OLD_FW_RESETLOG: u32 = 56;
+pub const IP_DUMMYNET_CONFIGURE: u32 = 60;
+pub const IP_DUMMYNET_DEL: u32 = 61;
+pub const IP_DUMMYNET_FLUSH: u32 = 62;
+pub const IP_DUMMYNET_GET: u32 = 64;
+pub const IP_TRAFFIC_MGT_BACKGROUND: u32 = 65;
+pub const IP_MULTICAST_IFINDEX: u32 = 66;
+pub const IP_ADD_SOURCE_MEMBERSHIP: u32 = 70;
+pub const IP_DROP_SOURCE_MEMBERSHIP: u32 = 71;
+pub const IP_BLOCK_SOURCE: u32 = 72;
+pub const IP_UNBLOCK_SOURCE: u32 = 73;
+pub const IP_MSFILTER: u32 = 74;
+pub const MCAST_JOIN_GROUP: u32 = 80;
+pub const MCAST_LEAVE_GROUP: u32 = 81;
+pub const MCAST_JOIN_SOURCE_GROUP: u32 = 82;
+pub const MCAST_LEAVE_SOURCE_GROUP: u32 = 83;
+pub const MCAST_BLOCK_SOURCE: u32 = 84;
+pub const MCAST_UNBLOCK_SOURCE: u32 = 85;
+pub const IP_DEFAULT_MULTICAST_TTL: u32 = 1;
+pub const IP_DEFAULT_MULTICAST_LOOP: u32 = 1;
+pub const IP_MIN_MEMBERSHIPS: u32 = 31;
+pub const IP_MAX_MEMBERSHIPS: u32 = 4095;
+pub const IP_MAX_GROUP_SRC_FILTER: u32 = 512;
+pub const IP_MAX_SOCK_SRC_FILTER: u32 = 128;
+pub const IP_MAX_SOCK_MUTE_FILTER: u32 = 128;
+pub const MCAST_UNDEFINED: u32 = 0;
+pub const MCAST_INCLUDE: u32 = 1;
+pub const MCAST_EXCLUDE: u32 = 2;
+pub const IP_PORTRANGE_DEFAULT: u32 = 0;
+pub const IP_PORTRANGE_HIGH: u32 = 1;
+pub const IP_PORTRANGE_LOW: u32 = 2;
+pub const IPPROTO_MAXID: u32 = 52;
+pub const IPCTL_FORWARDING: u32 = 1;
+pub const IPCTL_SENDREDIRECTS: u32 = 2;
+pub const IPCTL_DEFTTL: u32 = 3;
+pub const IPCTL_RTEXPIRE: u32 = 5;
+pub const IPCTL_RTMINEXPIRE: u32 = 6;
+pub const IPCTL_RTMAXCACHE: u32 = 7;
+pub const IPCTL_SOURCEROUTE: u32 = 8;
+pub const IPCTL_DIRECTEDBROADCAST: u32 = 9;
+pub const IPCTL_INTRQMAXLEN: u32 = 10;
+pub const IPCTL_INTRQDROPS: u32 = 11;
+pub const IPCTL_STATS: u32 = 12;
+pub const IPCTL_ACCEPTSOURCEROUTE: u32 = 13;
+pub const IPCTL_FASTFORWARDING: u32 = 14;
+pub const IPCTL_KEEPFAITH: u32 = 15;
+pub const IPCTL_GIF_TTL: u32 = 16;
+pub const IPCTL_MAXID: u32 = 17;
+pub const __KAME_VERSION: &[u8; 18usize] = b"2009/apple-darwin\0";
+pub const IPV6PORT_RESERVED: u32 = 1024;
+pub const IPV6PORT_ANONMIN: u32 = 49152;
+pub const IPV6PORT_ANONMAX: u32 = 65535;
+pub const IPV6PORT_RESERVEDMIN: u32 = 600;
+pub const IPV6PORT_RESERVEDMAX: u32 = 1023;
 pub const INET6_ADDRSTRLEN: u32 = 46;
-pub const _RPC_NETDB_H: u32 = 1;
-pub const _PATH_HEQUIV: &'static [u8; 17usize] = b"/etc/hosts.equiv\0";
-pub const _PATH_HOSTS: &'static [u8; 11usize] = b"/etc/hosts\0";
-pub const _PATH_NETWORKS: &'static [u8; 14usize] = b"/etc/networks\0";
-pub const _PATH_NSSWITCH_CONF: &'static [u8; 19usize] = b"/etc/nsswitch.conf\0";
-pub const _PATH_PROTOCOLS: &'static [u8; 15usize] = b"/etc/protocols\0";
-pub const _PATH_SERVICES: &'static [u8; 14usize] = b"/etc/services\0";
+pub const __IPV6_ADDR_SCOPE_NODELOCAL: u32 = 1;
+pub const __IPV6_ADDR_SCOPE_INTFACELOCAL: u32 = 1;
+pub const __IPV6_ADDR_SCOPE_LINKLOCAL: u32 = 2;
+pub const __IPV6_ADDR_SCOPE_SITELOCAL: u32 = 5;
+pub const __IPV6_ADDR_SCOPE_ORGLOCAL: u32 = 8;
+pub const __IPV6_ADDR_SCOPE_GLOBAL: u32 = 14;
+pub const IPV6_ADDR_MC_FLAGS_TRANSIENT: u32 = 16;
+pub const IPV6_ADDR_MC_FLAGS_PREFIX: u32 = 32;
+pub const IPV6_ADDR_MC_FLAGS_UNICAST_BASED: u32 = 48;
+pub const IPV6_SOCKOPT_RESERVED1: u32 = 3;
+pub const IPV6_UNICAST_HOPS: u32 = 4;
+pub const IPV6_MULTICAST_IF: u32 = 9;
+pub const IPV6_MULTICAST_HOPS: u32 = 10;
+pub const IPV6_MULTICAST_LOOP: u32 = 11;
+pub const IPV6_JOIN_GROUP: u32 = 12;
+pub const IPV6_LEAVE_GROUP: u32 = 13;
+pub const IPV6_PORTRANGE: u32 = 14;
+pub const ICMP6_FILTER: u32 = 18;
+pub const IPV6_2292PKTINFO: u32 = 19;
+pub const IPV6_2292HOPLIMIT: u32 = 20;
+pub const IPV6_2292NEXTHOP: u32 = 21;
+pub const IPV6_2292HOPOPTS: u32 = 22;
+pub const IPV6_2292DSTOPTS: u32 = 23;
+pub const IPV6_2292RTHDR: u32 = 24;
+pub const IPV6_2292PKTOPTIONS: u32 = 25;
+pub const IPV6_CHECKSUM: u32 = 26;
+pub const IPV6_V6ONLY: u32 = 27;
+pub const IPV6_BINDV6ONLY: u32 = 27;
+pub const IPV6_IPSEC_POLICY: u32 = 28;
+pub const IPV6_FAITH: u32 = 29;
+pub const IPV6_FW_ADD: u32 = 30;
+pub const IPV6_FW_DEL: u32 = 31;
+pub const IPV6_FW_FLUSH: u32 = 32;
+pub const IPV6_FW_ZERO: u32 = 33;
+pub const IPV6_FW_GET: u32 = 34;
+pub const IPV6_RECVTCLASS: u32 = 35;
+pub const IPV6_TCLASS: u32 = 36;
+pub const IPV6_BOUND_IF: u32 = 125;
+pub const IPV6_RTHDR_LOOSE: u32 = 0;
+pub const IPV6_RTHDR_STRICT: u32 = 1;
+pub const IPV6_RTHDR_TYPE_0: u32 = 0;
+pub const IPV6_DEFAULT_MULTICAST_HOPS: u32 = 1;
+pub const IPV6_DEFAULT_MULTICAST_LOOP: u32 = 1;
+pub const IPV6_MIN_MEMBERSHIPS: u32 = 31;
+pub const IPV6_MAX_MEMBERSHIPS: u32 = 4095;
+pub const IPV6_MAX_GROUP_SRC_FILTER: u32 = 512;
+pub const IPV6_MAX_SOCK_SRC_FILTER: u32 = 128;
+pub const IPV6_PORTRANGE_DEFAULT: u32 = 0;
+pub const IPV6_PORTRANGE_HIGH: u32 = 1;
+pub const IPV6_PORTRANGE_LOW: u32 = 2;
+pub const IPV6PROTO_MAXID: u32 = 104;
+pub const IPV6CTL_FORWARDING: u32 = 1;
+pub const IPV6CTL_SENDREDIRECTS: u32 = 2;
+pub const IPV6CTL_DEFHLIM: u32 = 3;
+pub const IPV6CTL_FORWSRCRT: u32 = 5;
+pub const IPV6CTL_STATS: u32 = 6;
+pub const IPV6CTL_MRTSTATS: u32 = 7;
+pub const IPV6CTL_MRTPROTO: u32 = 8;
+pub const IPV6CTL_MAXFRAGPACKETS: u32 = 9;
+pub const IPV6CTL_SOURCECHECK: u32 = 10;
+pub const IPV6CTL_SOURCECHECK_LOGINT: u32 = 11;
+pub const IPV6CTL_ACCEPT_RTADV: u32 = 12;
+pub const IPV6CTL_KEEPFAITH: u32 = 13;
+pub const IPV6CTL_LOG_INTERVAL: u32 = 14;
+pub const IPV6CTL_HDRNESTLIMIT: u32 = 15;
+pub const IPV6CTL_DAD_COUNT: u32 = 16;
+pub const IPV6CTL_AUTO_FLOWLABEL: u32 = 17;
+pub const IPV6CTL_DEFMCASTHLIM: u32 = 18;
+pub const IPV6CTL_GIF_HLIM: u32 = 19;
+pub const IPV6CTL_KAME_VERSION: u32 = 20;
+pub const IPV6CTL_USE_DEPRECATED: u32 = 21;
+pub const IPV6CTL_RR_PRUNE: u32 = 22;
+pub const IPV6CTL_V6ONLY: u32 = 24;
+pub const IPV6CTL_RTEXPIRE: u32 = 25;
+pub const IPV6CTL_RTMINEXPIRE: u32 = 26;
+pub const IPV6CTL_RTMAXCACHE: u32 = 27;
+pub const IPV6CTL_USETEMPADDR: u32 = 32;
+pub const IPV6CTL_TEMPPLTIME: u32 = 33;
+pub const IPV6CTL_TEMPVLTIME: u32 = 34;
+pub const IPV6CTL_AUTO_LINKLOCAL: u32 = 35;
+pub const IPV6CTL_RIP6STATS: u32 = 36;
+pub const IPV6CTL_PREFER_TEMPADDR: u32 = 37;
+pub const IPV6CTL_ADDRCTLPOLICY: u32 = 38;
+pub const IPV6CTL_USE_DEFAULTZONE: u32 = 39;
+pub const IPV6CTL_MAXFRAGS: u32 = 41;
+pub const IPV6CTL_MCAST_PMTU: u32 = 44;
+pub const IPV6CTL_NEIGHBORGCTHRESH: u32 = 46;
+pub const IPV6CTL_MAXIFPREFIXES: u32 = 47;
+pub const IPV6CTL_MAXIFDEFROUTERS: u32 = 48;
+pub const IPV6CTL_MAXDYNROUTES: u32 = 49;
+pub const ICMPV6CTL_ND6_ONLINKNSRFC4861: u32 = 50;
+pub const IPV6CTL_MAXID: u32 = 51;
+pub const _PATH_HEQUIV: &[u8; 17usize] = b"/etc/hosts.equiv\0";
+pub const _PATH_HOSTS: &[u8; 11usize] = b"/etc/hosts\0";
+pub const _PATH_NETWORKS: &[u8; 14usize] = b"/etc/networks\0";
+pub const _PATH_PROTOCOLS: &[u8; 15usize] = b"/etc/protocols\0";
+pub const _PATH_SERVICES: &[u8; 14usize] = b"/etc/services\0";
+pub const NETDB_INTERNAL: i32 = -1;
+pub const NETDB_SUCCESS: u32 = 0;
 pub const HOST_NOT_FOUND: u32 = 1;
 pub const TRY_AGAIN: u32 = 2;
 pub const NO_RECOVERY: u32 = 3;
@@ -1162,12 +1794,34 @@ pub const NI_NUMERICSERV: u32 = 2;
 pub const NI_NOFQDN: u32 = 4;
 pub const NI_NAMEREQD: u32 = 8;
 pub const NI_DGRAM: u32 = 16;
-pub const _PWD_H: u32 = 1;
-pub const NSS_BUFLEN_PASSWD: u32 = 1024;
+pub const NI_WITHSCOPEID: u32 = 32;
+pub const SCOPE_DELIMITER: u8 = 37u8;
+pub const _PATH_PWD: &[u8; 5usize] = b"/etc\0";
+pub const _PATH_PASSWD: &[u8; 12usize] = b"/etc/passwd\0";
+pub const _PASSWD: &[u8; 7usize] = b"passwd\0";
+pub const _PATH_MASTERPASSWD: &[u8; 19usize] = b"/etc/master.passwd\0";
+pub const _PATH_MASTERPASSWD_LOCK: &[u8; 10usize] = b"/etc/ptmp\0";
+pub const _MASTERPASSWD: &[u8; 14usize] = b"master.passwd\0";
+pub const _PATH_MP_DB: &[u8; 12usize] = b"/etc/pwd.db\0";
+pub const _MP_DB: &[u8; 7usize] = b"pwd.db\0";
+pub const _PATH_SMP_DB: &[u8; 13usize] = b"/etc/spwd.db\0";
+pub const _SMP_DB: &[u8; 8usize] = b"spwd.db\0";
+pub const _PATH_PWD_MKDB: &[u8; 19usize] = b"/usr/sbin/pwd_mkdb\0";
+pub const _PW_KEYBYNAME: u8 = 49u8;
+pub const _PW_KEYBYNUM: u8 = 50u8;
+pub const _PW_KEYBYUID: u8 = 51u8;
+pub const _PASSWORD_EFMT1: u8 = 95u8;
+pub const _PASSWORD_LEN: u32 = 128;
+pub const _PASSWORD_NOUID: u32 = 1;
+pub const _PASSWORD_NOGID: u32 = 2;
+pub const _PASSWORD_NOCHG: u32 = 4;
+pub const _PASSWORD_NOEXP: u32 = 8;
+pub const _PASSWORD_WARNDAYS: u32 = 14;
+pub const _PASSWORD_CHGNOW: i32 = -1;
 pub const PGINVALID_SOCKET: i32 = -1;
-pub const PG_BACKEND_VERSIONSTR: &'static [u8; 28usize] = b"postgres (PostgreSQL) 13.3\n\0";
-pub const EXE: &'static [u8; 1usize] = b"\0";
-pub const DEVNULL: &'static [u8; 10usize] = b"/dev/null\0";
+pub const PG_BACKEND_VERSIONSTR: &[u8; 28usize] = b"postgres (PostgreSQL) 13.4\n\0";
+pub const EXE: &[u8; 1usize] = b"\0";
+pub const DEVNULL: &[u8; 10usize] = b"/dev/null\0";
 pub const USE_REPL_SNPRINTF: u32 = 1;
 pub const PG_STRERROR_R_BUFLEN: u32 = 256;
 pub const PG_IOLBF: u32 = 1;
@@ -1725,7 +2379,7 @@ pub const TIME_UTC: u32 = 1;
 pub const PG_INSTR_CLOCK: u32 = 1;
 pub const FIELDNO_FUNCTIONCALLINFODATA_ISNULL: u32 = 4;
 pub const FIELDNO_FUNCTIONCALLINFODATA_ARGS: u32 = 6;
-pub const PG_MAGIC_FUNCTION_NAME_STRING: &'static [u8; 14usize] = b"Pg_magic_func\0";
+pub const PG_MAGIC_FUNCTION_NAME_STRING: &[u8; 14usize] = b"Pg_magic_func\0";
 pub const AGG_CONTEXT_AGGREGATE: u32 = 1;
 pub const AGG_CONTEXT_WINDOW: u32 = 2;
 pub const PARAM_FLAG_CONST: u32 = 1;
@@ -1855,12 +2509,12 @@ pub const DSM_IMPL_SYSV: u32 = 2;
 pub const DSM_IMPL_WINDOWS: u32 = 3;
 pub const DSM_IMPL_MMAP: u32 = 4;
 pub const DEFAULT_DYNAMIC_SHARED_MEMORY_TYPE: u32 = 1;
-pub const PG_DYNSHMEM_DIR: &'static [u8; 12usize] = b"pg_dynshmem\0";
-pub const PG_DYNSHMEM_MMAP_FILE_PREFIX: &'static [u8; 6usize] = b"mmap.\0";
+pub const PG_DYNSHMEM_DIR: &[u8; 12usize] = b"pg_dynshmem\0";
+pub const PG_DYNSHMEM_MMAP_FILE_PREFIX: &[u8; 6usize] = b"mmap.\0";
 pub const DSM_CREATE_NULL_IF_MAXSEGMENTS: u32 = 1;
 pub const DSM_HANDLE_INVALID: u32 = 0;
 pub const SIZEOF_DSA_POINTER: u32 = 8;
-pub const DSA_POINTER_FORMAT: &'static [u8; 7usize] = b"%016lx\0";
+pub const DSA_POINTER_FORMAT: &[u8; 7usize] = b"%016lx\0";
 pub const DSA_ALLOC_HUGE: u32 = 1;
 pub const DSA_ALLOC_NO_OOM: u32 = 2;
 pub const DSA_ALLOC_ZERO: u32 = 4;
@@ -1883,8 +2537,24 @@ pub const NO_MAX_DSIZE: i32 = -1;
 pub const _DIRENT_H: u32 = 1;
 pub const _DIRENT_MATCHES_DIRENT64: u32 = 1;
 pub const MAXNAMLEN: u32 = 255;
-pub const PG_TEMP_FILES_DIR: &'static [u8; 10usize] = b"pgsql_tmp\0";
-pub const PG_TEMP_FILE_PREFIX: &'static [u8; 10usize] = b"pgsql_tmp\0";
+pub const DT_UNKNOWN: u32 = 0;
+pub const DT_FIFO: u32 = 1;
+pub const DT_CHR: u32 = 2;
+pub const DT_DIR: u32 = 4;
+pub const DT_BLK: u32 = 6;
+pub const DT_REG: u32 = 8;
+pub const DT_LNK: u32 = 10;
+pub const DT_SOCK: u32 = 12;
+pub const DT_WHT: u32 = 14;
+pub const DIRBLKSIZ: u32 = 1024;
+pub const DTF_HIDEW: u32 = 1;
+pub const DTF_NODUP: u32 = 2;
+pub const DTF_REWIND: u32 = 4;
+pub const __DTF_READALL: u32 = 8;
+pub const __DTF_SKIPREAD: u32 = 16;
+pub const __DTF_ATEND: u32 = 32;
+pub const PG_TEMP_FILES_DIR: &[u8; 10usize] = b"pgsql_tmp\0";
+pub const PG_TEMP_FILE_PREFIX: &[u8; 10usize] = b"pgsql_tmp\0";
 pub const SHARED_TUPLESTORE_SINGLE_PASS: u32 = 1;
 pub const MAX_TIMESTAMP_PRECISION: u32 = 6;
 pub const MAX_INTERVAL_PRECISION: u32 = 6;
@@ -1911,7 +2581,7 @@ pub const POSTGRES_EPOCH_JDATE: u32 = 2451545;
 pub const DATETIME_MIN_JULIAN: u32 = 0;
 pub const DATE_END_JULIAN: u32 = 2147483494;
 pub const TIMESTAMP_END_JULIAN: u32 = 109203528;
-pub const RELCACHE_INIT_FILENAME: &'static [u8; 17usize] = b"pg_internal.init\0";
+pub const RELCACHE_INIT_FILENAME: &[u8; 17usize] = b"pg_internal.init\0";
 pub const INDEX_SIZE_MASK: u32 = 8191;
 pub const INDEX_AM_RESERVED_BIT: u32 = 8192;
 pub const INDEX_VAR_MASK: u32 = 16384;
@@ -2153,7 +2823,7 @@ pub const AUTH_REQ_SASL_CONT: u32 = 11;
 pub const AUTH_REQ_SASL_FIN: u32 = 12;
 pub const MIN_XFN_CHARS: u32 = 16;
 pub const MAX_XFN_CHARS: u32 = 40;
-pub const VALID_XFN_CHARS: &'static [u8; 40usize] = b"0123456789ABCDEF.history.backup.partial\0";
+pub const VALID_XFN_CHARS: &[u8; 40usize] = b"0123456789ABCDEF.history.backup.partial\0";
 pub const CATALOG_VERSION_NO: u32 = 202007201;
 pub const OIDCHARS: u32 = 10;
 pub const FORKNAMECHARS: u32 = 4;
@@ -2227,10 +2897,10 @@ pub const PROC_VACUUM_STATE_MASK: u32 = 14;
 pub const FP_LOCK_SLOTS_PER_BACKEND: u32 = 16;
 pub const INVALID_PGPROCNO: u32 = 2147483647;
 pub const NUM_AUXILIARY_PROCS: u32 = 4;
-pub const PGSTAT_STAT_PERMANENT_DIRECTORY: &'static [u8; 8usize] = b"pg_stat\0";
-pub const PGSTAT_STAT_PERMANENT_FILENAME: &'static [u8; 20usize] = b"pg_stat/global.stat\0";
-pub const PGSTAT_STAT_PERMANENT_TMPFILE: &'static [u8; 19usize] = b"pg_stat/global.tmp\0";
-pub const PG_STAT_TMP_DIR: &'static [u8; 12usize] = b"pg_stat_tmp\0";
+pub const PGSTAT_STAT_PERMANENT_DIRECTORY: &[u8; 8usize] = b"pg_stat\0";
+pub const PGSTAT_STAT_PERMANENT_FILENAME: &[u8; 20usize] = b"pg_stat/global.stat\0";
+pub const PGSTAT_STAT_PERMANENT_TMPFILE: &[u8; 19usize] = b"pg_stat/global.tmp\0";
+pub const PG_STAT_TMP_DIR: &[u8; 12usize] = b"pg_stat_tmp\0";
 pub const PGSTAT_MAX_MSG_SIZE: u32 = 1000;
 pub const PGSTAT_FILE_FORMAT_ID: u32 = 27638941;
 pub const PG_WAIT_LWLOCK: u32 = 16777216;
@@ -2290,14 +2960,14 @@ pub const CHECKPOINT_CAUSE_XLOG: u32 = 128;
 pub const CHECKPOINT_CAUSE_TIME: u32 = 256;
 pub const XLOG_INCLUDE_ORIGIN: u32 = 1;
 pub const XLOG_MARK_UNIMPORTANT: u32 = 2;
-pub const RECOVERY_SIGNAL_FILE: &'static [u8; 16usize] = b"recovery.signal\0";
-pub const STANDBY_SIGNAL_FILE: &'static [u8; 15usize] = b"standby.signal\0";
-pub const BACKUP_LABEL_FILE: &'static [u8; 13usize] = b"backup_label\0";
-pub const BACKUP_LABEL_OLD: &'static [u8; 17usize] = b"backup_label.old\0";
-pub const TABLESPACE_MAP: &'static [u8; 15usize] = b"tablespace_map\0";
-pub const TABLESPACE_MAP_OLD: &'static [u8; 19usize] = b"tablespace_map.old\0";
-pub const PROMOTE_SIGNAL_FILE: &'static [u8; 8usize] = b"promote\0";
-pub const FALLBACK_PROMOTE_SIGNAL_FILE: &'static [u8; 17usize] = b"fallback_promote\0";
+pub const RECOVERY_SIGNAL_FILE: &[u8; 16usize] = b"recovery.signal\0";
+pub const STANDBY_SIGNAL_FILE: &[u8; 15usize] = b"standby.signal\0";
+pub const BACKUP_LABEL_FILE: &[u8; 13usize] = b"backup_label\0";
+pub const BACKUP_LABEL_OLD: &[u8; 17usize] = b"backup_label.old\0";
+pub const TABLESPACE_MAP: &[u8; 15usize] = b"tablespace_map\0";
+pub const TABLESPACE_MAP_OLD: &[u8; 19usize] = b"tablespace_map.old\0";
+pub const PROMOTE_SIGNAL_FILE: &[u8; 8usize] = b"promote\0";
+pub const FALLBACK_PROMOTE_SIGNAL_FILE: &[u8; 17usize] = b"fallback_promote\0";
 pub const GIST_CONSISTENT_PROC: u32 = 1;
 pub const GIST_UNION_PROC: u32 = 2;
 pub const GIST_COMPRESS_PROC: u32 = 3;
@@ -2317,7 +2987,8 @@ pub const F_HAS_GARBAGE: u32 = 16;
 pub const GIST_PAGE_ID: u32 = 65409;
 pub const EOH_HEADER_MAGIC: i32 = -1;
 pub const EA_MAGIC: u32 = 689375833;
-pub const PG_AUTOCONF_FILENAME: &'static [u8; 21usize] = b"postgresql.auto.conf\0";
+pub const MAX_KILOBYTES: u32 = 2147483647;
+pub const PG_AUTOCONF_FILENAME: &[u8; 21usize] = b"postgresql.auto.conf\0";
 pub const GUC_QUALIFIER_SEPARATOR: u8 = 46u8;
 pub const GUC_LIST_INPUT: u32 = 1;
 pub const GUC_LIST_QUOTE: u32 = 2;
@@ -2433,7 +3104,7 @@ pub const Anum_pg_publication_pubviaroot: u32 = 9;
 pub const Natts_pg_publication: u32 = 9;
 pub const HEAP_MIN_FILLFACTOR: u32 = 10;
 pub const HEAP_DEFAULT_FILLFACTOR: u32 = 100;
-pub const DEFAULT_TABLE_ACCESS_METHOD: &'static [u8; 5usize] = b"heap\0";
+pub const DEFAULT_TABLE_ACCESS_METHOD: &[u8; 5usize] = b"heap\0";
 pub const TABLE_INSERT_SKIP_FSM: u32 = 2;
 pub const TABLE_INSERT_FROZEN: u32 = 4;
 pub const TABLE_INSERT_NO_LOGICAL: u32 = 8;
@@ -2452,33 +3123,33 @@ pub const INTERVAL_FULL_RANGE: u32 = 32767;
 pub const INTERVAL_RANGE_MASK: u32 = 32767;
 pub const INTERVAL_FULL_PRECISION: u32 = 65535;
 pub const INTERVAL_PRECISION_MASK: u32 = 65535;
-pub const DAGO: &'static [u8; 4usize] = b"ago\0";
-pub const DCURRENT: &'static [u8; 8usize] = b"current\0";
-pub const EPOCH: &'static [u8; 6usize] = b"epoch\0";
-pub const INVALID: &'static [u8; 8usize] = b"invalid\0";
-pub const EARLY: &'static [u8; 10usize] = b"-infinity\0";
-pub const LATE: &'static [u8; 9usize] = b"infinity\0";
-pub const NOW: &'static [u8; 4usize] = b"now\0";
-pub const TODAY: &'static [u8; 6usize] = b"today\0";
-pub const TOMORROW: &'static [u8; 9usize] = b"tomorrow\0";
-pub const YESTERDAY: &'static [u8; 10usize] = b"yesterday\0";
-pub const ZULU: &'static [u8; 5usize] = b"zulu\0";
-pub const DMICROSEC: &'static [u8; 8usize] = b"usecond\0";
-pub const DMILLISEC: &'static [u8; 8usize] = b"msecond\0";
-pub const DSECOND: &'static [u8; 7usize] = b"second\0";
-pub const DMINUTE: &'static [u8; 7usize] = b"minute\0";
-pub const DHOUR: &'static [u8; 5usize] = b"hour\0";
-pub const DDAY: &'static [u8; 4usize] = b"day\0";
-pub const DWEEK: &'static [u8; 5usize] = b"week\0";
-pub const DMONTH: &'static [u8; 6usize] = b"month\0";
-pub const DQUARTER: &'static [u8; 8usize] = b"quarter\0";
-pub const DYEAR: &'static [u8; 5usize] = b"year\0";
-pub const DDECADE: &'static [u8; 7usize] = b"decade\0";
-pub const DCENTURY: &'static [u8; 8usize] = b"century\0";
-pub const DMILLENNIUM: &'static [u8; 11usize] = b"millennium\0";
-pub const DA_D: &'static [u8; 3usize] = b"ad\0";
-pub const DB_C: &'static [u8; 3usize] = b"bc\0";
-pub const DTIMEZONE: &'static [u8; 9usize] = b"timezone\0";
+pub const DAGO: &[u8; 4usize] = b"ago\0";
+pub const DCURRENT: &[u8; 8usize] = b"current\0";
+pub const EPOCH: &[u8; 6usize] = b"epoch\0";
+pub const INVALID: &[u8; 8usize] = b"invalid\0";
+pub const EARLY: &[u8; 10usize] = b"-infinity\0";
+pub const LATE: &[u8; 9usize] = b"infinity\0";
+pub const NOW: &[u8; 4usize] = b"now\0";
+pub const TODAY: &[u8; 6usize] = b"today\0";
+pub const TOMORROW: &[u8; 9usize] = b"tomorrow\0";
+pub const YESTERDAY: &[u8; 10usize] = b"yesterday\0";
+pub const ZULU: &[u8; 5usize] = b"zulu\0";
+pub const DMICROSEC: &[u8; 8usize] = b"usecond\0";
+pub const DMILLISEC: &[u8; 8usize] = b"msecond\0";
+pub const DSECOND: &[u8; 7usize] = b"second\0";
+pub const DMINUTE: &[u8; 7usize] = b"minute\0";
+pub const DHOUR: &[u8; 5usize] = b"hour\0";
+pub const DDAY: &[u8; 4usize] = b"day\0";
+pub const DWEEK: &[u8; 5usize] = b"week\0";
+pub const DMONTH: &[u8; 6usize] = b"month\0";
+pub const DQUARTER: &[u8; 8usize] = b"quarter\0";
+pub const DYEAR: &[u8; 5usize] = b"year\0";
+pub const DDECADE: &[u8; 7usize] = b"decade\0";
+pub const DCENTURY: &[u8; 8usize] = b"century\0";
+pub const DMILLENNIUM: &[u8; 11usize] = b"millennium\0";
+pub const DA_D: &[u8; 3usize] = b"ad\0";
+pub const DB_C: &[u8; 3usize] = b"bc\0";
+pub const DTIMEZONE: &[u8; 9usize] = b"timezone\0";
 pub const AM: u32 = 0;
 pub const PM: u32 = 1;
 pub const HR24: u32 = 2;
@@ -2590,7 +3261,7 @@ pub const PERFORM_DELETION_QUIETLY: u32 = 4;
 pub const PERFORM_DELETION_SKIP_ORIGINAL: u32 = 8;
 pub const PERFORM_DELETION_SKIP_EXTENSIONS: u32 = 16;
 pub const PERFORM_DELETION_CONCURRENT_LOCK: u32 = 32;
-pub const DEFAULT_INDEX_TYPE: &'static [u8; 6usize] = b"btree\0";
+pub const DEFAULT_INDEX_TYPE: &[u8; 6usize] = b"btree\0";
 pub const INDEX_CREATE_IS_PRIMARY: u32 = 1;
 pub const INDEX_CREATE_ADD_CONSTRAINT: u32 = 2;
 pub const INDEX_CREATE_SKIP_BUILD: u32 = 4;
@@ -2825,6 +3496,61 @@ pub const GROUPING_CAN_USE_HASH: u32 = 2;
 pub const GROUPING_CAN_PARTIAL_AGG: u32 = 4;
 pub const FSV_MISSING_OK: u32 = 1;
 pub const FDW_MISSING_OK: u32 = 1;
+pub const MAX_MULTIBYTE_CHAR_LEN: u32 = 4;
+pub const SS2: u32 = 142;
+pub const SS3: u32 = 143;
+pub const LC_ISO8859_1: u32 = 129;
+pub const LC_ISO8859_2: u32 = 130;
+pub const LC_ISO8859_3: u32 = 131;
+pub const LC_ISO8859_4: u32 = 132;
+pub const LC_TIS620: u32 = 133;
+pub const LC_ISO8859_7: u32 = 134;
+pub const LC_ISO8859_6: u32 = 135;
+pub const LC_ISO8859_8: u32 = 136;
+pub const LC_JISX0201K: u32 = 137;
+pub const LC_JISX0201R: u32 = 138;
+pub const LC_KOI8_R: u32 = 139;
+pub const LC_ISO8859_5: u32 = 140;
+pub const LC_ISO8859_9: u32 = 141;
+pub const LC_ISO8859_15: u32 = 142;
+pub const LC_JISX0208_1978: u32 = 144;
+pub const LC_GB2312_80: u32 = 145;
+pub const LC_JISX0208: u32 = 146;
+pub const LC_KS5601: u32 = 147;
+pub const LC_JISX0212: u32 = 148;
+pub const LC_CNS11643_1: u32 = 149;
+pub const LC_CNS11643_2: u32 = 150;
+pub const LC_JISX0213_1: u32 = 151;
+pub const LC_BIG5_1: u32 = 152;
+pub const LC_BIG5_2: u32 = 153;
+pub const LCPRV1_A: u32 = 154;
+pub const LCPRV1_B: u32 = 155;
+pub const LCPRV2_A: u32 = 156;
+pub const LCPRV2_B: u32 = 157;
+pub const LC_SISHENG: u32 = 160;
+pub const LC_IPA: u32 = 161;
+pub const LC_VISCII_LOWER: u32 = 162;
+pub const LC_VISCII_UPPER: u32 = 163;
+pub const LC_ARABIC_DIGIT: u32 = 164;
+pub const LC_ARABIC_1_COLUMN: u32 = 165;
+pub const LC_ASCII_RIGHT_TO_LEFT: u32 = 166;
+pub const LC_LAO: u32 = 167;
+pub const LC_ARABIC_2_COLUMN: u32 = 168;
+pub const LC_INDIAN_1_COLUMN: u32 = 240;
+pub const LC_TIBETAN_1_COLUMN: u32 = 241;
+pub const LC_UNICODE_SUBSET_2: u32 = 242;
+pub const LC_UNICODE_SUBSET_3: u32 = 243;
+pub const LC_UNICODE_SUBSET: u32 = 244;
+pub const LC_ETHIOPIC: u32 = 245;
+pub const LC_CNS11643_3: u32 = 246;
+pub const LC_CNS11643_4: u32 = 247;
+pub const LC_CNS11643_5: u32 = 248;
+pub const LC_CNS11643_6: u32 = 249;
+pub const LC_CNS11643_7: u32 = 250;
+pub const LC_INDIAN_2_COLUMN: u32 = 251;
+pub const LC_TIBETAN: u32 = 252;
+pub const MAX_CONVERSION_GROWTH: u32 = 4;
+pub const MAX_UNICODE_EQUIVALENT_STRING: u32 = 16;
 pub const EXTNODENAME_MAX_LEN: u32 = 64;
 pub const CUSTOMPATH_SUPPORT_BACKWARD_SCAN: u32 = 1;
 pub const CUSTOMPATH_SUPPORT_MARK_RESTORE: u32 = 2;
@@ -3015,9 +3741,18 @@ pub type __socklen_t = ::std::os::raw::c_uint;
 pub type __sig_atomic_t = ::std::os::raw::c_int;
 #[repr(C)]
 #[derive(Copy, Clone)]
-pub struct __mbstate_t {
-    pub __count: ::std::os::raw::c_int,
-    pub __value: __mbstate_t__bindgen_ty_1,
+pub union __mbstate_t {
+    pub __mbstate8: [::std::os::raw::c_char; 128usize],
+    pub _mbstateL: ::std::os::raw::c_longlong,
+}
+impl Default for __mbstate_t {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -3027,35 +3762,57 @@ pub union __mbstate_t__bindgen_ty_1 {
 }
 impl Default for __mbstate_t__bindgen_ty_1 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
-    }
-}
-impl Default for __mbstate_t {
-    fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
-pub struct _G_fpos_t {
-    pub __pos: __off_t,
-    pub __state: __mbstate_t,
+#[derive(Debug, Copy, Clone)]
+pub struct _opaque_pthread_attr_t {
+    pub __sig: ::std::os::raw::c_long,
+    pub __opaque: [::std::os::raw::c_char; 56usize],
+}
+impl Default for _opaque_pthread_attr_t {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _opaque_pthread_cond_t {
+    pub __sig: ::std::os::raw::c_long,
+    pub __opaque: [::std::os::raw::c_char; 40usize],
 }
 impl Default for _G_fpos_t {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type __fpos_t = _G_fpos_t;
 #[repr(C)]
-#[derive(Copy, Clone)]
-pub struct _G_fpos64_t {
-    pub __pos: __off64_t,
-    pub __state: __mbstate_t,
+#[derive(Debug, Copy, Clone)]
+pub struct _opaque_pthread_mutex_t {
+    pub __sig: ::std::os::raw::c_long,
+    pub __opaque: [::std::os::raw::c_char; 56usize],
 }
 impl Default for _G_fpos64_t {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type __fpos64_t = _G_fpos64_t;
@@ -3073,8 +3830,9 @@ pub struct _IO_codecvt {
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct _IO_wide_data {
-    _unused: [u8; 0],
+pub struct _opaque_pthread_rwlock_t {
+    pub __sig: ::std::os::raw::c_long,
+    pub __opaque: [::std::os::raw::c_char; 192usize],
 }
 pub type _IO_lock_t = ::std::os::raw::c_void;
 #[repr(C)]
@@ -3112,11 +3870,62 @@ pub struct _IO_FILE {
 }
 impl Default for _IO_FILE {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
-pub type off_t = __off_t;
-pub type fpos_t = __fpos_t;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct _opaque_pthread_rwlockattr_t {
+    pub __sig: ::std::os::raw::c_long,
+    pub __opaque: [::std::os::raw::c_char; 16usize],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _opaque_pthread_t {
+    pub __sig: ::std::os::raw::c_long,
+    pub __cleanup_stack: *mut __darwin_pthread_handler_rec,
+    pub __opaque: [::std::os::raw::c_char; 8176usize],
+}
+impl Default for _opaque_pthread_t {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type __darwin_pthread_attr_t = _opaque_pthread_attr_t;
+pub type __darwin_pthread_cond_t = _opaque_pthread_cond_t;
+pub type __darwin_pthread_condattr_t = _opaque_pthread_condattr_t;
+pub type __darwin_pthread_key_t = ::std::os::raw::c_ulong;
+pub type __darwin_pthread_mutex_t = _opaque_pthread_mutex_t;
+pub type __darwin_pthread_mutexattr_t = _opaque_pthread_mutexattr_t;
+pub type __darwin_pthread_once_t = _opaque_pthread_once_t;
+pub type __darwin_pthread_rwlock_t = _opaque_pthread_rwlock_t;
+pub type __darwin_pthread_rwlockattr_t = _opaque_pthread_rwlockattr_t;
+pub type __darwin_pthread_t = *mut _opaque_pthread_t;
+pub type __darwin_nl_item = ::std::os::raw::c_int;
+pub type __darwin_wctrans_t = ::std::os::raw::c_int;
+pub type __darwin_wctype_t = __uint32_t;
+pub type u_int8_t = ::std::os::raw::c_uchar;
+pub type u_int16_t = ::std::os::raw::c_ushort;
+pub type u_int32_t = ::std::os::raw::c_uint;
+pub type u_int64_t = ::std::os::raw::c_ulonglong;
+pub type register_t = i64;
+pub type user_addr_t = u_int64_t;
+pub type user_size_t = u_int64_t;
+pub type user_ssize_t = i64;
+pub type user_long_t = i64;
+pub type user_ulong_t = u_int64_t;
+pub type user_time_t = i64;
+pub type user_off_t = i64;
+pub type syscall_arg_t = u_int64_t;
+pub type va_list = __darwin_va_list;
 #[pg_guard]
 extern "C" {
     pub static mut stdin: *mut FILE;
@@ -3127,7 +3936,29 @@ extern "C" {
 }
 #[pg_guard]
 extern "C" {
-    pub static mut stderr: *mut FILE;
+    pub fn renameatx_np(
+        arg1: ::std::os::raw::c_int,
+        arg2: *const ::std::os::raw::c_char,
+        arg3: ::std::os::raw::c_int,
+        arg4: *const ::std::os::raw::c_char,
+        arg5: ::std::os::raw::c_uint,
+    ) -> ::std::os::raw::c_int;
+}
+pub type fpos_t = __darwin_off_t;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __sbuf {
+    pub _base: *mut ::std::os::raw::c_uchar,
+    pub _size: ::std::os::raw::c_int,
+}
+impl Default for __sbuf {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -3140,14 +3971,14 @@ extern "C" {
         __new: *const ::std::os::raw::c_char,
     ) -> ::std::os::raw::c_int;
 }
-#[pg_guard]
-extern "C" {
-    pub fn renameat(
-        __oldfd: ::std::os::raw::c_int,
-        __old: *const ::std::os::raw::c_char,
-        __newfd: ::std::os::raw::c_int,
-        __new: *const ::std::os::raw::c_char,
-    ) -> ::std::os::raw::c_int;
+impl Default for __sFILE {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -3824,20 +4655,18 @@ pub struct timespec {
 pub type suseconds_t = __suseconds_t;
 pub type __fd_mask = ::std::os::raw::c_long;
 #[repr(C)]
-#[derive(Debug, Default, Copy, Clone)]
-pub struct fd_set {
-    pub __fds_bits: [__fd_mask; 16usize],
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_zmm_reg {
+    pub __zmm_reg: [::std::os::raw::c_char; 64usize],
 }
-pub type fd_mask = __fd_mask;
-#[pg_guard]
-extern "C" {
-    pub fn select(
-        __nfds: ::std::os::raw::c_int,
-        __readfds: *mut fd_set,
-        __writefds: *mut fd_set,
-        __exceptfds: *mut fd_set,
-        __timeout: *mut timeval,
-    ) -> ::std::os::raw::c_int;
+impl Default for __darwin_zmm_reg {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -3856,41 +4685,211 @@ pub type fsblkcnt_t = __fsblkcnt_t;
 pub type fsfilcnt_t = __fsfilcnt_t;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct __pthread_internal_list {
-    pub __prev: *mut __pthread_internal_list,
-    pub __next: *mut __pthread_internal_list,
+pub struct __darwin_i386_float_state {
+    pub __fpu_reserved: [::std::os::raw::c_int; 2usize],
+    pub __fpu_fcw: __darwin_fp_control,
+    pub __fpu_fsw: __darwin_fp_status,
+    pub __fpu_ftw: __uint8_t,
+    pub __fpu_rsrv1: __uint8_t,
+    pub __fpu_fop: __uint16_t,
+    pub __fpu_ip: __uint32_t,
+    pub __fpu_cs: __uint16_t,
+    pub __fpu_rsrv2: __uint16_t,
+    pub __fpu_dp: __uint32_t,
+    pub __fpu_ds: __uint16_t,
+    pub __fpu_rsrv3: __uint16_t,
+    pub __fpu_mxcsr: __uint32_t,
+    pub __fpu_mxcsrmask: __uint32_t,
+    pub __fpu_stmm0: __darwin_mmst_reg,
+    pub __fpu_stmm1: __darwin_mmst_reg,
+    pub __fpu_stmm2: __darwin_mmst_reg,
+    pub __fpu_stmm3: __darwin_mmst_reg,
+    pub __fpu_stmm4: __darwin_mmst_reg,
+    pub __fpu_stmm5: __darwin_mmst_reg,
+    pub __fpu_stmm6: __darwin_mmst_reg,
+    pub __fpu_stmm7: __darwin_mmst_reg,
+    pub __fpu_xmm0: __darwin_xmm_reg,
+    pub __fpu_xmm1: __darwin_xmm_reg,
+    pub __fpu_xmm2: __darwin_xmm_reg,
+    pub __fpu_xmm3: __darwin_xmm_reg,
+    pub __fpu_xmm4: __darwin_xmm_reg,
+    pub __fpu_xmm5: __darwin_xmm_reg,
+    pub __fpu_xmm6: __darwin_xmm_reg,
+    pub __fpu_xmm7: __darwin_xmm_reg,
+    pub __fpu_rsrv4: [::std::os::raw::c_char; 224usize],
+    pub __fpu_reserved1: ::std::os::raw::c_int,
 }
-impl Default for __pthread_internal_list {
+impl Default for __darwin_i386_float_state {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_i386_avx_state {
+    pub __fpu_reserved: [::std::os::raw::c_int; 2usize],
+    pub __fpu_fcw: __darwin_fp_control,
+    pub __fpu_fsw: __darwin_fp_status,
+    pub __fpu_ftw: __uint8_t,
+    pub __fpu_rsrv1: __uint8_t,
+    pub __fpu_fop: __uint16_t,
+    pub __fpu_ip: __uint32_t,
+    pub __fpu_cs: __uint16_t,
+    pub __fpu_rsrv2: __uint16_t,
+    pub __fpu_dp: __uint32_t,
+    pub __fpu_ds: __uint16_t,
+    pub __fpu_rsrv3: __uint16_t,
+    pub __fpu_mxcsr: __uint32_t,
+    pub __fpu_mxcsrmask: __uint32_t,
+    pub __fpu_stmm0: __darwin_mmst_reg,
+    pub __fpu_stmm1: __darwin_mmst_reg,
+    pub __fpu_stmm2: __darwin_mmst_reg,
+    pub __fpu_stmm3: __darwin_mmst_reg,
+    pub __fpu_stmm4: __darwin_mmst_reg,
+    pub __fpu_stmm5: __darwin_mmst_reg,
+    pub __fpu_stmm6: __darwin_mmst_reg,
+    pub __fpu_stmm7: __darwin_mmst_reg,
+    pub __fpu_xmm0: __darwin_xmm_reg,
+    pub __fpu_xmm1: __darwin_xmm_reg,
+    pub __fpu_xmm2: __darwin_xmm_reg,
+    pub __fpu_xmm3: __darwin_xmm_reg,
+    pub __fpu_xmm4: __darwin_xmm_reg,
+    pub __fpu_xmm5: __darwin_xmm_reg,
+    pub __fpu_xmm6: __darwin_xmm_reg,
+    pub __fpu_xmm7: __darwin_xmm_reg,
+    pub __fpu_rsrv4: [::std::os::raw::c_char; 224usize],
+    pub __fpu_reserved1: ::std::os::raw::c_int,
+    pub __avx_reserved1: [::std::os::raw::c_char; 64usize],
+    pub __fpu_ymmh0: __darwin_xmm_reg,
+    pub __fpu_ymmh1: __darwin_xmm_reg,
+    pub __fpu_ymmh2: __darwin_xmm_reg,
+    pub __fpu_ymmh3: __darwin_xmm_reg,
+    pub __fpu_ymmh4: __darwin_xmm_reg,
+    pub __fpu_ymmh5: __darwin_xmm_reg,
+    pub __fpu_ymmh6: __darwin_xmm_reg,
+    pub __fpu_ymmh7: __darwin_xmm_reg,
+}
+impl Default for __darwin_i386_avx_state {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type __pthread_list_t = __pthread_internal_list;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct __pthread_internal_slist {
-    pub __next: *mut __pthread_internal_slist,
+pub struct __darwin_i386_avx512_state {
+    pub __fpu_reserved: [::std::os::raw::c_int; 2usize],
+    pub __fpu_fcw: __darwin_fp_control,
+    pub __fpu_fsw: __darwin_fp_status,
+    pub __fpu_ftw: __uint8_t,
+    pub __fpu_rsrv1: __uint8_t,
+    pub __fpu_fop: __uint16_t,
+    pub __fpu_ip: __uint32_t,
+    pub __fpu_cs: __uint16_t,
+    pub __fpu_rsrv2: __uint16_t,
+    pub __fpu_dp: __uint32_t,
+    pub __fpu_ds: __uint16_t,
+    pub __fpu_rsrv3: __uint16_t,
+    pub __fpu_mxcsr: __uint32_t,
+    pub __fpu_mxcsrmask: __uint32_t,
+    pub __fpu_stmm0: __darwin_mmst_reg,
+    pub __fpu_stmm1: __darwin_mmst_reg,
+    pub __fpu_stmm2: __darwin_mmst_reg,
+    pub __fpu_stmm3: __darwin_mmst_reg,
+    pub __fpu_stmm4: __darwin_mmst_reg,
+    pub __fpu_stmm5: __darwin_mmst_reg,
+    pub __fpu_stmm6: __darwin_mmst_reg,
+    pub __fpu_stmm7: __darwin_mmst_reg,
+    pub __fpu_xmm0: __darwin_xmm_reg,
+    pub __fpu_xmm1: __darwin_xmm_reg,
+    pub __fpu_xmm2: __darwin_xmm_reg,
+    pub __fpu_xmm3: __darwin_xmm_reg,
+    pub __fpu_xmm4: __darwin_xmm_reg,
+    pub __fpu_xmm5: __darwin_xmm_reg,
+    pub __fpu_xmm6: __darwin_xmm_reg,
+    pub __fpu_xmm7: __darwin_xmm_reg,
+    pub __fpu_rsrv4: [::std::os::raw::c_char; 224usize],
+    pub __fpu_reserved1: ::std::os::raw::c_int,
+    pub __avx_reserved1: [::std::os::raw::c_char; 64usize],
+    pub __fpu_ymmh0: __darwin_xmm_reg,
+    pub __fpu_ymmh1: __darwin_xmm_reg,
+    pub __fpu_ymmh2: __darwin_xmm_reg,
+    pub __fpu_ymmh3: __darwin_xmm_reg,
+    pub __fpu_ymmh4: __darwin_xmm_reg,
+    pub __fpu_ymmh5: __darwin_xmm_reg,
+    pub __fpu_ymmh6: __darwin_xmm_reg,
+    pub __fpu_ymmh7: __darwin_xmm_reg,
+    pub __fpu_k0: __darwin_opmask_reg,
+    pub __fpu_k1: __darwin_opmask_reg,
+    pub __fpu_k2: __darwin_opmask_reg,
+    pub __fpu_k3: __darwin_opmask_reg,
+    pub __fpu_k4: __darwin_opmask_reg,
+    pub __fpu_k5: __darwin_opmask_reg,
+    pub __fpu_k6: __darwin_opmask_reg,
+    pub __fpu_k7: __darwin_opmask_reg,
+    pub __fpu_zmmh0: __darwin_ymm_reg,
+    pub __fpu_zmmh1: __darwin_ymm_reg,
+    pub __fpu_zmmh2: __darwin_ymm_reg,
+    pub __fpu_zmmh3: __darwin_ymm_reg,
+    pub __fpu_zmmh4: __darwin_ymm_reg,
+    pub __fpu_zmmh5: __darwin_ymm_reg,
+    pub __fpu_zmmh6: __darwin_ymm_reg,
+    pub __fpu_zmmh7: __darwin_ymm_reg,
 }
-impl Default for __pthread_internal_slist {
+impl Default for __darwin_i386_avx512_state {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type __pthread_slist_t = __pthread_internal_slist;
 #[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct __darwin_i386_exception_state {
+    pub __trapno: __uint16_t,
+    pub __cpu: __uint16_t,
+    pub __err: __uint32_t,
+    pub __faultvaddr: __uint32_t,
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct __darwin_x86_debug_state32 {
+    pub __dr0: ::std::os::raw::c_uint,
+    pub __dr1: ::std::os::raw::c_uint,
+    pub __dr2: ::std::os::raw::c_uint,
+    pub __dr3: ::std::os::raw::c_uint,
+    pub __dr4: ::std::os::raw::c_uint,
+    pub __dr5: ::std::os::raw::c_uint,
+    pub __dr6: ::std::os::raw::c_uint,
+    pub __dr7: ::std::os::raw::c_uint,
+}
+#[repr(C)]
 #[derive(Debug, Copy, Clone)]
-pub struct __pthread_mutex_s {
-    pub __lock: ::std::os::raw::c_int,
-    pub __count: ::std::os::raw::c_uint,
-    pub __owner: ::std::os::raw::c_int,
-    pub __nusers: ::std::os::raw::c_uint,
-    pub __kind: ::std::os::raw::c_int,
-    pub __spins: ::std::os::raw::c_int,
-    pub __list: __pthread_list_t,
+pub struct __x86_instruction_state {
+    pub __insn_stream_valid_bytes: ::std::os::raw::c_int,
+    pub __insn_offset: ::std::os::raw::c_int,
+    pub __out_of_synch: ::std::os::raw::c_int,
+    pub __insn_bytes: [__uint8_t; 2380usize],
+    pub __insn_cacheline: [__uint8_t; 64usize],
 }
 impl Default for __pthread_mutex_s {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -3931,31 +4930,237 @@ pub struct __pthread_cond_s__bindgen_ty_1__bindgen_ty_1 {
     pub __low: ::std::os::raw::c_uint,
     pub __high: ::std::os::raw::c_uint,
 }
-impl Default for __pthread_cond_s__bindgen_ty_1 {
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_x86_float_state64 {
+    pub __fpu_reserved: [::std::os::raw::c_int; 2usize],
+    pub __fpu_fcw: __darwin_fp_control,
+    pub __fpu_fsw: __darwin_fp_status,
+    pub __fpu_ftw: __uint8_t,
+    pub __fpu_rsrv1: __uint8_t,
+    pub __fpu_fop: __uint16_t,
+    pub __fpu_ip: __uint32_t,
+    pub __fpu_cs: __uint16_t,
+    pub __fpu_rsrv2: __uint16_t,
+    pub __fpu_dp: __uint32_t,
+    pub __fpu_ds: __uint16_t,
+    pub __fpu_rsrv3: __uint16_t,
+    pub __fpu_mxcsr: __uint32_t,
+    pub __fpu_mxcsrmask: __uint32_t,
+    pub __fpu_stmm0: __darwin_mmst_reg,
+    pub __fpu_stmm1: __darwin_mmst_reg,
+    pub __fpu_stmm2: __darwin_mmst_reg,
+    pub __fpu_stmm3: __darwin_mmst_reg,
+    pub __fpu_stmm4: __darwin_mmst_reg,
+    pub __fpu_stmm5: __darwin_mmst_reg,
+    pub __fpu_stmm6: __darwin_mmst_reg,
+    pub __fpu_stmm7: __darwin_mmst_reg,
+    pub __fpu_xmm0: __darwin_xmm_reg,
+    pub __fpu_xmm1: __darwin_xmm_reg,
+    pub __fpu_xmm2: __darwin_xmm_reg,
+    pub __fpu_xmm3: __darwin_xmm_reg,
+    pub __fpu_xmm4: __darwin_xmm_reg,
+    pub __fpu_xmm5: __darwin_xmm_reg,
+    pub __fpu_xmm6: __darwin_xmm_reg,
+    pub __fpu_xmm7: __darwin_xmm_reg,
+    pub __fpu_xmm8: __darwin_xmm_reg,
+    pub __fpu_xmm9: __darwin_xmm_reg,
+    pub __fpu_xmm10: __darwin_xmm_reg,
+    pub __fpu_xmm11: __darwin_xmm_reg,
+    pub __fpu_xmm12: __darwin_xmm_reg,
+    pub __fpu_xmm13: __darwin_xmm_reg,
+    pub __fpu_xmm14: __darwin_xmm_reg,
+    pub __fpu_xmm15: __darwin_xmm_reg,
+    pub __fpu_rsrv4: [::std::os::raw::c_char; 96usize],
+    pub __fpu_reserved1: ::std::os::raw::c_int,
+}
+impl Default for __darwin_x86_float_state64 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
-pub union __pthread_cond_s__bindgen_ty_2 {
-    pub __g1_start: ::std::os::raw::c_ulonglong,
-    pub __g1_start32: __pthread_cond_s__bindgen_ty_2__bindgen_ty_1,
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_x86_avx_state64 {
+    pub __fpu_reserved: [::std::os::raw::c_int; 2usize],
+    pub __fpu_fcw: __darwin_fp_control,
+    pub __fpu_fsw: __darwin_fp_status,
+    pub __fpu_ftw: __uint8_t,
+    pub __fpu_rsrv1: __uint8_t,
+    pub __fpu_fop: __uint16_t,
+    pub __fpu_ip: __uint32_t,
+    pub __fpu_cs: __uint16_t,
+    pub __fpu_rsrv2: __uint16_t,
+    pub __fpu_dp: __uint32_t,
+    pub __fpu_ds: __uint16_t,
+    pub __fpu_rsrv3: __uint16_t,
+    pub __fpu_mxcsr: __uint32_t,
+    pub __fpu_mxcsrmask: __uint32_t,
+    pub __fpu_stmm0: __darwin_mmst_reg,
+    pub __fpu_stmm1: __darwin_mmst_reg,
+    pub __fpu_stmm2: __darwin_mmst_reg,
+    pub __fpu_stmm3: __darwin_mmst_reg,
+    pub __fpu_stmm4: __darwin_mmst_reg,
+    pub __fpu_stmm5: __darwin_mmst_reg,
+    pub __fpu_stmm6: __darwin_mmst_reg,
+    pub __fpu_stmm7: __darwin_mmst_reg,
+    pub __fpu_xmm0: __darwin_xmm_reg,
+    pub __fpu_xmm1: __darwin_xmm_reg,
+    pub __fpu_xmm2: __darwin_xmm_reg,
+    pub __fpu_xmm3: __darwin_xmm_reg,
+    pub __fpu_xmm4: __darwin_xmm_reg,
+    pub __fpu_xmm5: __darwin_xmm_reg,
+    pub __fpu_xmm6: __darwin_xmm_reg,
+    pub __fpu_xmm7: __darwin_xmm_reg,
+    pub __fpu_xmm8: __darwin_xmm_reg,
+    pub __fpu_xmm9: __darwin_xmm_reg,
+    pub __fpu_xmm10: __darwin_xmm_reg,
+    pub __fpu_xmm11: __darwin_xmm_reg,
+    pub __fpu_xmm12: __darwin_xmm_reg,
+    pub __fpu_xmm13: __darwin_xmm_reg,
+    pub __fpu_xmm14: __darwin_xmm_reg,
+    pub __fpu_xmm15: __darwin_xmm_reg,
+    pub __fpu_rsrv4: [::std::os::raw::c_char; 96usize],
+    pub __fpu_reserved1: ::std::os::raw::c_int,
+    pub __avx_reserved1: [::std::os::raw::c_char; 64usize],
+    pub __fpu_ymmh0: __darwin_xmm_reg,
+    pub __fpu_ymmh1: __darwin_xmm_reg,
+    pub __fpu_ymmh2: __darwin_xmm_reg,
+    pub __fpu_ymmh3: __darwin_xmm_reg,
+    pub __fpu_ymmh4: __darwin_xmm_reg,
+    pub __fpu_ymmh5: __darwin_xmm_reg,
+    pub __fpu_ymmh6: __darwin_xmm_reg,
+    pub __fpu_ymmh7: __darwin_xmm_reg,
+    pub __fpu_ymmh8: __darwin_xmm_reg,
+    pub __fpu_ymmh9: __darwin_xmm_reg,
+    pub __fpu_ymmh10: __darwin_xmm_reg,
+    pub __fpu_ymmh11: __darwin_xmm_reg,
+    pub __fpu_ymmh12: __darwin_xmm_reg,
+    pub __fpu_ymmh13: __darwin_xmm_reg,
+    pub __fpu_ymmh14: __darwin_xmm_reg,
+    pub __fpu_ymmh15: __darwin_xmm_reg,
 }
-#[repr(C)]
-#[derive(Debug, Default, Copy, Clone)]
-pub struct __pthread_cond_s__bindgen_ty_2__bindgen_ty_1 {
-    pub __low: ::std::os::raw::c_uint,
-    pub __high: ::std::os::raw::c_uint,
-}
-impl Default for __pthread_cond_s__bindgen_ty_2 {
+impl Default for __darwin_x86_avx_state64 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
-impl Default for __pthread_cond_s {
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_x86_avx512_state64 {
+    pub __fpu_reserved: [::std::os::raw::c_int; 2usize],
+    pub __fpu_fcw: __darwin_fp_control,
+    pub __fpu_fsw: __darwin_fp_status,
+    pub __fpu_ftw: __uint8_t,
+    pub __fpu_rsrv1: __uint8_t,
+    pub __fpu_fop: __uint16_t,
+    pub __fpu_ip: __uint32_t,
+    pub __fpu_cs: __uint16_t,
+    pub __fpu_rsrv2: __uint16_t,
+    pub __fpu_dp: __uint32_t,
+    pub __fpu_ds: __uint16_t,
+    pub __fpu_rsrv3: __uint16_t,
+    pub __fpu_mxcsr: __uint32_t,
+    pub __fpu_mxcsrmask: __uint32_t,
+    pub __fpu_stmm0: __darwin_mmst_reg,
+    pub __fpu_stmm1: __darwin_mmst_reg,
+    pub __fpu_stmm2: __darwin_mmst_reg,
+    pub __fpu_stmm3: __darwin_mmst_reg,
+    pub __fpu_stmm4: __darwin_mmst_reg,
+    pub __fpu_stmm5: __darwin_mmst_reg,
+    pub __fpu_stmm6: __darwin_mmst_reg,
+    pub __fpu_stmm7: __darwin_mmst_reg,
+    pub __fpu_xmm0: __darwin_xmm_reg,
+    pub __fpu_xmm1: __darwin_xmm_reg,
+    pub __fpu_xmm2: __darwin_xmm_reg,
+    pub __fpu_xmm3: __darwin_xmm_reg,
+    pub __fpu_xmm4: __darwin_xmm_reg,
+    pub __fpu_xmm5: __darwin_xmm_reg,
+    pub __fpu_xmm6: __darwin_xmm_reg,
+    pub __fpu_xmm7: __darwin_xmm_reg,
+    pub __fpu_xmm8: __darwin_xmm_reg,
+    pub __fpu_xmm9: __darwin_xmm_reg,
+    pub __fpu_xmm10: __darwin_xmm_reg,
+    pub __fpu_xmm11: __darwin_xmm_reg,
+    pub __fpu_xmm12: __darwin_xmm_reg,
+    pub __fpu_xmm13: __darwin_xmm_reg,
+    pub __fpu_xmm14: __darwin_xmm_reg,
+    pub __fpu_xmm15: __darwin_xmm_reg,
+    pub __fpu_rsrv4: [::std::os::raw::c_char; 96usize],
+    pub __fpu_reserved1: ::std::os::raw::c_int,
+    pub __avx_reserved1: [::std::os::raw::c_char; 64usize],
+    pub __fpu_ymmh0: __darwin_xmm_reg,
+    pub __fpu_ymmh1: __darwin_xmm_reg,
+    pub __fpu_ymmh2: __darwin_xmm_reg,
+    pub __fpu_ymmh3: __darwin_xmm_reg,
+    pub __fpu_ymmh4: __darwin_xmm_reg,
+    pub __fpu_ymmh5: __darwin_xmm_reg,
+    pub __fpu_ymmh6: __darwin_xmm_reg,
+    pub __fpu_ymmh7: __darwin_xmm_reg,
+    pub __fpu_ymmh8: __darwin_xmm_reg,
+    pub __fpu_ymmh9: __darwin_xmm_reg,
+    pub __fpu_ymmh10: __darwin_xmm_reg,
+    pub __fpu_ymmh11: __darwin_xmm_reg,
+    pub __fpu_ymmh12: __darwin_xmm_reg,
+    pub __fpu_ymmh13: __darwin_xmm_reg,
+    pub __fpu_ymmh14: __darwin_xmm_reg,
+    pub __fpu_ymmh15: __darwin_xmm_reg,
+    pub __fpu_k0: __darwin_opmask_reg,
+    pub __fpu_k1: __darwin_opmask_reg,
+    pub __fpu_k2: __darwin_opmask_reg,
+    pub __fpu_k3: __darwin_opmask_reg,
+    pub __fpu_k4: __darwin_opmask_reg,
+    pub __fpu_k5: __darwin_opmask_reg,
+    pub __fpu_k6: __darwin_opmask_reg,
+    pub __fpu_k7: __darwin_opmask_reg,
+    pub __fpu_zmmh0: __darwin_ymm_reg,
+    pub __fpu_zmmh1: __darwin_ymm_reg,
+    pub __fpu_zmmh2: __darwin_ymm_reg,
+    pub __fpu_zmmh3: __darwin_ymm_reg,
+    pub __fpu_zmmh4: __darwin_ymm_reg,
+    pub __fpu_zmmh5: __darwin_ymm_reg,
+    pub __fpu_zmmh6: __darwin_ymm_reg,
+    pub __fpu_zmmh7: __darwin_ymm_reg,
+    pub __fpu_zmmh8: __darwin_ymm_reg,
+    pub __fpu_zmmh9: __darwin_ymm_reg,
+    pub __fpu_zmmh10: __darwin_ymm_reg,
+    pub __fpu_zmmh11: __darwin_ymm_reg,
+    pub __fpu_zmmh12: __darwin_ymm_reg,
+    pub __fpu_zmmh13: __darwin_ymm_reg,
+    pub __fpu_zmmh14: __darwin_ymm_reg,
+    pub __fpu_zmmh15: __darwin_ymm_reg,
+    pub __fpu_zmm16: __darwin_zmm_reg,
+    pub __fpu_zmm17: __darwin_zmm_reg,
+    pub __fpu_zmm18: __darwin_zmm_reg,
+    pub __fpu_zmm19: __darwin_zmm_reg,
+    pub __fpu_zmm20: __darwin_zmm_reg,
+    pub __fpu_zmm21: __darwin_zmm_reg,
+    pub __fpu_zmm22: __darwin_zmm_reg,
+    pub __fpu_zmm23: __darwin_zmm_reg,
+    pub __fpu_zmm24: __darwin_zmm_reg,
+    pub __fpu_zmm25: __darwin_zmm_reg,
+    pub __fpu_zmm26: __darwin_zmm_reg,
+    pub __fpu_zmm27: __darwin_zmm_reg,
+    pub __fpu_zmm28: __darwin_zmm_reg,
+    pub __fpu_zmm29: __darwin_zmm_reg,
+    pub __fpu_zmm30: __darwin_zmm_reg,
+    pub __fpu_zmm31: __darwin_zmm_reg,
+}
+impl Default for __darwin_x86_avx512_state64 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type __tss_t = ::std::os::raw::c_uint;
@@ -3967,117 +5172,189 @@ pub struct __once_flag {
 }
 pub type pthread_t = ::std::os::raw::c_ulong;
 #[repr(C)]
-#[derive(Copy, Clone)]
-pub union pthread_mutexattr_t {
-    pub __size: [::std::os::raw::c_char; 8usize],
-    pub __align: ::std::os::raw::c_int,
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_mcontext32 {
+    pub __es: __darwin_i386_exception_state,
+    pub __ss: __darwin_i386_thread_state,
+    pub __fs: __darwin_i386_float_state,
 }
 impl Default for pthread_mutexattr_t {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
-pub union pthread_condattr_t {
-    pub __size: [::std::os::raw::c_char; 8usize],
-    pub __align: ::std::os::raw::c_int,
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_mcontext_avx32 {
+    pub __es: __darwin_i386_exception_state,
+    pub __ss: __darwin_i386_thread_state,
+    pub __fs: __darwin_i386_avx_state,
 }
 impl Default for pthread_condattr_t {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type pthread_key_t = ::std::os::raw::c_uint;
 pub type pthread_once_t = ::std::os::raw::c_int;
 #[repr(C)]
-#[derive(Copy, Clone)]
-pub union pthread_attr_t {
-    pub __size: [::std::os::raw::c_char; 64usize],
-    pub __align: ::std::os::raw::c_long,
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_mcontext_avx512_32 {
+    pub __es: __darwin_i386_exception_state,
+    pub __ss: __darwin_i386_thread_state,
+    pub __fs: __darwin_i386_avx512_state,
 }
 impl Default for pthread_attr_t {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
-pub union pthread_mutex_t {
-    pub __data: __pthread_mutex_s,
-    pub __size: [::std::os::raw::c_char; 48usize],
-    pub __align: ::std::os::raw::c_long,
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_mcontext64 {
+    pub __es: __darwin_x86_exception_state64,
+    pub __ss: __darwin_x86_thread_state64,
+    pub __fs: __darwin_x86_float_state64,
 }
 impl Default for pthread_mutex_t {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
-pub union pthread_cond_t {
-    pub __data: __pthread_cond_s,
-    pub __size: [::std::os::raw::c_char; 48usize],
-    pub __align: ::std::os::raw::c_longlong,
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_mcontext64_full {
+    pub __es: __darwin_x86_exception_state64,
+    pub __ss: __darwin_x86_thread_full_state64,
+    pub __fs: __darwin_x86_float_state64,
 }
 impl Default for pthread_cond_t {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
-pub union pthread_rwlock_t {
-    pub __data: __pthread_rwlock_arch_t,
-    pub __size: [::std::os::raw::c_char; 56usize],
-    pub __align: ::std::os::raw::c_long,
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_mcontext_avx64 {
+    pub __es: __darwin_x86_exception_state64,
+    pub __ss: __darwin_x86_thread_state64,
+    pub __fs: __darwin_x86_avx_state64,
 }
 impl Default for pthread_rwlock_t {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
-pub union pthread_rwlockattr_t {
-    pub __size: [::std::os::raw::c_char; 8usize],
-    pub __align: ::std::os::raw::c_long,
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_mcontext_avx64_full {
+    pub __es: __darwin_x86_exception_state64,
+    pub __ss: __darwin_x86_thread_full_state64,
+    pub __fs: __darwin_x86_avx_state64,
 }
 impl Default for pthread_rwlockattr_t {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type pthread_spinlock_t = ::std::os::raw::c_int;
 #[repr(C)]
-#[derive(Copy, Clone)]
-pub union pthread_barrier_t {
-    pub __size: [::std::os::raw::c_char; 32usize],
-    pub __align: ::std::os::raw::c_long,
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_mcontext_avx512_64 {
+    pub __es: __darwin_x86_exception_state64,
+    pub __ss: __darwin_x86_thread_state64,
+    pub __fs: __darwin_x86_avx512_state64,
 }
 impl Default for pthread_barrier_t {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
-pub union pthread_barrierattr_t {
-    pub __size: [::std::os::raw::c_char; 8usize],
-    pub __align: ::std::os::raw::c_int,
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_mcontext_avx512_64_full {
+    pub __es: __darwin_x86_exception_state64,
+    pub __ss: __darwin_x86_thread_full_state64,
+    pub __fs: __darwin_x86_avx512_state64,
 }
 impl Default for pthread_barrierattr_t {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
-#[pg_guard]
-extern "C" {
-    pub fn random() -> ::std::os::raw::c_long;
+pub type mcontext_t = *mut __darwin_mcontext64;
+pub type pthread_attr_t = __darwin_pthread_attr_t;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_sigaltstack {
+    pub ss_sp: *mut ::std::os::raw::c_void,
+    pub ss_size: __darwin_size_t,
+    pub ss_flags: ::std::os::raw::c_int,
 }
-#[pg_guard]
-extern "C" {
-    pub fn srandom(__seed: ::std::os::raw::c_uint);
+impl Default for __darwin_sigaltstack {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type stack_t = __darwin_sigaltstack;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct __darwin_ucontext {
+    pub uc_onstack: ::std::os::raw::c_int,
+    pub uc_sigmask: __darwin_sigset_t,
+    pub uc_stack: __darwin_sigaltstack,
+    pub uc_link: *mut __darwin_ucontext,
+    pub uc_mcsize: __darwin_size_t,
+    pub uc_mcontext: *mut __darwin_mcontext64,
+}
+impl Default for __darwin_ucontext {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -4087,9 +5364,14 @@ extern "C" {
         __statelen: usize,
     ) -> *mut ::std::os::raw::c_char;
 }
-#[pg_guard]
-extern "C" {
-    pub fn setstate(__statebuf: *mut ::std::os::raw::c_char) -> *mut ::std::os::raw::c_char;
+impl Default for sigval {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -4104,19 +5386,25 @@ pub struct random_data {
 }
 impl Default for random_data {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
 extern "C" {
     pub fn random_r(__buf: *mut random_data, __result: *mut i32) -> ::std::os::raw::c_int;
 }
-#[pg_guard]
-extern "C" {
-    pub fn srandom_r(
-        __seed: ::std::os::raw::c_uint,
-        __buf: *mut random_data,
-    ) -> ::std::os::raw::c_int;
+impl Default for __siginfo {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -4127,28 +5415,40 @@ extern "C" {
         __buf: *mut random_data,
     ) -> ::std::os::raw::c_int;
 }
-#[pg_guard]
-extern "C" {
-    pub fn setstate_r(
-        __statebuf: *mut ::std::os::raw::c_char,
-        __buf: *mut random_data,
-    ) -> ::std::os::raw::c_int;
+impl Default for __sigaction_u {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
     pub fn rand() -> ::std::os::raw::c_int;
 }
-#[pg_guard]
-extern "C" {
-    pub fn srand(__seed: ::std::os::raw::c_uint);
+impl Default for __sigaction {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
     pub fn rand_r(__seed: *mut ::std::os::raw::c_uint) -> ::std::os::raw::c_int;
 }
-#[pg_guard]
-extern "C" {
-    pub fn drand48() -> f64;
+impl Default for sigaction {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -4158,9 +5458,14 @@ extern "C" {
 extern "C" {
     pub fn lrand48() -> ::std::os::raw::c_long;
 }
-#[pg_guard]
-extern "C" {
-    pub fn nrand48(__xsubi: *mut ::std::os::raw::c_ushort) -> ::std::os::raw::c_long;
+impl Default for sigstack {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -5014,7 +6319,11 @@ pub struct lconv {
 }
 impl Default for lconv {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -5192,7 +6501,10 @@ extern "C" {
 }
 #[pg_guard]
 extern "C" {
-    pub fn iscntrl(arg1: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+    pub fn aligned_alloc(
+        __alignment: ::std::os::raw::c_ulong,
+        __size: ::std::os::raw::c_ulong,
+    ) -> *mut ::std::os::raw::c_void;
 }
 #[pg_guard]
 extern "C" {
@@ -6796,7 +8108,44 @@ extern "C" {
 }
 #[pg_guard]
 extern "C" {
-    pub fn pg_strerror(errnum: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_char;
+    pub fn __error() -> *mut ::std::os::raw::c_int;
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct lconv {
+    pub decimal_point: *mut ::std::os::raw::c_char,
+    pub thousands_sep: *mut ::std::os::raw::c_char,
+    pub grouping: *mut ::std::os::raw::c_char,
+    pub int_curr_symbol: *mut ::std::os::raw::c_char,
+    pub currency_symbol: *mut ::std::os::raw::c_char,
+    pub mon_decimal_point: *mut ::std::os::raw::c_char,
+    pub mon_thousands_sep: *mut ::std::os::raw::c_char,
+    pub mon_grouping: *mut ::std::os::raw::c_char,
+    pub positive_sign: *mut ::std::os::raw::c_char,
+    pub negative_sign: *mut ::std::os::raw::c_char,
+    pub int_frac_digits: ::std::os::raw::c_char,
+    pub frac_digits: ::std::os::raw::c_char,
+    pub p_cs_precedes: ::std::os::raw::c_char,
+    pub p_sep_by_space: ::std::os::raw::c_char,
+    pub n_cs_precedes: ::std::os::raw::c_char,
+    pub n_sep_by_space: ::std::os::raw::c_char,
+    pub p_sign_posn: ::std::os::raw::c_char,
+    pub n_sign_posn: ::std::os::raw::c_char,
+    pub int_p_cs_precedes: ::std::os::raw::c_char,
+    pub int_n_cs_precedes: ::std::os::raw::c_char,
+    pub int_p_sep_by_space: ::std::os::raw::c_char,
+    pub int_n_sep_by_space: ::std::os::raw::c_char,
+    pub int_p_sign_posn: ::std::os::raw::c_char,
+    pub int_n_sign_posn: ::std::os::raw::c_char,
+}
+impl Default for lconv {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -6808,7 +8157,88 @@ extern "C" {
 }
 #[pg_guard]
 extern "C" {
-    pub fn pg_strsignal(signum: ::std::os::raw::c_int) -> *const ::std::os::raw::c_char;
+    pub fn setlocale(
+        arg1: ::std::os::raw::c_int,
+        arg2: *const ::std::os::raw::c_char,
+    ) -> *mut ::std::os::raw::c_char;
+}
+pub type Pointer = *mut ::std::os::raw::c_char;
+pub type int8 = ::std::os::raw::c_schar;
+pub type int16 = ::std::os::raw::c_short;
+pub type int32 = ::std::os::raw::c_int;
+pub type uint8 = ::std::os::raw::c_uchar;
+pub type uint16 = ::std::os::raw::c_ushort;
+pub type uint32 = ::std::os::raw::c_uint;
+pub type bits8 = uint8;
+pub type bits16 = uint16;
+pub type bits32 = uint32;
+pub type int64 = ::std::os::raw::c_long;
+pub type uint64 = ::std::os::raw::c_ulong;
+pub type int128 = i128;
+pub type uint128 = u128;
+pub type Size = usize;
+pub type Index = ::std::os::raw::c_uint;
+pub type Offset = ::std::os::raw::c_int;
+pub type float4 = f32;
+pub type float8 = f64;
+pub type regproc = Oid;
+pub type RegProcedure = regproc;
+pub type TransactionId = uint32;
+pub type LocalTransactionId = uint32;
+pub type SubTransactionId = uint32;
+pub type MultiXactId = TransactionId;
+pub type MultiXactOffset = uint32;
+pub type CommandId = uint32;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct IntArray {
+    pub indx: [::std::os::raw::c_int; 6usize],
+}
+#[repr(C)]
+#[derive(Debug, Default)]
+pub struct varlena {
+    pub vl_len_: [::std::os::raw::c_char; 4usize],
+    pub vl_dat: __IncompleteArrayField<::std::os::raw::c_char>,
+}
+pub type bytea = varlena;
+pub type text = varlena;
+pub type BpChar = varlena;
+pub type VarChar = varlena;
+#[repr(C)]
+#[derive(Debug, Default)]
+pub struct int2vector {
+    pub vl_len_: int32,
+    pub ndim: ::std::os::raw::c_int,
+    pub dataoffset: int32,
+    pub elemtype: Oid,
+    pub dim1: ::std::os::raw::c_int,
+    pub lbound1: ::std::os::raw::c_int,
+    pub values: __IncompleteArrayField<int16>,
+}
+#[repr(C)]
+#[derive(Debug, Default)]
+pub struct oidvector {
+    pub vl_len_: int32,
+    pub ndim: ::std::os::raw::c_int,
+    pub dataoffset: int32,
+    pub elemtype: Oid,
+    pub dim1: ::std::os::raw::c_int,
+    pub lbound1: ::std::os::raw::c_int,
+    pub values: __IncompleteArrayField<Oid>,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct nameData {
+    pub data: [::std::os::raw::c_char; 64usize],
+}
+impl Default for nameData {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -6819,13 +8249,121 @@ extern "C" {
         echo: bool,
     );
 }
-#[pg_guard]
-extern "C" {
-    pub fn pclose_check(stream: *mut FILE) -> ::std::os::raw::c_int;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union PGAlignedBlock {
+    pub data: [::std::os::raw::c_char; 8192usize],
+    pub force_align_d: f64,
+    pub force_align_i64: int64,
+}
+impl Default for PGAlignedBlock {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union PGAlignedXLogBlock {
+    pub data: [::std::os::raw::c_char; 8192usize],
+    pub force_align_d: f64,
+    pub force_align_i64: int64,
+}
+impl Default for PGAlignedXLogBlock {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
-    pub fn rmtree(path: *const ::std::os::raw::c_char, rmtopdir: bool) -> bool;
+    pub fn fdatasync(fildes: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+pub type wint_t = __darwin_wint_t;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _RuneEntry {
+    pub __min: __darwin_rune_t,
+    pub __max: __darwin_rune_t,
+    pub __map: __darwin_rune_t,
+    pub __types: *mut __uint32_t,
+}
+impl Default for _RuneEntry {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _RuneRange {
+    pub __nranges: ::std::os::raw::c_int,
+    pub __ranges: *mut _RuneEntry,
+}
+impl Default for _RuneRange {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct _RuneCharClass {
+    pub __name: [::std::os::raw::c_char; 14usize],
+    pub __mask: __uint32_t,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _RuneLocale {
+    pub __magic: [::std::os::raw::c_char; 8usize],
+    pub __encoding: [::std::os::raw::c_char; 32usize],
+    pub __sgetrune: ::std::option::Option<
+        unsafe extern "C" fn(
+            arg1: *const ::std::os::raw::c_char,
+            arg2: __darwin_size_t,
+            arg3: *mut *const ::std::os::raw::c_char,
+        ) -> __darwin_rune_t,
+    >,
+    pub __sputrune: ::std::option::Option<
+        unsafe extern "C" fn(
+            arg1: __darwin_rune_t,
+            arg2: *mut ::std::os::raw::c_char,
+            arg3: __darwin_size_t,
+            arg4: *mut *mut ::std::os::raw::c_char,
+        ) -> ::std::os::raw::c_int,
+    >,
+    pub __invalid_rune: __darwin_rune_t,
+    pub __runetype: [__uint32_t; 256usize],
+    pub __maplower: [__darwin_rune_t; 256usize],
+    pub __mapupper: [__darwin_rune_t; 256usize],
+    pub __runetype_ext: _RuneRange,
+    pub __maplower_ext: _RuneRange,
+    pub __mapupper_ext: _RuneRange,
+    pub __variable: *mut ::std::os::raw::c_void,
+    pub __variable_len: ::std::os::raw::c_int,
+    pub __ncharclasses: ::std::os::raw::c_int,
+    pub __charclasses: *mut _RuneCharClass,
+}
+impl Default for _RuneLocale {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -6863,15 +8401,128 @@ extern "C" {
 }
 #[pg_guard]
 extern "C" {
-    pub fn __signbit(__value: f64) -> ::std::os::raw::c_int;
+    pub fn __tolower(arg1: __darwin_ct_rune_t) -> __darwin_ct_rune_t;
+}
+pub type socklen_t = __darwin_socklen_t;
+pub type sa_family_t = __uint8_t;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct iovec {
+    pub iov_base: *mut ::std::os::raw::c_void,
+    pub iov_len: usize,
+}
+impl Default for iovec {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type sae_associd_t = __uint32_t;
+pub type sae_connid_t = __uint32_t;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct sa_endpoints {
+    pub sae_srcif: ::std::os::raw::c_uint,
+    pub sae_srcaddr: *const sockaddr,
+    pub sae_srcaddrlen: socklen_t,
+    pub sae_dstaddr: *const sockaddr,
+    pub sae_dstaddrlen: socklen_t,
+}
+impl Default for sa_endpoints {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type sa_endpoints_t = sa_endpoints;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct linger {
+    pub l_onoff: ::std::os::raw::c_int,
+    pub l_linger: ::std::os::raw::c_int,
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct so_np_extensions {
+    pub npx_flags: u_int32_t,
+    pub npx_mask: u_int32_t,
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct sockaddr {
+    pub sa_len: __uint8_t,
+    pub sa_family: sa_family_t,
+    pub sa_data: [::std::os::raw::c_char; 14usize],
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct sockproto {
+    pub sp_family: __uint16_t,
+    pub sp_protocol: __uint16_t,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct sockaddr_storage {
+    pub ss_len: __uint8_t,
+    pub ss_family: sa_family_t,
+    pub __ss_pad1: [::std::os::raw::c_char; 6usize],
+    pub __ss_align: __int64_t,
+    pub __ss_pad2: [::std::os::raw::c_char; 112usize],
+}
+impl Default for sockaddr_storage {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct msghdr {
+    pub msg_name: *mut ::std::os::raw::c_void,
+    pub msg_namelen: socklen_t,
+    pub msg_iov: *mut iovec,
+    pub msg_iovlen: ::std::os::raw::c_int,
+    pub msg_control: *mut ::std::os::raw::c_void,
+    pub msg_controllen: socklen_t,
+    pub msg_flags: ::std::os::raw::c_int,
+}
+impl Default for msghdr {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct cmsghdr {
+    pub cmsg_len: socklen_t,
+    pub cmsg_level: ::std::os::raw::c_int,
+    pub cmsg_type: ::std::os::raw::c_int,
 }
 #[pg_guard]
 extern "C" {
     pub fn __isinf(__value: f64) -> ::std::os::raw::c_int;
 }
-#[pg_guard]
-extern "C" {
-    pub fn __finite(__value: f64) -> ::std::os::raw::c_int;
+impl Default for sf_hdtr {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -6959,7 +8610,110 @@ extern "C" {
 }
 #[pg_guard]
 extern "C" {
-    pub fn tanh(__x: f64) -> f64;
+    pub fn disconnectx(
+        arg1: ::std::os::raw::c_int,
+        arg2: sae_associd_t,
+        arg3: sae_connid_t,
+    ) -> ::std::os::raw::c_int;
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct in_addr {
+    pub s_addr: in_addr_t,
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct sockaddr_in {
+    pub sin_len: __uint8_t,
+    pub sin_family: sa_family_t,
+    pub sin_port: in_port_t,
+    pub sin_addr: in_addr,
+    pub sin_zero: [::std::os::raw::c_char; 8usize],
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct ip_opts {
+    pub ip_dst: in_addr,
+    pub ip_opts: [::std::os::raw::c_char; 40usize],
+}
+impl Default for ip_opts {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct ip_mreq {
+    pub imr_multiaddr: in_addr,
+    pub imr_interface: in_addr,
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct ip_mreqn {
+    pub imr_multiaddr: in_addr,
+    pub imr_address: in_addr,
+    pub imr_ifindex: ::std::os::raw::c_int,
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct ip_mreq_source {
+    pub imr_multiaddr: in_addr,
+    pub imr_sourceaddr: in_addr,
+    pub imr_interface: in_addr,
+}
+#[repr(C, packed(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct group_req {
+    pub gr_interface: u32,
+    pub gr_group: sockaddr_storage,
+}
+impl Default for group_req {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C, packed(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct group_source_req {
+    pub gsr_interface: u32,
+    pub gsr_group: sockaddr_storage,
+    pub gsr_source: sockaddr_storage,
+}
+impl Default for group_source_req {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C, packed(4))]
+#[derive(Debug, Copy, Clone)]
+pub struct __msfilterreq {
+    pub msfr_ifindex: u32,
+    pub msfr_fmode: u32,
+    pub msfr_nsrcs: u32,
+    pub __msfr_align: u32,
+    pub msfr_group: sockaddr_storage,
+    pub msfr_srcs: *mut sockaddr_storage,
+}
+impl Default for __msfilterreq {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -6975,7 +8729,72 @@ extern "C" {
 }
 #[pg_guard]
 extern "C" {
-    pub fn asinh(__x: f64) -> f64;
+    pub fn getsourcefilter(
+        arg1: ::std::os::raw::c_int,
+        arg2: u32,
+        arg3: *mut sockaddr,
+        arg4: socklen_t,
+        arg5: *mut u32,
+        arg6: *mut u32,
+        arg7: *mut sockaddr_storage,
+    ) -> ::std::os::raw::c_int;
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct in_pktinfo {
+    pub ipi_ifindex: ::std::os::raw::c_uint,
+    pub ipi_spec_dst: in_addr,
+    pub ipi_addr: in_addr,
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct in6_addr {
+    pub __u6_addr: in6_addr__bindgen_ty_1,
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub union in6_addr__bindgen_ty_1 {
+    pub __u6_addr8: [__uint8_t; 16usize],
+    pub __u6_addr16: [__uint16_t; 8usize],
+    pub __u6_addr32: [__uint32_t; 4usize],
+}
+impl Default for in6_addr__bindgen_ty_1 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+impl Default for in6_addr {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type in6_addr_t = in6_addr;
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct sockaddr_in6 {
+    pub sin6_len: __uint8_t,
+    pub sin6_family: sa_family_t,
+    pub sin6_port: in_port_t,
+    pub sin6_flowinfo: __uint32_t,
+    pub sin6_addr: in6_addr,
+    pub sin6_scope_id: __uint32_t,
+}
+impl Default for sockaddr_in6 {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -6999,7 +8818,52 @@ extern "C" {
 }
 #[pg_guard]
 extern "C" {
-    pub fn frexp(__x: f64, __exponent: *mut ::std::os::raw::c_int) -> f64;
+    pub static in6addr_linklocal_allv2routers: in6_addr;
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct ipv6_mreq {
+    pub ipv6mr_multiaddr: in6_addr,
+    pub ipv6mr_interface: ::std::os::raw::c_uint,
+}
+impl Default for ipv6_mreq {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct in6_pktinfo {
+    pub ipi6_addr: in6_addr,
+    pub ipi6_ifindex: ::std::os::raw::c_uint,
+}
+impl Default for in6_pktinfo {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Copy, Clone)]
+pub struct ip6_mtuinfo {
+    pub ip6m_addr: sockaddr_in6,
+    pub ip6m_mtu: u32,
+}
+impl Default for ip6_mtuinfo {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -7115,7 +8979,112 @@ extern "C" {
 }
 #[pg_guard]
 extern "C" {
-    pub fn __ceil(__x: f64) -> f64;
+    pub static mut h_errno: ::std::os::raw::c_int;
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct hostent {
+    pub h_name: *mut ::std::os::raw::c_char,
+    pub h_aliases: *mut *mut ::std::os::raw::c_char,
+    pub h_addrtype: ::std::os::raw::c_int,
+    pub h_length: ::std::os::raw::c_int,
+    pub h_addr_list: *mut *mut ::std::os::raw::c_char,
+}
+impl Default for hostent {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct netent {
+    pub n_name: *mut ::std::os::raw::c_char,
+    pub n_aliases: *mut *mut ::std::os::raw::c_char,
+    pub n_addrtype: ::std::os::raw::c_int,
+    pub n_net: u32,
+}
+impl Default for netent {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct servent {
+    pub s_name: *mut ::std::os::raw::c_char,
+    pub s_aliases: *mut *mut ::std::os::raw::c_char,
+    pub s_port: ::std::os::raw::c_int,
+    pub s_proto: *mut ::std::os::raw::c_char,
+}
+impl Default for servent {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct protoent {
+    pub p_name: *mut ::std::os::raw::c_char,
+    pub p_aliases: *mut *mut ::std::os::raw::c_char,
+    pub p_proto: ::std::os::raw::c_int,
+}
+impl Default for protoent {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct addrinfo {
+    pub ai_flags: ::std::os::raw::c_int,
+    pub ai_family: ::std::os::raw::c_int,
+    pub ai_socktype: ::std::os::raw::c_int,
+    pub ai_protocol: ::std::os::raw::c_int,
+    pub ai_addrlen: socklen_t,
+    pub ai_canonname: *mut ::std::os::raw::c_char,
+    pub ai_addr: *mut sockaddr,
+    pub ai_next: *mut addrinfo,
+}
+impl Default for addrinfo {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct rpcent {
+    pub r_name: *mut ::std::os::raw::c_char,
+    pub r_aliases: *mut *mut ::std::os::raw::c_char,
+    pub r_number: ::std::os::raw::c_int,
+}
+impl Default for rpcent {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -7273,9 +9242,14 @@ extern "C" {
 extern "C" {
     pub fn __gamma(arg1: f64) -> f64;
 }
-#[pg_guard]
-extern "C" {
-    pub fn lgamma_r(arg1: f64, __signgamp: *mut ::std::os::raw::c_int) -> f64;
+impl Default for passwd {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -8445,65 +10419,14 @@ extern "C" {
 extern "C" {
     pub fn lgammal_r(arg1: u128, __signgamp: *mut ::std::os::raw::c_int) -> u128;
 }
-#[pg_guard]
-extern "C" {
-    pub fn __lgammal_r(arg1: u128, __signgamp: *mut ::std::os::raw::c_int) -> u128;
-}
-#[pg_guard]
-extern "C" {
-    pub fn rintl(__x: u128) -> u128;
-}
-#[pg_guard]
-extern "C" {
-    pub fn __rintl(__x: u128) -> u128;
-}
-#[pg_guard]
-extern "C" {
-    pub fn nextafterl(__x: u128, __y: u128) -> u128;
-}
-#[pg_guard]
-extern "C" {
-    pub fn __nextafterl(__x: u128, __y: u128) -> u128;
-}
-#[pg_guard]
-extern "C" {
-    pub fn nexttowardl(__x: u128, __y: u128) -> u128;
-}
-#[pg_guard]
-extern "C" {
-    pub fn __nexttowardl(__x: u128, __y: u128) -> u128;
-}
-#[pg_guard]
-extern "C" {
-    pub fn remainderl(__x: u128, __y: u128) -> u128;
-}
-#[pg_guard]
-extern "C" {
-    pub fn __remainderl(__x: u128, __y: u128) -> u128;
-}
-#[pg_guard]
-extern "C" {
-    pub fn scalbnl(__x: u128, __n: ::std::os::raw::c_int) -> u128;
-}
-#[pg_guard]
-extern "C" {
-    pub fn __scalbnl(__x: u128, __n: ::std::os::raw::c_int) -> u128;
-}
-#[pg_guard]
-extern "C" {
-    pub fn ilogbl(__x: u128) -> ::std::os::raw::c_int;
-}
-#[pg_guard]
-extern "C" {
-    pub fn __ilogbl(__x: u128) -> ::std::os::raw::c_int;
-}
-#[pg_guard]
-extern "C" {
-    pub fn scalblnl(__x: u128, __n: ::std::os::raw::c_long) -> u128;
-}
-#[pg_guard]
-extern "C" {
-    pub fn __scalblnl(__x: u128, __n: ::std::os::raw::c_long) -> u128;
+impl Default for exception {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
 }
 #[pg_guard]
 extern "C" {
@@ -8941,7 +10864,11 @@ pub struct ErrorContextCallback {
 }
 impl Default for ErrorContextCallback {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -8987,7 +10914,11 @@ pub struct ErrorData {
 }
 impl Default for ErrorData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -9086,7 +11017,11 @@ pub struct MemoryContextCallback {
 }
 impl Default for MemoryContextCallback {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -9211,7 +11146,11 @@ pub struct varatt_indirect {
 }
 impl Default for varatt_indirect {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -9221,7 +11160,11 @@ pub struct varatt_expanded {
 }
 impl Default for varatt_expanded {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const vartag_external_VARTAG_INDIRECT: vartag_external = 1;
@@ -9250,7 +11193,11 @@ pub struct varattrib_4b__bindgen_ty_2 {
 }
 impl Default for varattrib_4b {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -9275,7 +11222,7 @@ pub struct NullableDatum {
 }
 pub type AttrNumber = int16;
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct FormData_pg_attribute {
     pub attrelid: Oid,
     pub attname: NameData,
@@ -9301,7 +11248,11 @@ pub struct FormData_pg_attribute {
 }
 impl Default for FormData_pg_attribute {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type Form_pg_attribute = *mut FormData_pg_attribute;
@@ -9735,7 +11686,11 @@ pub struct Node {
 }
 impl Default for Node {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -9856,7 +11811,11 @@ pub union ListCell {
 }
 impl Default for ListCell {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -9869,7 +11828,11 @@ pub struct List {
 }
 impl Default for List {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -9880,7 +11843,11 @@ pub struct ForEachState {
 }
 impl Default for ForEachState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -9892,7 +11859,11 @@ pub struct ForBothState {
 }
 impl Default for ForBothState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -9905,7 +11876,11 @@ pub struct ForBothCellState {
 }
 impl Default for ForBothCellState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -9918,7 +11893,11 @@ pub struct ForThreeState {
 }
 impl Default for ForThreeState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -9932,7 +11911,11 @@ pub struct ForFourState {
 }
 impl Default for ForFourState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -9947,7 +11930,11 @@ pub struct ForFiveState {
 }
 impl Default for ForFiveState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -10201,7 +12188,11 @@ pub struct AttrDefault {
 }
 impl Default for AttrDefault {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -10214,7 +12205,11 @@ pub struct ConstrCheck {
 }
 impl Default for ConstrCheck {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -10230,10 +12225,15 @@ pub struct TupleConstr {
 }
 impl Default for TupleConstr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
+#[derive(Debug)]
 pub struct TupleDescData {
     pub natts: ::std::os::raw::c_int,
     pub tdtypeid: Oid,
@@ -10244,7 +12244,11 @@ pub struct TupleDescData {
 }
 impl Default for TupleDescData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type TupleDesc = *mut TupleDescData;
@@ -10351,7 +12355,11 @@ pub struct AttrMap {
 }
 impl Default for AttrMap {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -10480,7 +12488,11 @@ pub struct HeapTupleData {
 }
 impl Default for HeapTupleData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type HeapTuple = *mut HeapTupleData;
@@ -10515,23 +12527,139 @@ pub struct flock {
 }
 #[repr(C)]
 #[derive(Debug, Default, Copy, Clone)]
-pub struct stat {
-    pub st_dev: __dev_t,
-    pub st_ino: __ino_t,
-    pub st_mode: __mode_t,
-    pub st_nlink: __nlink_t,
-    pub st_uid: __uid_t,
-    pub st_gid: __gid_t,
-    pub st_rdev: __dev_t,
-    pub __pad1: __dev_t,
-    pub st_size: __off_t,
-    pub st_blksize: __blksize_t,
-    pub __pad2: ::std::os::raw::c_int,
-    pub st_blocks: __blkcnt_t,
-    pub st_atim: timespec,
-    pub st_mtim: timespec,
-    pub st_ctim: timespec,
-    pub __glibc_reserved: [::std::os::raw::c_int; 2usize],
+pub struct timespec {
+    pub tv_sec: __darwin_time_t,
+    pub tv_nsec: ::std::os::raw::c_long,
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct flocktimeout {
+    pub fl: flock,
+    pub timeout: timespec,
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct radvisory {
+    pub ra_offset: off_t,
+    pub ra_count: ::std::os::raw::c_int,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct fsignatures {
+    pub fs_file_start: off_t,
+    pub fs_blob_start: *mut ::std::os::raw::c_void,
+    pub fs_blob_size: usize,
+    pub fs_fsignatures_size: usize,
+    pub fs_cdhash: [::std::os::raw::c_char; 20usize],
+    pub fs_hash_type: ::std::os::raw::c_int,
+}
+impl Default for fsignatures {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type fsignatures_t = fsignatures;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct fsupplement {
+    pub fs_file_start: off_t,
+    pub fs_blob_start: off_t,
+    pub fs_blob_size: usize,
+    pub fs_orig_fd: ::std::os::raw::c_int,
+}
+pub type fsupplement_t = fsupplement;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct fchecklv {
+    pub lv_file_start: off_t,
+    pub lv_error_message_size: usize,
+    pub lv_error_message: *mut ::std::os::raw::c_void,
+}
+impl Default for fchecklv {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type fchecklv_t = fchecklv;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct fgetsigsinfo {
+    pub fg_file_start: off_t,
+    pub fg_info_request: ::std::os::raw::c_int,
+    pub fg_sig_is_platform: ::std::os::raw::c_int,
+}
+pub type fgetsigsinfo_t = fgetsigsinfo;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct fstore {
+    pub fst_flags: ::std::os::raw::c_uint,
+    pub fst_posmode: ::std::os::raw::c_int,
+    pub fst_offset: off_t,
+    pub fst_length: off_t,
+    pub fst_bytesalloc: off_t,
+}
+pub type fstore_t = fstore;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct fpunchhole {
+    pub fp_flags: ::std::os::raw::c_uint,
+    pub reserved: ::std::os::raw::c_uint,
+    pub fp_offset: off_t,
+    pub fp_length: off_t,
+}
+pub type fpunchhole_t = fpunchhole;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct ftrimactivefile {
+    pub fta_offset: off_t,
+    pub fta_length: off_t,
+}
+pub type ftrimactivefile_t = ftrimactivefile;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct fspecread {
+    pub fsr_flags: ::std::os::raw::c_uint,
+    pub reserved: ::std::os::raw::c_uint,
+    pub fsr_offset: off_t,
+    pub fsr_length: off_t,
+}
+pub type fspecread_t = fspecread;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct fbootstraptransfer {
+    pub fbt_offset: off_t,
+    pub fbt_length: usize,
+    pub fbt_buffer: *mut ::std::os::raw::c_void,
+}
+impl Default for fbootstraptransfer {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+pub type fbootstraptransfer_t = fbootstraptransfer;
+#[repr(C, packed(4))]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct log2phys {
+    pub l2p_flags: ::std::os::raw::c_uint,
+    pub l2p_contigbytes: off_t,
+    pub l2p_devoffset: off_t,
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct _filesec {
+    _unused: [u8; 0],
 }
 #[pg_guard]
 extern "C" {
@@ -10848,12 +12976,20 @@ pub union HeapTupleFields__bindgen_ty_1 {
 }
 impl Default for HeapTupleFields__bindgen_ty_1 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 impl Default for HeapTupleFields {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -10880,12 +13016,20 @@ pub union HeapTupleHeaderData__bindgen_ty_1 {
 }
 impl Default for HeapTupleHeaderData__bindgen_ty_1 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 impl Default for HeapTupleHeaderData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -11056,7 +13200,11 @@ pub struct TupleTableSlot {
 }
 impl Default for TupleTableSlot {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -11113,7 +13261,11 @@ pub struct VirtualTupleTableSlot {
 }
 impl Default for VirtualTupleTableSlot {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -11126,7 +13278,11 @@ pub struct HeapTupleTableSlot {
 }
 impl Default for HeapTupleTableSlot {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -11137,7 +13293,11 @@ pub struct BufferHeapTupleTableSlot {
 }
 impl Default for BufferHeapTupleTableSlot {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -11151,7 +13311,11 @@ pub struct MinimalTupleTableSlot {
 }
 impl Default for MinimalTupleTableSlot {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -11454,7 +13618,11 @@ pub struct TupleConversionMap {
 }
 impl Default for TupleConversionMap {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -11508,7 +13676,11 @@ pub struct tm {
 }
 impl Default for tm {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -11838,7 +14010,11 @@ pub struct FmgrInfo {
 }
 impl Default for FmgrInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -11854,7 +14030,11 @@ pub struct FunctionCallInfoBaseData {
 }
 impl Default for FunctionCallInfoBaseData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -12448,7 +14628,11 @@ pub struct StringInfoData {
 }
 impl Default for StringInfoData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type StringInfo = *mut StringInfoData;
@@ -12517,7 +14701,11 @@ pub struct pairingheap_node {
 }
 impl Default for pairingheap_node {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type pairingheap_comparator = ::std::option::Option<
@@ -12536,7 +14724,11 @@ pub struct pairingheap {
 }
 impl Default for pairingheap {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -12610,7 +14802,11 @@ pub struct ParamListInfoData {
 }
 impl Default for ParamListInfoData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -12622,7 +14818,11 @@ pub struct ParamExecData {
 }
 impl Default for ParamExecData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -12633,7 +14833,11 @@ pub struct ParamsErrorCbData {
 }
 impl Default for ParamsErrorCbData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -12700,7 +14904,11 @@ pub struct Alias {
 }
 impl Default for Alias {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const OnCommitAction_ONCOMMIT_NOOP: OnCommitAction = 0;
@@ -12722,7 +14930,11 @@ pub struct RangeVar {
 }
 impl Default for RangeVar {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -12745,7 +14957,11 @@ pub struct TableFunc {
 }
 impl Default for TableFunc {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -12763,7 +14979,11 @@ pub struct IntoClause {
 }
 impl Default for IntoClause {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -12773,7 +14993,11 @@ pub struct Expr {
 }
 impl Default for Expr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -12792,7 +15016,11 @@ pub struct Var {
 }
 impl Default for Var {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -12810,7 +15038,11 @@ pub struct Const {
 }
 impl Default for Const {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const ParamKind_PARAM_EXTERN: ParamKind = 0;
@@ -12831,7 +15063,11 @@ pub struct Param {
 }
 impl Default for Param {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -12858,7 +15094,11 @@ pub struct Aggref {
 }
 impl Default for Aggref {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -12873,7 +15113,11 @@ pub struct GroupingFunc {
 }
 impl Default for GroupingFunc {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -12893,7 +15137,11 @@ pub struct WindowFunc {
 }
 impl Default for WindowFunc {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -12911,7 +15159,11 @@ pub struct SubscriptingRef {
 }
 impl Default for SubscriptingRef {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const CoercionContext_COERCION_IMPLICIT: CoercionContext = 0;
@@ -12938,7 +15190,11 @@ pub struct FuncExpr {
 }
 impl Default for FuncExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -12952,7 +15208,11 @@ pub struct NamedArgExpr {
 }
 impl Default for NamedArgExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -12970,7 +15230,11 @@ pub struct OpExpr {
 }
 impl Default for OpExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type DistinctExpr = OpExpr;
@@ -12988,7 +15252,11 @@ pub struct ScalarArrayOpExpr {
 }
 impl Default for ScalarArrayOpExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const BoolExprType_AND_EXPR: BoolExprType = 0;
@@ -13005,7 +15273,11 @@ pub struct BoolExpr {
 }
 impl Default for BoolExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const SubLinkType_EXISTS_SUBLINK: SubLinkType = 0;
@@ -13030,7 +15302,11 @@ pub struct SubLink {
 }
 impl Default for SubLink {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13056,7 +15332,11 @@ pub struct SubPlan {
 }
 impl Default for SubPlan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13067,7 +15347,11 @@ pub struct AlternativeSubPlan {
 }
 impl Default for AlternativeSubPlan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13082,7 +15366,11 @@ pub struct FieldSelect {
 }
 impl Default for FieldSelect {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13096,7 +15384,11 @@ pub struct FieldStore {
 }
 impl Default for FieldStore {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13112,7 +15404,11 @@ pub struct RelabelType {
 }
 impl Default for RelabelType {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13127,7 +15423,11 @@ pub struct CoerceViaIO {
 }
 impl Default for CoerceViaIO {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13144,7 +15444,11 @@ pub struct ArrayCoerceExpr {
 }
 impl Default for ArrayCoerceExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13158,7 +15462,11 @@ pub struct ConvertRowtypeExpr {
 }
 impl Default for ConvertRowtypeExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13171,7 +15479,11 @@ pub struct CollateExpr {
 }
 impl Default for CollateExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13187,7 +15499,11 @@ pub struct CaseExpr {
 }
 impl Default for CaseExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13200,7 +15516,11 @@ pub struct CaseWhen {
 }
 impl Default for CaseWhen {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13213,7 +15533,11 @@ pub struct CaseTestExpr {
 }
 impl Default for CaseTestExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13229,7 +15553,11 @@ pub struct ArrayExpr {
 }
 impl Default for ArrayExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13244,7 +15572,11 @@ pub struct RowExpr {
 }
 impl Default for RowExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const RowCompareType_ROWCOMPARE_LT: RowCompareType = 1;
@@ -13267,7 +15599,11 @@ pub struct RowCompareExpr {
 }
 impl Default for RowCompareExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13281,7 +15617,11 @@ pub struct CoalesceExpr {
 }
 impl Default for CoalesceExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const MinMaxOp_IS_GREATEST: MinMaxOp = 0;
@@ -13300,7 +15640,11 @@ pub struct MinMaxExpr {
 }
 impl Default for MinMaxExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const SQLValueFunctionOp_SVFOP_CURRENT_DATE: SQLValueFunctionOp = 0;
@@ -13330,7 +15674,11 @@ pub struct SQLValueFunction {
 }
 impl Default for SQLValueFunction {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const XmlExprOp_IS_XMLCONCAT: XmlExprOp = 0;
@@ -13361,7 +15709,11 @@ pub struct XmlExpr {
 }
 impl Default for XmlExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const NullTestType_IS_NULL: NullTestType = 0;
@@ -13378,7 +15730,11 @@ pub struct NullTest {
 }
 impl Default for NullTest {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const BoolTestType_IS_TRUE: BoolTestType = 0;
@@ -13398,7 +15754,11 @@ pub struct BooleanTest {
 }
 impl Default for BooleanTest {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13414,7 +15774,11 @@ pub struct CoerceToDomain {
 }
 impl Default for CoerceToDomain {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13428,7 +15792,11 @@ pub struct CoerceToDomainValue {
 }
 impl Default for CoerceToDomainValue {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13442,7 +15810,11 @@ pub struct SetToDefault {
 }
 impl Default for SetToDefault {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13455,7 +15827,11 @@ pub struct CurrentOfExpr {
 }
 impl Default for CurrentOfExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13467,7 +15843,11 @@ pub struct NextValueExpr {
 }
 impl Default for NextValueExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13480,7 +15860,11 @@ pub struct InferenceElem {
 }
 impl Default for InferenceElem {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13497,7 +15881,11 @@ pub struct TargetEntry {
 }
 impl Default for TargetEntry {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13508,7 +15896,11 @@ pub struct RangeTblRef {
 }
 impl Default for RangeTblRef {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13526,7 +15918,11 @@ pub struct JoinExpr {
 }
 impl Default for JoinExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13538,7 +15934,11 @@ pub struct FromExpr {
 }
 impl Default for FromExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13556,7 +15956,11 @@ pub struct OnConflictExpr {
 }
 impl Default for OnConflictExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13589,7 +15993,11 @@ pub struct PlannedStmt {
 }
 impl Default for PlannedStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13613,7 +16021,11 @@ pub struct Plan {
 }
 impl Default for Plan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13624,7 +16036,11 @@ pub struct Result {
 }
 impl Default for Result {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13634,7 +16050,11 @@ pub struct ProjectSet {
 }
 impl Default for ProjectSet {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13665,7 +16085,11 @@ pub struct ModifyTable {
 }
 impl Default for ModifyTable {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13679,7 +16103,11 @@ pub struct Append {
 }
 impl Default for Append {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13697,7 +16125,11 @@ pub struct MergeAppend {
 }
 impl Default for MergeAppend {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13713,7 +16145,11 @@ pub struct RecursiveUnion {
 }
 impl Default for RecursiveUnion {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13724,7 +16160,11 @@ pub struct BitmapAnd {
 }
 impl Default for BitmapAnd {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13736,7 +16176,11 @@ pub struct BitmapOr {
 }
 impl Default for BitmapOr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13747,7 +16191,11 @@ pub struct Scan {
 }
 impl Default for Scan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type SeqScan = Scan;
@@ -13759,7 +16207,11 @@ pub struct SampleScan {
 }
 impl Default for SampleScan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13776,7 +16228,11 @@ pub struct IndexScan {
 }
 impl Default for IndexScan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13791,7 +16247,11 @@ pub struct IndexOnlyScan {
 }
 impl Default for IndexOnlyScan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13805,7 +16265,11 @@ pub struct BitmapIndexScan {
 }
 impl Default for BitmapIndexScan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13816,7 +16280,11 @@ pub struct BitmapHeapScan {
 }
 impl Default for BitmapHeapScan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13827,7 +16295,11 @@ pub struct TidScan {
 }
 impl Default for TidScan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13838,7 +16310,11 @@ pub struct SubqueryScan {
 }
 impl Default for SubqueryScan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13850,7 +16326,11 @@ pub struct FunctionScan {
 }
 impl Default for FunctionScan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13861,7 +16341,11 @@ pub struct ValuesScan {
 }
 impl Default for ValuesScan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13872,7 +16356,11 @@ pub struct TableFuncScan {
 }
 impl Default for TableFuncScan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13884,7 +16372,11 @@ pub struct CteScan {
 }
 impl Default for CteScan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13895,7 +16387,11 @@ pub struct NamedTuplestoreScan {
 }
 impl Default for NamedTuplestoreScan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13906,7 +16402,11 @@ pub struct WorkTableScan {
 }
 impl Default for WorkTableScan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13924,7 +16424,11 @@ pub struct ForeignScan {
 }
 impl Default for ForeignScan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13941,7 +16445,11 @@ pub struct CustomScan {
 }
 impl Default for CustomScan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13954,7 +16462,11 @@ pub struct Join {
 }
 impl Default for Join {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13965,7 +16477,11 @@ pub struct NestLoop {
 }
 impl Default for NestLoop {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13977,7 +16493,11 @@ pub struct NestLoopParam {
 }
 impl Default for NestLoopParam {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -13993,7 +16513,11 @@ pub struct MergeJoin {
 }
 impl Default for MergeJoin {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14007,7 +16531,11 @@ pub struct HashJoin {
 }
 impl Default for HashJoin {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14017,7 +16545,11 @@ pub struct Material {
 }
 impl Default for Material {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14032,7 +16564,11 @@ pub struct Sort {
 }
 impl Default for Sort {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14043,7 +16579,11 @@ pub struct IncrementalSort {
 }
 impl Default for IncrementalSort {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14057,7 +16597,11 @@ pub struct Group {
 }
 impl Default for Group {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14078,7 +16622,11 @@ pub struct Agg {
 }
 impl Default for Agg {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14105,7 +16653,11 @@ pub struct WindowAgg {
 }
 impl Default for WindowAgg {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14119,7 +16671,11 @@ pub struct Unique {
 }
 impl Default for Unique {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14134,7 +16690,11 @@ pub struct Gather {
 }
 impl Default for Gather {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14152,7 +16712,11 @@ pub struct GatherMerge {
 }
 impl Default for GatherMerge {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14167,7 +16731,11 @@ pub struct Hash {
 }
 impl Default for Hash {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14186,7 +16754,11 @@ pub struct SetOp {
 }
 impl Default for SetOp {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14198,7 +16770,11 @@ pub struct LockRows {
 }
 impl Default for LockRows {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14215,7 +16791,11 @@ pub struct Limit {
 }
 impl Default for Limit {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const RowMarkType_ROW_MARK_EXCLUSIVE: RowMarkType = 0;
@@ -14240,7 +16820,11 @@ pub struct PlanRowMark {
 }
 impl Default for PlanRowMark {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14252,7 +16836,11 @@ pub struct PartitionPruneInfo {
 }
 impl Default for PartitionPruneInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14271,7 +16859,11 @@ pub struct PartitionedRelPruneInfo {
 }
 impl Default for PartitionedRelPruneInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14282,7 +16874,11 @@ pub struct PartitionPruneStep {
 }
 impl Default for PartitionPruneStep {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14296,7 +16892,11 @@ pub struct PartitionPruneStepOp {
 }
 impl Default for PartitionPruneStepOp {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const PartitionPruneCombineOp_PARTPRUNE_COMBINE_UNION: PartitionPruneCombineOp = 0;
@@ -14311,7 +16911,11 @@ pub struct PartitionPruneStepCombine {
 }
 impl Default for PartitionPruneStepCombine {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14323,7 +16927,11 @@ pub struct PlanInvalItem {
 }
 impl Default for PlanInvalItem {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14733,7 +17341,11 @@ pub struct SpinDelayStatus {
 }
 impl Default for SpinDelayStatus {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -14809,7 +17421,11 @@ pub struct HASHELEMENT {
 }
 impl Default for HASHELEMENT {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -14841,7 +17457,11 @@ pub struct HASHCTL {
 }
 impl Default for HASHCTL {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const HASHACTION_HASH_FIND: HASHACTION = 0;
@@ -14858,7 +17478,11 @@ pub struct HASH_SEQ_STATUS {
 }
 impl Default for HASH_SEQ_STATUS {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -14962,7 +17586,11 @@ pub struct EphemeralNamedRelationMetadataData {
 }
 impl Default for EphemeralNamedRelationMetadataData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type EphemeralNamedRelationMetadata = *mut EphemeralNamedRelationMetadataData;
@@ -14974,7 +17602,11 @@ pub struct EphemeralNamedRelationData {
 }
 impl Default for EphemeralNamedRelationData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type EphemeralNamedRelation = *mut EphemeralNamedRelationData;
@@ -15038,7 +17670,11 @@ pub struct Trigger {
 }
 impl Default for Trigger {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -15070,11 +17706,15 @@ pub struct TriggerDesc {
 }
 impl Default for TriggerDesc {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct dirent {
     pub d_ino: __ino_t,
     pub d_off: __off_t,
@@ -15084,7 +17724,11 @@ pub struct dirent {
 }
 impl Default for dirent {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const DT_UNKNOWN: ::std::os::raw::c_uint = 0;
@@ -15102,7 +17746,29 @@ pub type _bindgen_ty_9 = ::std::os::raw::c_uint;
 pub struct __dirstream {
     _unused: [u8; 0],
 }
-pub type DIR = __dirstream;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct DIR {
+    pub __dd_fd: ::std::os::raw::c_int,
+    pub __dd_loc: ::std::os::raw::c_long,
+    pub __dd_size: ::std::os::raw::c_long,
+    pub __dd_buf: *mut ::std::os::raw::c_char,
+    pub __dd_len: ::std::os::raw::c_int,
+    pub __dd_seek: ::std::os::raw::c_long,
+    pub __padding: ::std::os::raw::c_long,
+    pub __dd_flags: ::std::os::raw::c_int,
+    pub __dd_lock: __darwin_pthread_mutex_t,
+    pub __dd_td: *mut _telldir,
+}
+impl Default for DIR {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
 #[pg_guard]
 extern "C" {
     pub fn opendir(__name: *const ::std::os::raw::c_char) -> *mut DIR;
@@ -15681,7 +18347,11 @@ pub struct SnapshotData {
 }
 impl Default for SnapshotData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type Relation = *mut RelationData;
@@ -15906,7 +18576,11 @@ pub struct SortSupportData {
 }
 impl Default for SortSupportData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -15990,7 +18664,11 @@ pub struct SortCoordinateData {
 }
 impl Default for SortCoordinateData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type SortCoordinate = *mut SortCoordinateData;
@@ -16012,7 +18690,11 @@ pub struct TuplesortInstrumentation {
 }
 impl Default for TuplesortInstrumentation {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -16345,7 +19027,11 @@ pub struct ExprState {
 }
 impl Default for ExprState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -16377,7 +19063,11 @@ pub struct IndexInfo {
 }
 impl Default for IndexInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type ExprContextCallbackFunction = ::std::option::Option<unsafe extern "C" fn(arg: Datum)>;
@@ -16390,7 +19080,11 @@ pub struct ExprContext_CB {
 }
 impl Default for ExprContext_CB {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -16415,7 +19109,11 @@ pub struct ExprContext {
 }
 impl Default for ExprContext {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const ExprDoneCond_ExprSingleResult: ExprDoneCond = 0;
@@ -16441,7 +19139,11 @@ pub struct ReturnSetInfo {
 }
 impl Default for ReturnSetInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -16453,7 +19155,11 @@ pub struct ProjectionInfo {
 }
 impl Default for ProjectionInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -16468,7 +19174,11 @@ pub struct JunkFilter {
 }
 impl Default for JunkFilter {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -16482,7 +19192,11 @@ pub struct OnConflictSetState {
 }
 impl Default for OnConflictSetState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -16522,7 +19236,11 @@ pub struct ResultRelInfo {
 }
 impl Default for ResultRelInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -16570,7 +19288,11 @@ pub struct EState {
 }
 impl Default for EState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -16590,7 +19312,11 @@ pub struct ExecRowMark {
 }
 impl Default for ExecRowMark {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -16603,7 +19329,11 @@ pub struct ExecAuxRowMark {
 }
 impl Default for ExecAuxRowMark {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type TupleHashEntry = *mut TupleHashEntryData;
@@ -16618,7 +19348,11 @@ pub struct TupleHashEntryData {
 }
 impl Default for TupleHashEntryData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -16660,7 +19394,11 @@ pub struct tuplehash_hash {
 }
 impl Default for tuplehash_hash {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const tuplehash_status_tuplehash_SH_EMPTY: tuplehash_status = 0;
@@ -16770,7 +19508,11 @@ pub struct TupleHashTableData {
 }
 impl Default for TupleHashTableData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type TupleHashIterator = tuplehash_iterator;
@@ -16783,7 +19525,11 @@ pub struct AggrefExprState {
 }
 impl Default for AggrefExprState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -16797,7 +19543,11 @@ pub struct WindowFuncExprState {
 }
 impl Default for WindowFuncExprState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -16819,7 +19569,11 @@ pub struct SetExprState {
 }
 impl Default for SetExprState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -16855,7 +19609,11 @@ pub struct SubPlanState {
 }
 impl Default for SubPlanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -16868,7 +19626,11 @@ pub struct AlternativeSubPlanState {
 }
 impl Default for AlternativeSubPlanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const DomainConstraintType_DOM_CONSTRAINT_NOTNULL: DomainConstraintType = 0;
@@ -16885,7 +19647,11 @@ pub struct DomainConstraintState {
 }
 impl Default for DomainConstraintState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type ExecProcNodeMtd =
@@ -16927,7 +19693,11 @@ pub struct PlanState {
 }
 impl Default for PlanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -16947,7 +19717,11 @@ pub struct EPQState {
 }
 impl Default for EPQState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -16960,7 +19734,11 @@ pub struct ResultState {
 }
 impl Default for ResultState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -16975,7 +19753,11 @@ pub struct ProjectSetState {
 }
 impl Default for ProjectSetState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17002,7 +19784,11 @@ pub struct ModifyTableState {
 }
 impl Default for ModifyTableState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17032,7 +19818,11 @@ pub struct AppendState {
 }
 impl Default for AppendState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17051,7 +19841,11 @@ pub struct MergeAppendState {
 }
 impl Default for MergeAppendState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17070,7 +19864,11 @@ pub struct RecursiveUnionState {
 }
 impl Default for RecursiveUnionState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17082,7 +19880,11 @@ pub struct BitmapAndState {
 }
 impl Default for BitmapAndState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17094,7 +19896,11 @@ pub struct BitmapOrState {
 }
 impl Default for BitmapOrState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17107,7 +19913,11 @@ pub struct ScanState {
 }
 impl Default for ScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17118,7 +19928,11 @@ pub struct SeqScanState {
 }
 impl Default for SeqScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17139,7 +19953,11 @@ pub struct SampleScanState {
 }
 impl Default for SampleScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17151,7 +19969,11 @@ pub struct IndexRuntimeKeyInfo {
 }
 impl Default for IndexRuntimeKeyInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17166,7 +19988,11 @@ pub struct IndexArrayKeyInfo {
 }
 impl Default for IndexArrayKeyInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17196,7 +20022,11 @@ pub struct IndexScanState {
 }
 impl Default for IndexScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17220,7 +20050,11 @@ pub struct IndexOnlyScanState {
 }
 impl Default for IndexOnlyScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17241,7 +20075,11 @@ pub struct BitmapIndexScanState {
 }
 impl Default for BitmapIndexScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const SharedBitmapState_BM_INITIAL: SharedBitmapState = 0;
@@ -17262,7 +20100,11 @@ pub struct ParallelBitmapHeapState {
 }
 impl Default for ParallelBitmapHeapState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17291,7 +20133,11 @@ pub struct BitmapHeapScanState {
 }
 impl Default for BitmapHeapScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17307,7 +20153,11 @@ pub struct TidScanState {
 }
 impl Default for TidScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17318,7 +20168,11 @@ pub struct SubqueryScanState {
 }
 impl Default for SubqueryScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17340,7 +20194,11 @@ pub struct FunctionScanState {
 }
 impl Default for FunctionScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17355,7 +20213,11 @@ pub struct ValuesScanState {
 }
 impl Default for ValuesScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17379,7 +20241,11 @@ pub struct TableFuncScanState {
 }
 impl Default for TableFuncScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17395,7 +20261,11 @@ pub struct CteScanState {
 }
 impl Default for CteScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17408,7 +20278,11 @@ pub struct NamedTuplestoreScanState {
 }
 impl Default for NamedTuplestoreScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17419,7 +20293,11 @@ pub struct WorkTableScanState {
 }
 impl Default for WorkTableScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17433,7 +20311,11 @@ pub struct ForeignScanState {
 }
 impl Default for ForeignScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17447,7 +20329,11 @@ pub struct CustomScanState {
 }
 impl Default for CustomScanState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17460,7 +20346,11 @@ pub struct JoinState {
 }
 impl Default for JoinState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17473,7 +20363,11 @@ pub struct NestLoopState {
 }
 impl Default for NestLoopState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17506,7 +20400,11 @@ pub struct MergeJoinState {
 }
 impl Default for MergeJoinState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17545,7 +20443,11 @@ pub struct HashJoinState {
 }
 impl Default for HashJoinState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17558,7 +20460,11 @@ pub struct MaterialState {
 }
 impl Default for MaterialState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17570,7 +20476,11 @@ pub struct PresortedKeyData {
 }
 impl Default for PresortedKeyData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17581,7 +20491,11 @@ pub struct SharedSortInfo {
 }
 impl Default for SharedSortInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17600,7 +20514,11 @@ pub struct SortState {
 }
 impl Default for SortState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17651,7 +20569,11 @@ pub struct IncrementalSortState {
 }
 impl Default for IncrementalSortState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17663,7 +20585,11 @@ pub struct GroupState {
 }
 impl Default for GroupState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17771,7 +20697,11 @@ pub struct AggState {
 }
 impl Default for AggState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17844,7 +20774,11 @@ pub struct WindowAggState {
 }
 impl Default for WindowAggState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17855,7 +20789,11 @@ pub struct UniqueState {
 }
 impl Default for UniqueState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17874,7 +20812,11 @@ pub struct GatherState {
 }
 impl Default for GatherState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17903,7 +20845,11 @@ pub struct GatherMergeState {
 }
 impl Default for GatherMergeState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17933,7 +20879,11 @@ pub struct HashState {
 }
 impl Default for HashState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17960,7 +20910,11 @@ pub struct SetOpState {
 }
 impl Default for SetOpState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -17972,7 +20926,11 @@ pub struct LockRowsState {
 }
 impl Default for LockRowsState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const LimitStateCond_LIMIT_INITIAL: LimitStateCond = 0;
@@ -18002,7 +20960,11 @@ pub struct LimitState {
 }
 impl Default for LimitState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const CommandTag_CMDTAG_UNKNOWN: CommandTag = 0;
@@ -18206,7 +21168,11 @@ pub struct QueryCompletion {
 }
 impl Default for QueryCompletion {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -18266,7 +21232,11 @@ pub struct _DestReceiver {
 }
 impl Default for _DestReceiver {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -18321,7 +21291,11 @@ pub struct QueryDesc {
 }
 impl Default for QueryDesc {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -18355,12 +21329,20 @@ pub union Value_ValUnion {
 }
 impl Default for Value_ValUnion {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 impl Default for Value {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -18444,7 +21426,11 @@ pub struct Query {
 }
 impl Default for Query {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[doc = "\tSupporting data structures for Parse Trees"]
@@ -18467,7 +21453,11 @@ pub struct TypeName {
 }
 impl Default for TypeName {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18479,7 +21469,11 @@ pub struct ColumnRef {
 }
 impl Default for ColumnRef {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18491,7 +21485,11 @@ pub struct ParamRef {
 }
 impl Default for ParamRef {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const A_Expr_Kind_AEXPR_OP: A_Expr_Kind = 0;
@@ -18523,7 +21521,11 @@ pub struct A_Expr {
 }
 impl Default for A_Expr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18535,7 +21537,11 @@ pub struct A_Const {
 }
 impl Default for A_Const {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18548,7 +21554,11 @@ pub struct TypeCast {
 }
 impl Default for TypeCast {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18561,7 +21571,11 @@ pub struct CollateClause {
 }
 impl Default for CollateClause {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const RoleSpecType_ROLESPEC_CSTRING: RoleSpecType = 0;
@@ -18579,7 +21593,11 @@ pub struct RoleSpec {
 }
 impl Default for RoleSpec {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18599,7 +21617,11 @@ pub struct FuncCall {
 }
 impl Default for FuncCall {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18609,7 +21631,11 @@ pub struct A_Star {
 }
 impl Default for A_Star {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18622,7 +21648,11 @@ pub struct A_Indices {
 }
 impl Default for A_Indices {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18634,7 +21664,11 @@ pub struct A_Indirection {
 }
 impl Default for A_Indirection {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18646,7 +21680,11 @@ pub struct A_ArrayExpr {
 }
 impl Default for A_ArrayExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18660,7 +21698,11 @@ pub struct ResTarget {
 }
 impl Default for ResTarget {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18673,7 +21715,11 @@ pub struct MultiAssignRef {
 }
 impl Default for MultiAssignRef {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18688,7 +21734,11 @@ pub struct SortBy {
 }
 impl Default for SortBy {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18706,7 +21756,11 @@ pub struct WindowDef {
 }
 impl Default for WindowDef {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18719,7 +21773,11 @@ pub struct RangeSubselect {
 }
 impl Default for RangeSubselect {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18735,7 +21793,11 @@ pub struct RangeFunction {
 }
 impl Default for RangeFunction {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18752,7 +21814,11 @@ pub struct RangeTableFunc {
 }
 impl Default for RangeTableFunc {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18769,7 +21835,11 @@ pub struct RangeTableFuncCol {
 }
 impl Default for RangeTableFuncCol {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18784,7 +21854,11 @@ pub struct RangeTableSample {
 }
 impl Default for RangeTableSample {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18811,7 +21885,11 @@ pub struct ColumnDef {
 }
 impl Default for ColumnDef {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18824,7 +21902,11 @@ pub struct TableLikeClause {
 }
 impl Default for TableLikeClause {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const TableLikeOption_CREATE_TABLE_LIKE_COMMENTS: TableLikeOption = 1;
@@ -18852,7 +21934,11 @@ pub struct IndexElem {
 }
 impl Default for IndexElem {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const DefElemAction_DEFELEM_UNSPEC: DefElemAction = 0;
@@ -18872,7 +21958,11 @@ pub struct DefElem {
 }
 impl Default for DefElem {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18885,7 +21975,11 @@ pub struct LockingClause {
 }
 impl Default for LockingClause {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18899,7 +21993,11 @@ pub struct XmlSerialize {
 }
 impl Default for XmlSerialize {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18914,7 +22012,11 @@ pub struct PartitionElem {
 }
 impl Default for PartitionElem {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18927,7 +22029,11 @@ pub struct PartitionSpec {
 }
 impl Default for PartitionSpec {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18945,7 +22051,11 @@ pub struct PartitionBoundSpec {
 }
 impl Default for PartitionBoundSpec {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const PartitionRangeDatumKind_PARTITION_RANGE_DATUM_MINVALUE: PartitionRangeDatumKind = -1;
@@ -18962,7 +22072,11 @@ pub struct PartitionRangeDatum {
 }
 impl Default for PartitionRangeDatum {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -18974,7 +22088,11 @@ pub struct PartitionCmd {
 }
 impl Default for PartitionCmd {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const RTEKind_RTE_RELATION: RTEKind = 0;
@@ -19030,7 +22148,11 @@ pub struct RangeTblEntry {
 }
 impl Default for RangeTblEntry {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19047,7 +22169,11 @@ pub struct RangeTblFunction {
 }
 impl Default for RangeTblFunction {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19060,7 +22186,11 @@ pub struct TableSampleClause {
 }
 impl Default for TableSampleClause {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const WCOKind_WCO_VIEW_CHECK: WCOKind = 0;
@@ -19080,7 +22210,11 @@ pub struct WithCheckOption {
 }
 impl Default for WithCheckOption {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19095,7 +22229,11 @@ pub struct SortGroupClause {
 }
 impl Default for SortGroupClause {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const GroupingSetKind_GROUPING_SET_EMPTY: GroupingSetKind = 0;
@@ -19114,7 +22252,11 @@ pub struct GroupingSet {
 }
 impl Default for GroupingSet {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19138,7 +22280,11 @@ pub struct WindowClause {
 }
 impl Default for WindowClause {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19152,7 +22298,11 @@ pub struct RowMarkClause {
 }
 impl Default for RowMarkClause {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19165,7 +22315,11 @@ pub struct WithClause {
 }
 impl Default for WithClause {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19179,7 +22333,11 @@ pub struct InferClause {
 }
 impl Default for InferClause {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19194,7 +22352,11 @@ pub struct OnConflictClause {
 }
 impl Default for OnConflictClause {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const CTEMaterialize_CTEMaterializeDefault: CTEMaterialize = 0;
@@ -19219,7 +22381,11 @@ pub struct CommonTableExpr {
 }
 impl Default for CommonTableExpr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19232,7 +22398,11 @@ pub struct TriggerTransition {
 }
 impl Default for TriggerTransition {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[doc = "\t\tRaw Grammar Output Statements"]
@@ -19246,7 +22416,11 @@ pub struct RawStmt {
 }
 impl Default for RawStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[doc = "\t\tOptimizable Statements"]
@@ -19264,7 +22438,11 @@ pub struct InsertStmt {
 }
 impl Default for InsertStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19279,7 +22457,11 @@ pub struct DeleteStmt {
 }
 impl Default for DeleteStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19295,7 +22477,11 @@ pub struct UpdateStmt {
 }
 impl Default for UpdateStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const SetOperation_SETOP_NONE: SetOperation = 0;
@@ -19329,7 +22515,11 @@ pub struct SelectStmt {
 }
 impl Default for SelectStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19347,7 +22537,11 @@ pub struct SetOperationStmt {
 }
 impl Default for SetOperationStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const ObjectType_OBJECT_ACCESS_METHOD: ObjectType = 0;
@@ -19423,7 +22617,11 @@ pub struct CreateSchemaStmt {
 }
 impl Default for CreateSchemaStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const DropBehavior_DROP_RESTRICT: DropBehavior = 0;
@@ -19440,7 +22638,11 @@ pub struct AlterTableStmt {
 }
 impl Default for AlterTableStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const AlterTableType_AT_AddColumn: AlterTableType = 0;
@@ -19520,7 +22722,11 @@ pub struct ReplicaIdentityStmt {
 }
 impl Default for ReplicaIdentityStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19537,7 +22743,11 @@ pub struct AlterTableCmd {
 }
 impl Default for AlterTableCmd {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19548,7 +22758,11 @@ pub struct AlterCollationStmt {
 }
 impl Default for AlterCollationStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19564,7 +22778,11 @@ pub struct AlterDomainStmt {
 }
 impl Default for AlterDomainStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const GrantTargetType_ACL_TARGET_OBJECT: GrantTargetType = 0;
@@ -19586,7 +22804,11 @@ pub struct GrantStmt {
 }
 impl Default for GrantStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19599,7 +22821,11 @@ pub struct ObjectWithArgs {
 }
 impl Default for ObjectWithArgs {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19611,7 +22837,11 @@ pub struct AccessPriv {
 }
 impl Default for AccessPriv {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19627,7 +22857,11 @@ pub struct GrantRoleStmt {
 }
 impl Default for GrantRoleStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19639,7 +22873,11 @@ pub struct AlterDefaultPrivilegesStmt {
 }
 impl Default for AlterDefaultPrivilegesStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19657,7 +22895,11 @@ pub struct CopyStmt {
 }
 impl Default for CopyStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const VariableSetKind_VAR_SET_VALUE: VariableSetKind = 0;
@@ -19678,7 +22920,11 @@ pub struct VariableSetStmt {
 }
 impl Default for VariableSetStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19689,7 +22935,11 @@ pub struct VariableShowStmt {
 }
 impl Default for VariableShowStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19711,7 +22961,11 @@ pub struct CreateStmt {
 }
 impl Default for CreateStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const ConstrType_CONSTR_NULL: ConstrType = 0;
@@ -19764,7 +23018,11 @@ pub struct Constraint {
 }
 impl Default for Constraint {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19778,7 +23036,11 @@ pub struct CreateTableSpaceStmt {
 }
 impl Default for CreateTableSpaceStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19790,7 +23052,11 @@ pub struct DropTableSpaceStmt {
 }
 impl Default for DropTableSpaceStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19803,7 +23069,11 @@ pub struct AlterTableSpaceOptionsStmt {
 }
 impl Default for AlterTableSpaceOptionsStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19818,7 +23088,11 @@ pub struct AlterTableMoveAllStmt {
 }
 impl Default for AlterTableMoveAllStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19831,7 +23105,11 @@ pub struct CreateExtensionStmt {
 }
 impl Default for CreateExtensionStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19843,7 +23121,11 @@ pub struct AlterExtensionStmt {
 }
 impl Default for AlterExtensionStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19857,7 +23139,11 @@ pub struct AlterExtensionContentsStmt {
 }
 impl Default for AlterExtensionContentsStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19870,7 +23156,11 @@ pub struct CreateFdwStmt {
 }
 impl Default for CreateFdwStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19883,7 +23173,11 @@ pub struct AlterFdwStmt {
 }
 impl Default for AlterFdwStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19899,7 +23193,11 @@ pub struct CreateForeignServerStmt {
 }
 impl Default for CreateForeignServerStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19913,7 +23211,11 @@ pub struct AlterForeignServerStmt {
 }
 impl Default for AlterForeignServerStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19925,7 +23227,11 @@ pub struct CreateForeignTableStmt {
 }
 impl Default for CreateForeignTableStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19939,7 +23245,11 @@ pub struct CreateUserMappingStmt {
 }
 impl Default for CreateUserMappingStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19952,7 +23262,11 @@ pub struct AlterUserMappingStmt {
 }
 impl Default for AlterUserMappingStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -19965,7 +23279,11 @@ pub struct DropUserMappingStmt {
 }
 impl Default for DropUserMappingStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const ImportForeignSchemaType_FDW_IMPORT_SCHEMA_ALL: ImportForeignSchemaType = 0;
@@ -19985,7 +23303,11 @@ pub struct ImportForeignSchemaStmt {
 }
 impl Default for ImportForeignSchemaStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20002,7 +23324,11 @@ pub struct CreatePolicyStmt {
 }
 impl Default for CreatePolicyStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20017,7 +23343,11 @@ pub struct AlterPolicyStmt {
 }
 impl Default for AlterPolicyStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20030,7 +23360,11 @@ pub struct CreateAmStmt {
 }
 impl Default for CreateAmStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20054,7 +23388,11 @@ pub struct CreateTrigStmt {
 }
 impl Default for CreateTrigStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20068,7 +23406,11 @@ pub struct CreateEventTrigStmt {
 }
 impl Default for CreateEventTrigStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20080,7 +23422,11 @@ pub struct AlterEventTrigStmt {
 }
 impl Default for AlterEventTrigStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20096,7 +23442,11 @@ pub struct CreatePLangStmt {
 }
 impl Default for CreatePLangStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const RoleStmtType_ROLESTMT_ROLE: RoleStmtType = 0;
@@ -20113,7 +23463,11 @@ pub struct CreateRoleStmt {
 }
 impl Default for CreateRoleStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20126,7 +23480,11 @@ pub struct AlterRoleStmt {
 }
 impl Default for AlterRoleStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20139,7 +23497,11 @@ pub struct AlterRoleSetStmt {
 }
 impl Default for AlterRoleSetStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20151,7 +23513,11 @@ pub struct DropRoleStmt {
 }
 impl Default for DropRoleStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20166,7 +23532,11 @@ pub struct CreateSeqStmt {
 }
 impl Default for CreateSeqStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20180,7 +23550,11 @@ pub struct AlterSeqStmt {
 }
 impl Default for AlterSeqStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20197,7 +23571,11 @@ pub struct DefineStmt {
 }
 impl Default for DefineStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20211,7 +23589,11 @@ pub struct CreateDomainStmt {
 }
 impl Default for CreateDomainStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20227,7 +23609,11 @@ pub struct CreateOpClassStmt {
 }
 impl Default for CreateOpClassStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20243,7 +23629,11 @@ pub struct CreateOpClassItem {
 }
 impl Default for CreateOpClassItem {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20255,7 +23645,11 @@ pub struct CreateOpFamilyStmt {
 }
 impl Default for CreateOpFamilyStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20269,7 +23663,11 @@ pub struct AlterOpFamilyStmt {
 }
 impl Default for AlterOpFamilyStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20284,7 +23682,11 @@ pub struct DropStmt {
 }
 impl Default for DropStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20297,7 +23699,11 @@ pub struct TruncateStmt {
 }
 impl Default for TruncateStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20310,7 +23716,11 @@ pub struct CommentStmt {
 }
 impl Default for CommentStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20324,7 +23734,11 @@ pub struct SecLabelStmt {
 }
 impl Default for SecLabelStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20337,7 +23751,11 @@ pub struct DeclareCursorStmt {
 }
 impl Default for DeclareCursorStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20348,7 +23766,11 @@ pub struct ClosePortalStmt {
 }
 impl Default for ClosePortalStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const FetchDirection_FETCH_FORWARD: FetchDirection = 0;
@@ -20367,7 +23789,11 @@ pub struct FetchStmt {
 }
 impl Default for FetchStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20400,7 +23826,11 @@ pub struct IndexStmt {
 }
 impl Default for IndexStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20416,7 +23846,11 @@ pub struct CreateStatsStmt {
 }
 impl Default for CreateStatsStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20429,7 +23863,11 @@ pub struct AlterStatsStmt {
 }
 impl Default for AlterStatsStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20445,7 +23883,11 @@ pub struct CreateFunctionStmt {
 }
 impl Default for CreateFunctionStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const FunctionParameterMode_FUNC_PARAM_IN: FunctionParameterMode = 105;
@@ -20465,7 +23907,11 @@ pub struct FunctionParameter {
 }
 impl Default for FunctionParameter {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20478,7 +23924,11 @@ pub struct AlterFunctionStmt {
 }
 impl Default for AlterFunctionStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20489,7 +23939,11 @@ pub struct DoStmt {
 }
 impl Default for DoStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20503,7 +23957,11 @@ pub struct InlineCodeBlock {
 }
 impl Default for InlineCodeBlock {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20515,7 +23973,11 @@ pub struct CallStmt {
 }
 impl Default for CallStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20526,7 +23988,11 @@ pub struct CallContext {
 }
 impl Default for CallContext {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20544,7 +24010,11 @@ pub struct RenameStmt {
 }
 impl Default for RenameStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20559,7 +24029,11 @@ pub struct AlterObjectDependsStmt {
 }
 impl Default for AlterObjectDependsStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20574,7 +24048,11 @@ pub struct AlterObjectSchemaStmt {
 }
 impl Default for AlterObjectSchemaStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20588,7 +24066,11 @@ pub struct AlterOwnerStmt {
 }
 impl Default for AlterOwnerStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20600,7 +24082,11 @@ pub struct AlterOperatorStmt {
 }
 impl Default for AlterOperatorStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20612,7 +24098,11 @@ pub struct AlterTypeStmt {
 }
 impl Default for AlterTypeStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20629,7 +24119,11 @@ pub struct RuleStmt {
 }
 impl Default for RuleStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20641,7 +24135,11 @@ pub struct NotifyStmt {
 }
 impl Default for NotifyStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20652,7 +24150,11 @@ pub struct ListenStmt {
 }
 impl Default for ListenStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20663,7 +24165,11 @@ pub struct UnlistenStmt {
 }
 impl Default for UnlistenStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const TransactionStmtKind_TRANS_STMT_BEGIN: TransactionStmtKind = 0;
@@ -20689,7 +24195,11 @@ pub struct TransactionStmt {
 }
 impl Default for TransactionStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20701,7 +24211,11 @@ pub struct CompositeTypeStmt {
 }
 impl Default for CompositeTypeStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20713,7 +24227,11 @@ pub struct CreateEnumStmt {
 }
 impl Default for CreateEnumStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20725,7 +24243,11 @@ pub struct CreateRangeStmt {
 }
 impl Default for CreateRangeStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20741,7 +24263,11 @@ pub struct AlterEnumStmt {
 }
 impl Default for AlterEnumStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const ViewCheckOption_NO_CHECK_OPTION: ViewCheckOption = 0;
@@ -20761,7 +24287,11 @@ pub struct ViewStmt {
 }
 impl Default for ViewStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20772,7 +24302,11 @@ pub struct LoadStmt {
 }
 impl Default for LoadStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20784,7 +24318,11 @@ pub struct CreatedbStmt {
 }
 impl Default for CreatedbStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20796,7 +24334,11 @@ pub struct AlterDatabaseStmt {
 }
 impl Default for AlterDatabaseStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20808,7 +24350,11 @@ pub struct AlterDatabaseSetStmt {
 }
 impl Default for AlterDatabaseSetStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20821,7 +24367,11 @@ pub struct DropdbStmt {
 }
 impl Default for DropdbStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20832,7 +24382,11 @@ pub struct AlterSystemStmt {
 }
 impl Default for AlterSystemStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const ClusterOption_CLUOPT_RECHECK: ClusterOption = 1;
@@ -20848,7 +24402,11 @@ pub struct ClusterStmt {
 }
 impl Default for ClusterStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20861,7 +24419,11 @@ pub struct VacuumStmt {
 }
 impl Default for VacuumStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20874,7 +24436,11 @@ pub struct VacuumRelation {
 }
 impl Default for VacuumRelation {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20886,7 +24452,11 @@ pub struct ExplainStmt {
 }
 impl Default for ExplainStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20901,7 +24471,11 @@ pub struct CreateTableAsStmt {
 }
 impl Default for CreateTableAsStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20914,7 +24488,11 @@ pub struct RefreshMatViewStmt {
 }
 impl Default for RefreshMatViewStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20924,7 +24502,11 @@ pub struct CheckPointStmt {
 }
 impl Default for CheckPointStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const DiscardMode_DISCARD_ALL: DiscardMode = 0;
@@ -20940,7 +24522,11 @@ pub struct DiscardStmt {
 }
 impl Default for DiscardStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20953,7 +24539,11 @@ pub struct LockStmt {
 }
 impl Default for LockStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -20965,7 +24555,11 @@ pub struct ConstraintsSetStmt {
 }
 impl Default for ConstraintsSetStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const ReindexObjectType_REINDEX_OBJECT_INDEX: ReindexObjectType = 0;
@@ -20986,7 +24580,11 @@ pub struct ReindexStmt {
 }
 impl Default for ReindexStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -21001,7 +24599,11 @@ pub struct CreateConversionStmt {
 }
 impl Default for CreateConversionStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -21016,7 +24618,11 @@ pub struct CreateCastStmt {
 }
 impl Default for CreateCastStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -21031,7 +24637,11 @@ pub struct CreateTransformStmt {
 }
 impl Default for CreateTransformStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -21044,7 +24654,11 @@ pub struct PrepareStmt {
 }
 impl Default for PrepareStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -21056,7 +24670,11 @@ pub struct ExecuteStmt {
 }
 impl Default for ExecuteStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -21067,7 +24685,11 @@ pub struct DeallocateStmt {
 }
 impl Default for DeallocateStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -21079,7 +24701,11 @@ pub struct DropOwnedStmt {
 }
 impl Default for DropOwnedStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -21091,7 +24717,11 @@ pub struct ReassignOwnedStmt {
 }
 impl Default for ReassignOwnedStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -21103,7 +24733,11 @@ pub struct AlterTSDictionaryStmt {
 }
 impl Default for AlterTSDictionaryStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const AlterTSConfigType_ALTER_TSCONFIG_ADD_MAPPING: AlterTSConfigType = 0;
@@ -21126,7 +24760,11 @@ pub struct AlterTSConfigurationStmt {
 }
 impl Default for AlterTSConfigurationStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -21140,7 +24778,11 @@ pub struct CreatePublicationStmt {
 }
 impl Default for CreatePublicationStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -21155,7 +24797,11 @@ pub struct AlterPublicationStmt {
 }
 impl Default for AlterPublicationStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -21169,7 +24815,11 @@ pub struct CreateSubscriptionStmt {
 }
 impl Default for CreateSubscriptionStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const AlterSubscriptionType_ALTER_SUBSCRIPTION_OPTIONS: AlterSubscriptionType = 0;
@@ -21190,7 +24840,11 @@ pub struct AlterSubscriptionStmt {
 }
 impl Default for AlterSubscriptionStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -21203,7 +24857,11 @@ pub struct DropSubscriptionStmt {
 }
 impl Default for DropSubscriptionStmt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -21271,7 +24929,11 @@ pub struct MemoryContextData {
 }
 impl Default for MemoryContextData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -22032,7 +25694,11 @@ pub struct TupOutputState {
 }
 impl Default for TupOutputState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -22345,7 +26011,11 @@ pub struct AttInMetadata {
 }
 impl Default for AttInMetadata {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -22360,7 +26030,11 @@ pub struct FuncCallContext {
 }
 impl Default for FuncCallContext {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const TypeFuncClass_TYPEFUNC_SCALAR: TypeFuncClass = 0;
@@ -23227,7 +26901,11 @@ pub struct pg_tm {
 }
 impl Default for pg_tm {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -23325,6 +27003,56 @@ extern "C" {
 }
 #[pg_guard]
 extern "C" {
+    #[doc = "\t  System interrupt and critical section handling"]
+    #[doc = ""]
+    #[doc = " There are two types of interrupts that a running backend needs to accept"]
+    #[doc = " without messing up its state: QueryCancel (SIGINT) and ProcDie (SIGTERM)."]
+    #[doc = " In both cases, we need to be able to clean up the current transaction"]
+    #[doc = " gracefully, so we can't respond to the interrupt instantaneously ---"]
+    #[doc = " there's no guarantee that internal data structures would be self-consistent"]
+    #[doc = " if the code is interrupted at an arbitrary instant.  Instead, the signal"]
+    #[doc = " handlers set flags that are checked periodically during execution."]
+    #[doc = ""]
+    #[doc = " The CHECK_FOR_INTERRUPTS() macro is called at strategically located spots"]
+    #[doc = " where it is normally safe to accept a cancel or die interrupt.  In some"]
+    #[doc = " cases, we invoke CHECK_FOR_INTERRUPTS() inside low-level subroutines that"]
+    #[doc = " might sometimes be called in contexts that do *not* want to allow a cancel"]
+    #[doc = " or die interrupt.  The HOLD_INTERRUPTS() and RESUME_INTERRUPTS() macros"]
+    #[doc = " allow code to ensure that no cancel or die interrupt will be accepted,"]
+    #[doc = " even if CHECK_FOR_INTERRUPTS() gets called in a subroutine.  The interrupt"]
+    #[doc = " will be held off until CHECK_FOR_INTERRUPTS() is done outside any"]
+    #[doc = " HOLD_INTERRUPTS() ... RESUME_INTERRUPTS() section."]
+    #[doc = ""]
+    #[doc = " There is also a mechanism to prevent query cancel interrupts, while still"]
+    #[doc = " allowing die interrupts: HOLD_CANCEL_INTERRUPTS() and"]
+    #[doc = " RESUME_CANCEL_INTERRUPTS()."]
+    #[doc = ""]
+    #[doc = " Note that ProcessInterrupts() has also acquired a number of tasks that"]
+    #[doc = " do not necessarily cause a query-cancel-or-die response.  Hence, it's"]
+    #[doc = " possible that it will just clear InterruptPending and return."]
+    #[doc = ""]
+    #[doc = " INTERRUPTS_PENDING_CONDITION() can be checked to see whether an"]
+    #[doc = " interrupt needs to be serviced, without trying to do so immediately."]
+    #[doc = " Some callers are also interested in INTERRUPTS_CAN_BE_PROCESSED(),"]
+    #[doc = " which tells whether ProcessInterrupts is sure to clear the interrupt."]
+    #[doc = ""]
+    #[doc = " Special mechanisms are used to let an interrupt be accepted when we are"]
+    #[doc = " waiting for a lock or when we are waiting for command input (but, of"]
+    #[doc = " course, only if the interrupt holdoff counter is zero).  See the"]
+    #[doc = " related code for details."]
+    #[doc = ""]
+    #[doc = " A lost connection is handled similarly, although the loss of connection"]
+    #[doc = " does not raise a signal, but is detected when we fail to write to the"]
+    #[doc = " socket. If there was a signal for a broken connection, we could make use of"]
+    #[doc = " it by setting ClientConnectionLost in the signal handler."]
+    #[doc = ""]
+    #[doc = " A related, but conceptually distinct, mechanism is the \"critical section\""]
+    #[doc = " mechanism.  A critical section not only holds off cancel/die interrupts,"]
+    #[doc = " but causes any ereport(ERROR) or ereport(FATAL) to become ereport(PANIC)"]
+    #[doc = " --- that is, a system-wide reset is forced.  Needless to say, only really"]
+    #[doc = " *critical* code should be marked as a critical section!\tCurrently, this"]
+    #[doc = " mechanism is only used for XLOG-related code."]
+    #[doc = ""]
     pub static mut InterruptPending: sig_atomic_t;
 }
 #[pg_guard]
@@ -23365,6 +27093,7 @@ extern "C" {
 }
 #[pg_guard]
 extern "C" {
+    #[doc = "\t  globals.h --\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t *"]
     pub static mut PostmasterPid: pid_t;
 }
 #[pg_guard]
@@ -23850,35 +27579,47 @@ extern "C" {
 }
 #[pg_guard]
 extern "C" {
+    pub fn get_hash_memory_limit() -> usize;
+}
+#[pg_guard]
+extern "C" {
     pub fn get_hash_mem() -> ::std::os::raw::c_int;
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct sockaddr_un {
     pub sun_family: sa_family_t,
     pub sun_path: [::std::os::raw::c_char; 108usize],
 }
 impl Default for sockaddr_un {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct SockAddr {
     pub addr: sockaddr_storage,
     pub salen: socklen_t,
 }
 impl Default for SockAddr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type ProtocolVersion = uint32;
 pub type MsgType = ProtocolVersion;
 pub type PacketLen = uint32;
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct StartupPacket {
     pub protoVersion: ProtocolVersion,
     pub database: [::std::os::raw::c_char; 64usize],
@@ -23889,7 +27630,11 @@ pub struct StartupPacket {
 }
 impl Default for StartupPacket {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -24065,14 +27810,18 @@ pub struct WALOpenSegment {
     pub ws_tli: TimeLineID,
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct WALSegmentContext {
     pub ws_dir: [::std::os::raw::c_char; 1024usize],
     pub ws_segsize: ::std::os::raw::c_int,
 }
 impl Default for WALSegmentContext {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type XLogPageReadCB = ::std::option::Option<
@@ -24122,11 +27871,15 @@ pub struct DecodedBkpBlock {
 }
 impl Default for DecodedBkpBlock {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct XLogReaderState {
     pub routine: XLogReaderRoutine,
     pub system_identifier: uint64,
@@ -24157,7 +27910,11 @@ pub struct XLogReaderState {
 }
 impl Default for XLogReaderState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -24336,7 +28093,11 @@ pub struct dlist_node {
 }
 impl Default for dlist_node {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -24346,7 +28107,11 @@ pub struct dlist_head {
 }
 impl Default for dlist_head {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -24357,7 +28122,11 @@ pub struct dlist_iter {
 }
 impl Default for dlist_iter {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -24369,7 +28138,11 @@ pub struct dlist_mutable_iter {
 }
 impl Default for dlist_mutable_iter {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -24379,7 +28152,11 @@ pub struct slist_node {
 }
 impl Default for slist_node {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -24389,7 +28166,11 @@ pub struct slist_head {
 }
 impl Default for slist_head {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -24399,7 +28180,11 @@ pub struct slist_iter {
 }
 impl Default for slist_iter {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -24411,7 +28196,11 @@ pub struct slist_mutable_iter {
 }
 impl Default for slist_mutable_iter {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -24435,7 +28224,11 @@ pub struct WaitEvent {
 }
 impl Default for WaitEvent {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -24558,7 +28351,11 @@ pub union LWLockPadded {
 }
 impl Default for LWLockPadded {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -24569,7 +28366,11 @@ pub union LWLockMinimallyPadded {
 }
 impl Default for LWLockMinimallyPadded {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -24584,7 +28385,11 @@ pub struct NamedLWLockTranche {
 }
 impl Default for NamedLWLockTranche {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -24722,7 +28527,11 @@ pub struct SHM_QUEUE {
 }
 impl Default for SHM_QUEUE {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -24784,7 +28593,7 @@ extern "C" {
     pub fn RequestAddinShmemSpace(size: Size);
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct ShmemIndexEnt {
     pub key: [::std::os::raw::c_char; 48usize],
     pub location: *mut ::std::os::raw::c_void,
@@ -24793,7 +28602,11 @@ pub struct ShmemIndexEnt {
 }
 impl Default for ShmemIndexEnt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -24848,7 +28661,11 @@ pub struct PROC_QUEUE {
 }
 impl Default for PROC_QUEUE {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -24871,7 +28688,11 @@ pub struct LockMethodData {
 }
 impl Default for LockMethodData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type LockMethod = *const LockMethodData;
@@ -24917,7 +28738,11 @@ pub struct LOCK {
 }
 impl Default for LOCK {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -24928,7 +28753,11 @@ pub struct PROCLOCKTAG {
 }
 impl Default for PROCLOCKTAG {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -24943,7 +28772,11 @@ pub struct PROCLOCK {
 }
 impl Default for PROCLOCK {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -24960,7 +28793,11 @@ pub struct LOCALLOCKOWNER {
 }
 impl Default for LOCALLOCKOWNER {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -24979,7 +28816,11 @@ pub struct LOCALLOCK {
 }
 impl Default for LOCALLOCK {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25002,7 +28843,11 @@ pub struct LockData {
 }
 impl Default for LockData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25029,7 +28874,11 @@ pub struct BlockedProcsData {
 }
 impl Default for BlockedProcsData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const LockAcquireResult_LOCKACQUIRE_NOT_AVAIL: LockAcquireResult = 0;
@@ -25295,17 +29144,21 @@ extern "C" {
     pub fn PGSemaphoreTryLock(sema: PGSemaphore) -> bool;
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct XidCache {
     pub xids: [TransactionId; 64usize],
 }
 impl Default for XidCache {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct PGPROC {
     pub links: SHM_QUEUE,
     pub procgloballist: *mut *mut PGPROC,
@@ -25356,7 +29209,11 @@ pub struct PGPROC {
 }
 impl Default for PGPROC {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -25397,7 +29254,11 @@ pub struct PROC_HDR {
 }
 impl Default for PROC_HDR {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -25583,7 +29444,11 @@ pub struct PgStat_TableStatus {
 }
 impl Default for PgStat_TableStatus {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25603,7 +29468,11 @@ pub struct PgStat_TableXactStatus {
 }
 impl Default for PgStat_TableXactStatus {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25614,7 +29483,11 @@ pub struct PgStat_MsgHdr {
 }
 impl Default for PgStat_MsgHdr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25624,7 +29497,11 @@ pub struct PgStat_MsgDummy {
 }
 impl Default for PgStat_MsgDummy {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25637,7 +29514,11 @@ pub struct PgStat_MsgInquiry {
 }
 impl Default for PgStat_MsgInquiry {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25660,11 +29541,15 @@ pub struct PgStat_MsgTabstat {
 }
 impl Default for PgStat_MsgTabstat {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct PgStat_MsgTabpurge {
     pub m_hdr: PgStat_MsgHdr,
     pub m_databaseid: Oid,
@@ -25673,7 +29558,11 @@ pub struct PgStat_MsgTabpurge {
 }
 impl Default for PgStat_MsgTabpurge {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25684,7 +29573,11 @@ pub struct PgStat_MsgDropdb {
 }
 impl Default for PgStat_MsgDropdb {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25695,7 +29588,11 @@ pub struct PgStat_MsgResetcounter {
 }
 impl Default for PgStat_MsgResetcounter {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25706,7 +29603,11 @@ pub struct PgStat_MsgResetsharedcounter {
 }
 impl Default for PgStat_MsgResetsharedcounter {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25719,7 +29620,11 @@ pub struct PgStat_MsgResetsinglecounter {
 }
 impl Default for PgStat_MsgResetsinglecounter {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25730,7 +29635,11 @@ pub struct PgStat_MsgResetslrucounter {
 }
 impl Default for PgStat_MsgResetslrucounter {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25742,7 +29651,11 @@ pub struct PgStat_MsgAutovacStart {
 }
 impl Default for PgStat_MsgAutovacStart {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25758,7 +29671,11 @@ pub struct PgStat_MsgVacuum {
 }
 impl Default for PgStat_MsgVacuum {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25775,11 +29692,15 @@ pub struct PgStat_MsgAnalyze {
 }
 impl Default for PgStat_MsgAnalyze {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct PgStat_MsgArchiver {
     pub m_hdr: PgStat_MsgHdr,
     pub m_failed: bool,
@@ -25788,7 +29709,11 @@ pub struct PgStat_MsgArchiver {
 }
 impl Default for PgStat_MsgArchiver {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25808,7 +29733,11 @@ pub struct PgStat_MsgBgWriter {
 }
 impl Default for PgStat_MsgBgWriter {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25826,7 +29755,11 @@ pub struct PgStat_MsgSLRU {
 }
 impl Default for PgStat_MsgSLRU {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25838,7 +29771,11 @@ pub struct PgStat_MsgRecoveryConflict {
 }
 impl Default for PgStat_MsgRecoveryConflict {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25850,7 +29787,11 @@ pub struct PgStat_MsgTempFile {
 }
 impl Default for PgStat_MsgTempFile {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25884,11 +29825,15 @@ pub struct PgStat_MsgFuncstat {
 }
 impl Default for PgStat_MsgFuncstat {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct PgStat_MsgFuncpurge {
     pub m_hdr: PgStat_MsgHdr,
     pub m_databaseid: Oid,
@@ -25897,7 +29842,11 @@ pub struct PgStat_MsgFuncpurge {
 }
 impl Default for PgStat_MsgFuncpurge {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25908,7 +29857,11 @@ pub struct PgStat_MsgDeadlock {
 }
 impl Default for PgStat_MsgDeadlock {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25921,7 +29874,11 @@ pub struct PgStat_MsgChecksumFailure {
 }
 impl Default for PgStat_MsgChecksumFailure {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25952,7 +29909,11 @@ pub union PgStat_Msg {
 }
 impl Default for PgStat_Msg {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -25988,7 +29949,11 @@ pub struct PgStat_StatDBEntry {
 }
 impl Default for PgStat_StatDBEntry {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -26026,7 +29991,7 @@ pub struct PgStat_StatFuncEntry {
     pub f_self_time: PgStat_Counter,
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct PgStat_ArchiverStats {
     pub archived_count: PgStat_Counter,
     pub last_archived_wal: [::std::os::raw::c_char; 41usize],
@@ -26038,7 +30003,11 @@ pub struct PgStat_ArchiverStats {
 }
 impl Default for PgStat_ArchiverStats {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -26228,7 +30197,7 @@ pub const ProgressCommandType_PROGRESS_COMMAND_CREATE_INDEX: ProgressCommandType
 pub const ProgressCommandType_PROGRESS_COMMAND_BASEBACKUP: ProgressCommandType = 5;
 pub type ProgressCommandType = ::std::os::raw::c_uint;
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct PgBackendSSLStatus {
     pub ssl_bits: ::std::os::raw::c_int,
     pub ssl_compression: bool,
@@ -26240,11 +30209,15 @@ pub struct PgBackendSSLStatus {
 }
 impl Default for PgBackendSSLStatus {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct PgBackendGSSStatus {
     pub gss_princ: [::std::os::raw::c_char; 64usize],
     pub gss_auth: bool,
@@ -26252,11 +30225,15 @@ pub struct PgBackendGSSStatus {
 }
 impl Default for PgBackendGSSStatus {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct PgBackendStatus {
     pub st_changecount: ::std::os::raw::c_int,
     pub st_procpid: ::std::os::raw::c_int,
@@ -26282,11 +30259,15 @@ pub struct PgBackendStatus {
 }
 impl Default for PgBackendStatus {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct LocalPgBackendStatus {
     pub backendStatus: PgBackendStatus,
     pub backend_xid: TransactionId,
@@ -26294,7 +30275,11 @@ pub struct LocalPgBackendStatus {
 }
 impl Default for LocalPgBackendStatus {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -26307,7 +30292,11 @@ pub struct PgStat_FunctionCallUsage {
 }
 impl Default for PgStat_FunctionCallUsage {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -26693,7 +30682,11 @@ pub struct ScanKeyData {
 }
 impl Default for ScanKeyData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type ScanKey = *mut ScanKeyData;
@@ -26752,7 +30745,11 @@ pub struct IndexVacuumInfo {
 }
 impl Default for IndexVacuumInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -27167,7 +31164,11 @@ pub struct IndexAmRoutine {
 }
 impl Default for IndexAmRoutine {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -27860,7 +31861,11 @@ pub struct GIST_SPLITVEC {
 }
 impl Default for GIST_SPLITVEC {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -27874,7 +31879,11 @@ pub struct GISTENTRY {
 }
 impl Default for GISTENTRY {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -27890,7 +31899,11 @@ pub struct GistEntryVector {
 }
 impl Default for GistEntryVector {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -27929,7 +31942,11 @@ pub struct TableScanDescData {
 }
 impl Default for TableScanDescData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type TableScanDesc = *mut TableScanDescData;
@@ -27959,7 +31976,11 @@ pub struct IndexFetchTableData {
 }
 impl Default for IndexFetchTableData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -27993,7 +32014,11 @@ pub struct IndexScanDescData {
 }
 impl Default for IndexScanDescData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -28016,7 +32041,11 @@ pub struct SysScanDescData {
 }
 impl Default for SysScanDescData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -28065,7 +32094,11 @@ pub struct ExpandedObjectHeader {
 }
 impl Default for ExpandedObjectHeader {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -28135,7 +32168,11 @@ pub struct ExpandedArrayHeader {
 }
 impl Default for ExpandedArrayHeader {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -28146,7 +32183,11 @@ pub union AnyArrayType {
 }
 impl Default for AnyArrayType {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -28165,7 +32206,11 @@ pub struct ArrayBuildState {
 }
 impl Default for ArrayBuildState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -28187,7 +32232,11 @@ pub struct ArrayBuildStateArr {
 }
 impl Default for ArrayBuildStateArr {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -28198,7 +32247,11 @@ pub struct ArrayBuildStateAny {
 }
 impl Default for ArrayBuildStateAny {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -28215,7 +32268,11 @@ pub struct ArrayMetaState {
 }
 impl Default for ArrayMetaState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -28226,7 +32283,11 @@ pub struct ArrayMapState {
 }
 impl Default for ArrayMapState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -28649,7 +32710,11 @@ pub struct ConfigVariable {
 }
 impl Default for ConfigVariable {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -28701,7 +32766,11 @@ pub struct config_enum_entry {
 }
 impl Default for config_enum_entry {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type GucBoolCheckHook = ::std::option::Option<
@@ -29248,7 +33317,7 @@ extern "C" {
     );
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct FormData_pg_class {
     pub oid: Oid,
     pub relname: NameData,
@@ -29283,7 +33352,11 @@ pub struct FormData_pg_class {
 }
 impl Default for FormData_pg_class {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type Form_pg_class = *mut FormData_pg_class;
@@ -29444,7 +33517,7 @@ extern "C" {
     pub fn get_relkind_objtype(relkind: ::std::os::raw::c_char) -> ObjectType;
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct FormData_pg_publication {
     pub oid: Oid,
     pub pubname: NameData,
@@ -29458,7 +33531,11 @@ pub struct FormData_pg_publication {
 }
 impl Default for FormData_pg_publication {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type Form_pg_publication = *mut FormData_pg_publication;
@@ -29481,7 +33558,11 @@ pub struct Publication {
 }
 impl Default for Publication {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -29547,7 +33628,11 @@ pub struct RewriteRule {
 }
 impl Default for RewriteRule {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -29558,7 +33643,11 @@ pub struct RuleLock {
 }
 impl Default for RuleLock {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -29641,7 +33730,11 @@ pub struct RelationData {
 }
 impl Default for RelationData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -29658,7 +33751,11 @@ pub struct ForeignKeyCacheInfo {
 }
 impl Default for ForeignKeyCacheInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -29706,7 +33803,11 @@ pub struct ViewOptions {
 }
 impl Default for ViewOptions {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -30044,7 +34145,11 @@ pub struct TableAmRoutine {
 }
 impl Default for TableAmRoutine {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -30222,7 +34327,7 @@ extern "C" {
 }
 pub type BulkInsertState = *mut BulkInsertStateData;
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct HeapScanDescData {
     pub rs_base: TableScanDescData,
     pub rs_nblocks: BlockNumber,
@@ -30239,7 +34344,11 @@ pub struct HeapScanDescData {
 }
 impl Default for HeapScanDescData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type HeapScanDesc = *mut HeapScanDescData;
@@ -30251,7 +34360,11 @@ pub struct IndexFetchHeapData {
 }
 impl Default for IndexFetchHeapData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const HTSV_Result_HEAPTUPLE_DEAD: HTSV_Result = 0;
@@ -30619,7 +34732,11 @@ pub struct relopt_gen {
 }
 impl Default for relopt_gen {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -30640,12 +34757,20 @@ pub union relopt_value__bindgen_ty_1 {
 }
 impl Default for relopt_value__bindgen_ty_1 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 impl Default for relopt_value {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -30656,7 +34781,11 @@ pub struct relopt_bool {
 }
 impl Default for relopt_bool {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -30669,7 +34798,11 @@ pub struct relopt_int {
 }
 impl Default for relopt_int {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -30682,7 +34815,11 @@ pub struct relopt_real {
 }
 impl Default for relopt_real {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -30693,7 +34830,11 @@ pub struct relopt_enum_elt_def {
 }
 impl Default for relopt_enum_elt_def {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -30706,7 +34847,11 @@ pub struct relopt_enum {
 }
 impl Default for relopt_enum {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type validate_string_relopt =
@@ -30736,7 +34881,11 @@ pub struct relopt_string {
 }
 impl Default for relopt_string {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -30748,7 +34897,11 @@ pub struct relopt_parse_elt {
 }
 impl Default for relopt_parse_elt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -30759,7 +34912,11 @@ pub struct local_relopt {
 }
 impl Default for local_relopt {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -30771,7 +34928,11 @@ pub struct local_relopts {
 }
 impl Default for local_relopts {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -31038,7 +35199,11 @@ pub union SharedInvalidationMessage {
 }
 impl Default for SharedInvalidationMessage {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -31296,7 +35461,11 @@ pub struct DynamicZoneAbbrev {
 }
 impl Default for DynamicZoneAbbrev {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -31646,7 +35815,11 @@ pub struct xl_xact_invals {
 }
 impl Default for xl_xact_invals {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -31689,7 +35862,7 @@ pub struct xl_xact_prepare {
     pub origin_timestamp: TimestampTz,
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct xl_xact_parsed_commit {
     pub xact_time: TimestampTz,
     pub xinfo: uint32,
@@ -31710,12 +35883,16 @@ pub struct xl_xact_parsed_commit {
 }
 impl Default for xl_xact_parsed_commit {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type xl_xact_parsed_prepare = xl_xact_parsed_commit;
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct xl_xact_parsed_abort {
     pub xact_time: TimestampTz,
     pub xinfo: uint32,
@@ -31732,7 +35909,11 @@ pub struct xl_xact_parsed_abort {
 }
 impl Default for xl_xact_parsed_abort {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -32384,7 +36565,11 @@ pub struct ValidateIndexState {
 }
 impl Default for ValidateIndexState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -32577,7 +36762,11 @@ pub struct _FuncCandidateList {
 }
 impl Default for _FuncCandidateList {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type FuncCandidateList = *mut _FuncCandidateList;
@@ -32595,7 +36784,11 @@ pub struct OverrideSearchPath {
 }
 impl Default for OverrideSearchPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const RVROption_RVR_MISSING_OK: RVROption = 1;
@@ -32915,7 +37108,7 @@ extern "C" {
     ) -> ::std::os::raw::c_int;
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct FormData_pg_enum {
     pub oid: Oid,
     pub enumtypid: Oid,
@@ -32924,7 +37117,11 @@ pub struct FormData_pg_enum {
 }
 impl Default for FormData_pg_enum {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type Form_pg_enum = *mut FormData_pg_enum;
@@ -32975,6 +37172,7 @@ extern "C" {
     pub fn AtEOXact_Enum();
 }
 #[repr(C)]
+#[derive(Debug)]
 pub struct FormData_pg_proc {
     pub oid: Oid,
     pub proname: NameData,
@@ -32999,7 +37197,11 @@ pub struct FormData_pg_proc {
 }
 impl Default for FormData_pg_proc {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type Form_pg_proc = *mut FormData_pg_proc;
@@ -33043,6 +37245,7 @@ extern "C" {
     pub fn oid_array_to_list(datum: Datum) -> *mut List;
 }
 #[repr(C)]
+#[derive(Debug)]
 pub struct FormData_pg_trigger {
     pub oid: Oid,
     pub tgrelid: Oid,
@@ -33062,12 +37265,16 @@ pub struct FormData_pg_trigger {
 }
 impl Default for FormData_pg_trigger {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type Form_pg_trigger = *mut FormData_pg_trigger;
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct FormData_pg_type {
     pub oid: Oid,
     pub typname: NameData,
@@ -33100,7 +37307,11 @@ pub struct FormData_pg_type {
 }
 impl Default for FormData_pg_type {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type Form_pg_type = *mut FormData_pg_type;
@@ -33315,7 +37526,11 @@ pub struct ParseState {
 }
 impl Default for ParseState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -33331,7 +37546,11 @@ pub struct ParseNamespaceItem {
 }
 impl Default for ParseNamespaceItem {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -33354,7 +37573,11 @@ pub struct ParseCallbackState {
 }
 impl Default for ParseCallbackState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -33909,7 +38132,7 @@ extern "C" {
     pub fn defGetStringList(def: *mut DefElem) -> *mut List;
 }
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct FormData_pg_event_trigger {
     pub oid: Oid,
     pub evtname: NameData,
@@ -33920,7 +38143,11 @@ pub struct FormData_pg_event_trigger {
 }
 impl Default for FormData_pg_event_trigger {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type Form_pg_event_trigger = *mut FormData_pg_event_trigger;
@@ -33939,7 +38166,11 @@ pub struct InternalGrant {
 }
 impl Default for InternalGrant {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const CollectedCommandType_SCT_Simple: CollectedCommandType = 0;
@@ -33958,7 +38189,11 @@ pub struct CollectedATSubcmd {
 }
 impl Default for CollectedATSubcmd {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -33996,7 +38231,11 @@ pub struct CollectedCommand__bindgen_ty_1__bindgen_ty_2 {
 }
 impl Default for CollectedCommand__bindgen_ty_1__bindgen_ty_2 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -34006,7 +38245,11 @@ pub struct CollectedCommand__bindgen_ty_1__bindgen_ty_3 {
 }
 impl Default for CollectedCommand__bindgen_ty_1__bindgen_ty_3 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -34018,7 +38261,11 @@ pub struct CollectedCommand__bindgen_ty_1__bindgen_ty_4 {
 }
 impl Default for CollectedCommand__bindgen_ty_1__bindgen_ty_4 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -34030,7 +38277,11 @@ pub struct CollectedCommand__bindgen_ty_1__bindgen_ty_5 {
 }
 impl Default for CollectedCommand__bindgen_ty_1__bindgen_ty_5 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -34042,7 +38293,11 @@ pub struct CollectedCommand__bindgen_ty_1__bindgen_ty_6 {
 }
 impl Default for CollectedCommand__bindgen_ty_1__bindgen_ty_6 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -34052,17 +38307,29 @@ pub struct CollectedCommand__bindgen_ty_1__bindgen_ty_7 {
 }
 impl Default for CollectedCommand__bindgen_ty_1__bindgen_ty_7 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 impl Default for CollectedCommand__bindgen_ty_1 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 impl Default for CollectedCommand {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -34075,7 +38342,11 @@ pub struct EventTriggerData {
 }
 impl Default for EventTriggerData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -34232,7 +38503,11 @@ pub struct ExplainWorkersState {
 }
 impl Default for ExplainWorkersState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -34260,7 +38535,11 @@ pub struct ExplainState {
 }
 impl Default for ExplainState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type ExplainOneQuery_hook_type = ::std::option::Option<
@@ -34639,7 +38918,11 @@ pub struct TriggerData {
 }
 impl Default for TriggerData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -34660,7 +38943,11 @@ pub struct TransitionCaptureState {
 }
 impl Default for TransitionCaptureState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -34681,6 +38968,23 @@ extern "C" {
         whenClause: *mut Node,
         isInternal: bool,
         in_partition: bool,
+    ) -> ObjectAddress;
+}
+#[pg_guard]
+extern "C" {
+    pub fn CreateTriggerFiringOn(
+        stmt: *mut CreateTrigStmt,
+        queryString: *const ::std::os::raw::c_char,
+        relOid: Oid,
+        refRelOid: Oid,
+        constraintOid: Oid,
+        indexOid: Oid,
+        funcoid: Oid,
+        parentTriggerOid: Oid,
+        whenClause: *mut Node,
+        isInternal: bool,
+        in_partition: bool,
+        trigger_fires_when: ::std::os::raw::c_char,
     ) -> ObjectAddress;
 }
 #[pg_guard]
@@ -35010,7 +39314,11 @@ pub struct VacAttrStats {
 }
 impl Default for VacAttrStats {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const VacuumOption_VACOPT_VACUUM: VacuumOption = 1;
@@ -35042,7 +39350,11 @@ pub struct VacuumParams {
 }
 impl Default for VacuumParams {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -35324,7 +39636,11 @@ pub struct CachedPlanSource {
 }
 impl Default for CachedPlanSource {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -35344,7 +39660,11 @@ pub struct CachedPlan {
 }
 impl Default for CachedPlan {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -35360,7 +39680,11 @@ pub struct CachedExpression {
 }
 impl Default for CachedExpression {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -35513,10 +39837,15 @@ pub struct PortalData {
     pub portalPos: uint64,
     pub creation_time: TimestampTz,
     pub visible: bool,
+    pub portalSnapshot: Snapshot,
 }
 impl Default for PortalData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -35631,6 +39960,10 @@ extern "C" {
 extern "C" {
     pub fn HoldPinnedPortals();
 }
+#[pg_guard]
+extern "C" {
+    pub fn ForgetPortalSnapshots();
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct SPITupleTable {
@@ -35644,7 +39977,11 @@ pub struct SPITupleTable {
 }
 impl Default for SPITupleTable {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36025,7 +40362,7 @@ pub const BgWorkerStartTime_BgWorkerStart_ConsistentState: BgWorkerStartTime = 1
 pub const BgWorkerStartTime_BgWorkerStart_RecoveryFinished: BgWorkerStartTime = 2;
 pub type BgWorkerStartTime = ::std::os::raw::c_uint;
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Debug, Copy, Clone)]
 pub struct BackgroundWorker {
     pub bgw_name: [::std::os::raw::c_char; 96usize],
     pub bgw_type: [::std::os::raw::c_char; 96usize],
@@ -36040,7 +40377,11 @@ pub struct BackgroundWorker {
 }
 impl Default for BackgroundWorker {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const BgwHandleStatus_BGWH_STARTED: BgwHandleStatus = 0;
@@ -36132,7 +40473,11 @@ pub struct shm_mq_iovec {
 }
 impl Default for shm_mq_iovec {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const shm_mq_result_SHM_MQ_SUCCESS: shm_mq_result = 0;
@@ -36225,7 +40570,11 @@ pub struct ParallelWorkerInfo {
 }
 impl Default for ParallelWorkerInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36249,7 +40598,11 @@ pub struct ParallelContext {
 }
 impl Default for ParallelContext {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36260,7 +40613,11 @@ pub struct ParallelWorkerContext {
 }
 impl Default for ParallelWorkerContext {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -36403,7 +40760,11 @@ pub struct PlannerGlobal {
 }
 impl Default for PlannerGlobal {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36472,7 +40833,11 @@ pub struct PlannerInfo {
 }
 impl Default for PlannerInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36489,7 +40854,11 @@ pub struct PartitionSchemeData {
 }
 impl Default for PartitionSchemeData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type PartitionScheme = *mut PartitionSchemeData;
@@ -36566,7 +40935,11 @@ pub struct RelOptInfo {
 }
 impl Default for RelOptInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36611,7 +40984,11 @@ pub struct IndexOptInfo {
 }
 impl Default for IndexOptInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36632,7 +41009,11 @@ pub struct ForeignKeyOptInfo {
 }
 impl Default for ForeignKeyOptInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36646,7 +41027,11 @@ pub struct StatisticExtInfo {
 }
 impl Default for StatisticExtInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36670,7 +41055,11 @@ pub struct EquivalenceClass {
 }
 impl Default for EquivalenceClass {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36686,7 +41075,11 @@ pub struct EquivalenceMember {
 }
 impl Default for EquivalenceMember {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36700,7 +41093,11 @@ pub struct PathKey {
 }
 impl Default for PathKey {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36714,7 +41111,11 @@ pub struct PathTarget {
 }
 impl Default for PathTarget {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36727,7 +41128,11 @@ pub struct ParamPathInfo {
 }
 impl Default for ParamPathInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36748,7 +41153,11 @@ pub struct Path {
 }
 impl Default for Path {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36765,7 +41174,11 @@ pub struct IndexPath {
 }
 impl Default for IndexPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36780,7 +41193,11 @@ pub struct IndexClause {
 }
 impl Default for IndexClause {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36791,7 +41208,11 @@ pub struct BitmapHeapPath {
 }
 impl Default for BitmapHeapPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36803,7 +41224,11 @@ pub struct BitmapAndPath {
 }
 impl Default for BitmapAndPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36815,7 +41240,11 @@ pub struct BitmapOrPath {
 }
 impl Default for BitmapOrPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36826,7 +41255,11 @@ pub struct TidPath {
 }
 impl Default for TidPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36837,7 +41270,11 @@ pub struct SubqueryScanPath {
 }
 impl Default for SubqueryScanPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36849,7 +41286,11 @@ pub struct ForeignPath {
 }
 impl Default for ForeignPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36863,7 +41304,11 @@ pub struct CustomPath {
 }
 impl Default for CustomPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36877,7 +41322,11 @@ pub struct AppendPath {
 }
 impl Default for AppendPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -36894,7 +41343,11 @@ pub struct MergeAppendPath {
 }
 impl Default for MergeAppendPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36905,7 +41358,11 @@ pub struct GroupResultPath {
 }
 impl Default for GroupResultPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36916,7 +41373,11 @@ pub struct MaterialPath {
 }
 impl Default for MaterialPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const UniquePathMethod_UNIQUE_PATH_NOOP: UniquePathMethod = 0;
@@ -36934,7 +41395,11 @@ pub struct UniquePath {
 }
 impl Default for UniquePath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36947,7 +41412,11 @@ pub struct GatherPath {
 }
 impl Default for GatherPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36959,7 +41428,11 @@ pub struct GatherMergePath {
 }
 impl Default for GatherMergePath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -36974,7 +41447,11 @@ pub struct JoinPath {
 }
 impl Default for JoinPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type NestPath = JoinPath;
@@ -36990,7 +41467,11 @@ pub struct MergePath {
 }
 impl Default for MergePath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37003,7 +41484,11 @@ pub struct HashPath {
 }
 impl Default for HashPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37015,7 +41500,11 @@ pub struct ProjectionPath {
 }
 impl Default for ProjectionPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37026,7 +41515,11 @@ pub struct ProjectSetPath {
 }
 impl Default for ProjectSetPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37037,7 +41530,11 @@ pub struct SortPath {
 }
 impl Default for SortPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37048,7 +41545,11 @@ pub struct IncrementalSortPath {
 }
 impl Default for IncrementalSortPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37061,7 +41562,11 @@ pub struct GroupPath {
 }
 impl Default for GroupPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37073,7 +41578,11 @@ pub struct UpperUniquePath {
 }
 impl Default for UpperUniquePath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37090,7 +41599,11 @@ pub struct AggPath {
 }
 impl Default for AggPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37102,7 +41615,11 @@ pub struct GroupingSetData {
 }
 impl Default for GroupingSetData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37118,7 +41635,11 @@ pub struct RollupData {
 }
 impl Default for RollupData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37133,7 +41654,11 @@ pub struct GroupingSetsPath {
 }
 impl Default for GroupingSetsPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37145,7 +41670,11 @@ pub struct MinMaxAggPath {
 }
 impl Default for MinMaxAggPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37157,7 +41686,11 @@ pub struct WindowAggPath {
 }
 impl Default for WindowAggPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37174,7 +41707,11 @@ pub struct SetOpPath {
 }
 impl Default for SetOpPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37189,7 +41726,11 @@ pub struct RecursiveUnionPath {
 }
 impl Default for RecursiveUnionPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37202,7 +41743,11 @@ pub struct LockRowsPath {
 }
 impl Default for LockRowsPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37225,7 +41770,11 @@ pub struct ModifyTablePath {
 }
 impl Default for ModifyTablePath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37239,7 +41788,11 @@ pub struct LimitPath {
 }
 impl Default for LimitPath {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37279,7 +41832,11 @@ pub struct RestrictInfo {
 }
 impl Default for RestrictInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37305,7 +41862,11 @@ pub struct PlaceHolderVar {
 }
 impl Default for PlaceHolderVar {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37326,7 +41887,11 @@ pub struct SpecialJoinInfo {
 }
 impl Default for SpecialJoinInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37344,7 +41909,11 @@ pub struct AppendRelInfo {
 }
 impl Default for AppendRelInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37360,7 +41929,11 @@ pub struct PlaceHolderInfo {
 }
 impl Default for PlaceHolderInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37377,7 +41950,11 @@ pub struct MinMaxAggInfo {
 }
 impl Default for MinMaxAggInfo {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37389,7 +41966,11 @@ pub struct PlannerParamItem {
 }
 impl Default for PlannerParamItem {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37410,7 +41991,11 @@ pub struct JoinPathExtraData {
 }
 impl Default for JoinPathExtraData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const PartitionwiseAggregateType_PARTITIONWISE_AGGREGATE_NONE: PartitionwiseAggregateType = 0;
@@ -37432,7 +42017,11 @@ pub struct GroupPathExtraData {
 }
 impl Default for GroupPathExtraData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37709,7 +42298,11 @@ pub struct FdwRoutine {
 }
 impl Default for FdwRoutine {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -37755,7 +42348,11 @@ pub struct ForeignDataWrapper {
 }
 impl Default for ForeignDataWrapper {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37771,7 +42368,11 @@ pub struct ForeignServer {
 }
 impl Default for ForeignServer {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37784,7 +42385,11 @@ pub struct UserMapping {
 }
 impl Default for UserMapping {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37796,7 +42401,11 @@ pub struct ForeignTable {
 }
 impl Default for ForeignTable {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -37855,6 +42464,632 @@ extern "C" {
         missing_ok: bool,
     ) -> Oid;
 }
+pub type pg_wchar = ::std::os::raw::c_uint;
+pub const pg_enc_PG_SQL_ASCII: pg_enc = 0;
+pub const pg_enc_PG_EUC_JP: pg_enc = 1;
+pub const pg_enc_PG_EUC_CN: pg_enc = 2;
+pub const pg_enc_PG_EUC_KR: pg_enc = 3;
+pub const pg_enc_PG_EUC_TW: pg_enc = 4;
+pub const pg_enc_PG_EUC_JIS_2004: pg_enc = 5;
+pub const pg_enc_PG_UTF8: pg_enc = 6;
+pub const pg_enc_PG_MULE_INTERNAL: pg_enc = 7;
+pub const pg_enc_PG_LATIN1: pg_enc = 8;
+pub const pg_enc_PG_LATIN2: pg_enc = 9;
+pub const pg_enc_PG_LATIN3: pg_enc = 10;
+pub const pg_enc_PG_LATIN4: pg_enc = 11;
+pub const pg_enc_PG_LATIN5: pg_enc = 12;
+pub const pg_enc_PG_LATIN6: pg_enc = 13;
+pub const pg_enc_PG_LATIN7: pg_enc = 14;
+pub const pg_enc_PG_LATIN8: pg_enc = 15;
+pub const pg_enc_PG_LATIN9: pg_enc = 16;
+pub const pg_enc_PG_LATIN10: pg_enc = 17;
+pub const pg_enc_PG_WIN1256: pg_enc = 18;
+pub const pg_enc_PG_WIN1258: pg_enc = 19;
+pub const pg_enc_PG_WIN866: pg_enc = 20;
+pub const pg_enc_PG_WIN874: pg_enc = 21;
+pub const pg_enc_PG_KOI8R: pg_enc = 22;
+pub const pg_enc_PG_WIN1251: pg_enc = 23;
+pub const pg_enc_PG_WIN1252: pg_enc = 24;
+pub const pg_enc_PG_ISO_8859_5: pg_enc = 25;
+pub const pg_enc_PG_ISO_8859_6: pg_enc = 26;
+pub const pg_enc_PG_ISO_8859_7: pg_enc = 27;
+pub const pg_enc_PG_ISO_8859_8: pg_enc = 28;
+pub const pg_enc_PG_WIN1250: pg_enc = 29;
+pub const pg_enc_PG_WIN1253: pg_enc = 30;
+pub const pg_enc_PG_WIN1254: pg_enc = 31;
+pub const pg_enc_PG_WIN1255: pg_enc = 32;
+pub const pg_enc_PG_WIN1257: pg_enc = 33;
+pub const pg_enc_PG_KOI8U: pg_enc = 34;
+pub const pg_enc_PG_SJIS: pg_enc = 35;
+pub const pg_enc_PG_BIG5: pg_enc = 36;
+pub const pg_enc_PG_GBK: pg_enc = 37;
+pub const pg_enc_PG_UHC: pg_enc = 38;
+pub const pg_enc_PG_GB18030: pg_enc = 39;
+pub const pg_enc_PG_JOHAB: pg_enc = 40;
+pub const pg_enc_PG_SHIFT_JIS_2004: pg_enc = 41;
+pub const pg_enc__PG_LAST_ENCODING_: pg_enc = 42;
+pub type pg_enc = ::std::os::raw::c_uint;
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct pg_enc2name {
+    pub name: *const ::std::os::raw::c_char,
+    pub encoding: pg_enc,
+}
+impl Default for pg_enc2name {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[pg_guard]
+extern "C" {
+    pub static mut pg_enc2name_tbl: [pg_enc2name; 0usize];
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct pg_enc2gettext {
+    pub encoding: pg_enc,
+    pub name: *const ::std::os::raw::c_char,
+}
+impl Default for pg_enc2gettext {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[pg_guard]
+extern "C" {
+    pub static mut pg_enc2gettext_tbl: [pg_enc2gettext; 0usize];
+}
+pub type mb2wchar_with_len_converter = ::std::option::Option<
+    unsafe extern "C" fn(
+        from: *const ::std::os::raw::c_uchar,
+        to: *mut pg_wchar,
+        len: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int,
+>;
+pub type wchar2mb_with_len_converter = ::std::option::Option<
+    unsafe extern "C" fn(
+        from: *const pg_wchar,
+        to: *mut ::std::os::raw::c_uchar,
+        len: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int,
+>;
+pub type mblen_converter = ::std::option::Option<
+    unsafe extern "C" fn(mbstr: *const ::std::os::raw::c_uchar) -> ::std::os::raw::c_int,
+>;
+pub type mbdisplaylen_converter = ::std::option::Option<
+    unsafe extern "C" fn(mbstr: *const ::std::os::raw::c_uchar) -> ::std::os::raw::c_int,
+>;
+pub type mbcharacter_incrementer = ::std::option::Option<
+    unsafe extern "C" fn(mbstr: *mut ::std::os::raw::c_uchar, len: ::std::os::raw::c_int) -> bool,
+>;
+pub type mbverifier = ::std::option::Option<
+    unsafe extern "C" fn(
+        mbstr: *const ::std::os::raw::c_uchar,
+        len: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int,
+>;
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct pg_wchar_tbl {
+    pub mb2wchar_with_len: mb2wchar_with_len_converter,
+    pub wchar2mb_with_len: wchar2mb_with_len_converter,
+    pub mblen: mblen_converter,
+    pub dsplen: mbdisplaylen_converter,
+    pub mbverify: mbverifier,
+    pub maxmblen: ::std::os::raw::c_int,
+}
+#[pg_guard]
+extern "C" {
+    pub static mut pg_wchar_table: [pg_wchar_tbl; 0usize];
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct pg_mb_radix_tree {
+    pub chars16: *const uint16,
+    pub chars32: *const uint32,
+    pub b1root: uint32,
+    pub b1_lower: uint8,
+    pub b1_upper: uint8,
+    pub b2root: uint32,
+    pub b2_1_lower: uint8,
+    pub b2_1_upper: uint8,
+    pub b2_2_lower: uint8,
+    pub b2_2_upper: uint8,
+    pub b3root: uint32,
+    pub b3_1_lower: uint8,
+    pub b3_1_upper: uint8,
+    pub b3_2_lower: uint8,
+    pub b3_2_upper: uint8,
+    pub b3_3_lower: uint8,
+    pub b3_3_upper: uint8,
+    pub b4root: uint32,
+    pub b4_1_lower: uint8,
+    pub b4_1_upper: uint8,
+    pub b4_2_lower: uint8,
+    pub b4_2_upper: uint8,
+    pub b4_3_lower: uint8,
+    pub b4_3_upper: uint8,
+    pub b4_4_lower: uint8,
+    pub b4_4_upper: uint8,
+}
+impl Default for pg_mb_radix_tree {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct pg_utf_to_local_combined {
+    pub utf1: uint32,
+    pub utf2: uint32,
+    pub code: uint32,
+}
+#[repr(C)]
+#[derive(Debug, Default, Copy, Clone)]
+pub struct pg_local_to_utf_combined {
+    pub code: uint32,
+    pub utf1: uint32,
+    pub utf2: uint32,
+}
+pub type utf_local_conversion_func =
+    ::std::option::Option<unsafe extern "C" fn(code: uint32) -> uint32>;
+#[pg_guard]
+extern "C" {
+    pub fn pg_char_to_encoding(name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_encoding_to_char(encoding: ::std::os::raw::c_int) -> *const ::std::os::raw::c_char;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_valid_server_encoding_id(encoding: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_encoding_mblen(
+        encoding: ::std::os::raw::c_int,
+        mbstr: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_encoding_mblen_bounded(
+        encoding: ::std::os::raw::c_int,
+        mbstr: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_encoding_dsplen(
+        encoding: ::std::os::raw::c_int,
+        mbstr: *const ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_encoding_verifymb(
+        encoding: ::std::os::raw::c_int,
+        mbstr: *const ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_encoding_max_length(encoding: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_valid_client_encoding(name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_valid_server_encoding(name: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn is_encoding_supported_by_icu(encoding: ::std::os::raw::c_int) -> bool;
+}
+#[pg_guard]
+extern "C" {
+    pub fn get_encoding_name_for_icu(
+        encoding: ::std::os::raw::c_int,
+    ) -> *const ::std::os::raw::c_char;
+}
+#[pg_guard]
+extern "C" {
+    pub fn unicode_to_utf8(
+        c: pg_wchar,
+        utf8string: *mut ::std::os::raw::c_uchar,
+    ) -> *mut ::std::os::raw::c_uchar;
+}
+#[pg_guard]
+extern "C" {
+    pub fn utf8_to_unicode(c: *const ::std::os::raw::c_uchar) -> pg_wchar;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_utf8_islegal(
+        source: *const ::std::os::raw::c_uchar,
+        length: ::std::os::raw::c_int,
+    ) -> bool;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_utf_mblen(s: *const ::std::os::raw::c_uchar) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_mule_mblen(s: *const ::std::os::raw::c_uchar) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_mb2wchar(
+        from: *const ::std::os::raw::c_char,
+        to: *mut pg_wchar,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_mb2wchar_with_len(
+        from: *const ::std::os::raw::c_char,
+        to: *mut pg_wchar,
+        len: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_encoding_mb2wchar_with_len(
+        encoding: ::std::os::raw::c_int,
+        from: *const ::std::os::raw::c_char,
+        to: *mut pg_wchar,
+        len: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_wchar2mb(
+        from: *const pg_wchar,
+        to: *mut ::std::os::raw::c_char,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_wchar2mb_with_len(
+        from: *const pg_wchar,
+        to: *mut ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_encoding_wchar2mb_with_len(
+        encoding: ::std::os::raw::c_int,
+        from: *const pg_wchar,
+        to: *mut ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_char_and_wchar_strcmp(
+        s1: *const ::std::os::raw::c_char,
+        s2: *const pg_wchar,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_wchar_strncmp(
+        s1: *const pg_wchar,
+        s2: *const pg_wchar,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_char_and_wchar_strncmp(
+        s1: *const ::std::os::raw::c_char,
+        s2: *const pg_wchar,
+        n: usize,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_wchar_strlen(wstr: *const pg_wchar) -> usize;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_mblen(mbstr: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_dsplen(mbstr: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_mbstrlen(mbstr: *const ::std::os::raw::c_char) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_mbstrlen_with_len(
+        mbstr: *const ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_mbcliplen(
+        mbstr: *const ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+        limit: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_encoding_mbcliplen(
+        encoding: ::std::os::raw::c_int,
+        mbstr: *const ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+        limit: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_mbcharcliplen(
+        mbstr: *const ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+        limit: ::std::os::raw::c_int,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_database_encoding_max_length() -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_database_encoding_character_incrementer() -> mbcharacter_incrementer;
+}
+#[pg_guard]
+extern "C" {
+    pub fn PrepareClientEncoding(encoding: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn SetClientEncoding(encoding: ::std::os::raw::c_int) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn InitializeClientEncoding();
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_get_client_encoding() -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_get_client_encoding_name() -> *const ::std::os::raw::c_char;
+}
+#[pg_guard]
+extern "C" {
+    pub fn SetDatabaseEncoding(encoding: ::std::os::raw::c_int);
+}
+#[pg_guard]
+extern "C" {
+    pub fn GetDatabaseEncoding() -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn GetDatabaseEncodingName() -> *const ::std::os::raw::c_char;
+}
+#[pg_guard]
+extern "C" {
+    pub fn SetMessageEncoding(encoding: ::std::os::raw::c_int);
+}
+#[pg_guard]
+extern "C" {
+    pub fn GetMessageEncoding() -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_do_encoding_conversion(
+        src: *mut ::std::os::raw::c_uchar,
+        len: ::std::os::raw::c_int,
+        src_encoding: ::std::os::raw::c_int,
+        dest_encoding: ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_uchar;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_client_to_server(
+        s: *const ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_server_to_client(
+        s: *const ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_any_to_server(
+        s: *const ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+        encoding: ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_server_to_any(
+        s: *const ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+        encoding: ::std::os::raw::c_int,
+    ) -> *mut ::std::os::raw::c_char;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_unicode_to_server(c: pg_wchar, s: *mut ::std::os::raw::c_uchar);
+}
+#[pg_guard]
+extern "C" {
+    pub fn BIG5toCNS(
+        big5: ::std::os::raw::c_ushort,
+        lc: *mut ::std::os::raw::c_uchar,
+    ) -> ::std::os::raw::c_ushort;
+}
+#[pg_guard]
+extern "C" {
+    pub fn CNStoBIG5(
+        cns: ::std::os::raw::c_ushort,
+        lc: ::std::os::raw::c_uchar,
+    ) -> ::std::os::raw::c_ushort;
+}
+#[pg_guard]
+extern "C" {
+    pub fn UtfToLocal(
+        utf: *const ::std::os::raw::c_uchar,
+        len: ::std::os::raw::c_int,
+        iso: *mut ::std::os::raw::c_uchar,
+        map: *const pg_mb_radix_tree,
+        cmap: *const pg_utf_to_local_combined,
+        cmapsize: ::std::os::raw::c_int,
+        conv_func: utf_local_conversion_func,
+        encoding: ::std::os::raw::c_int,
+    );
+}
+#[pg_guard]
+extern "C" {
+    pub fn LocalToUtf(
+        iso: *const ::std::os::raw::c_uchar,
+        len: ::std::os::raw::c_int,
+        utf: *mut ::std::os::raw::c_uchar,
+        map: *const pg_mb_radix_tree,
+        cmap: *const pg_local_to_utf_combined,
+        cmapsize: ::std::os::raw::c_int,
+        conv_func: utf_local_conversion_func,
+        encoding: ::std::os::raw::c_int,
+    );
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_verifymbstr(
+        mbstr: *const ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+        noError: bool,
+    ) -> bool;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_verify_mbstr(
+        encoding: ::std::os::raw::c_int,
+        mbstr: *const ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+        noError: bool,
+    ) -> bool;
+}
+#[pg_guard]
+extern "C" {
+    pub fn pg_verify_mbstr_len(
+        encoding: ::std::os::raw::c_int,
+        mbstr: *const ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+        noError: bool,
+    ) -> ::std::os::raw::c_int;
+}
+#[pg_guard]
+extern "C" {
+    pub fn check_encoding_conversion_args(
+        src_encoding: ::std::os::raw::c_int,
+        dest_encoding: ::std::os::raw::c_int,
+        len: ::std::os::raw::c_int,
+        expected_src_encoding: ::std::os::raw::c_int,
+        expected_dest_encoding: ::std::os::raw::c_int,
+    );
+}
+#[pg_guard]
+extern "C" {
+    pub fn report_invalid_encoding(
+        encoding: ::std::os::raw::c_int,
+        mbstr: *const ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+    );
+}
+#[pg_guard]
+extern "C" {
+    pub fn report_untranslatable_char(
+        src_encoding: ::std::os::raw::c_int,
+        dest_encoding: ::std::os::raw::c_int,
+        mbstr: *const ::std::os::raw::c_char,
+        len: ::std::os::raw::c_int,
+    );
+}
+#[pg_guard]
+extern "C" {
+    pub fn local2local(
+        l: *const ::std::os::raw::c_uchar,
+        p: *mut ::std::os::raw::c_uchar,
+        len: ::std::os::raw::c_int,
+        src_encoding: ::std::os::raw::c_int,
+        dest_encoding: ::std::os::raw::c_int,
+        tab: *const ::std::os::raw::c_uchar,
+    );
+}
+#[pg_guard]
+extern "C" {
+    pub fn latin2mic(
+        l: *const ::std::os::raw::c_uchar,
+        p: *mut ::std::os::raw::c_uchar,
+        len: ::std::os::raw::c_int,
+        lc: ::std::os::raw::c_int,
+        encoding: ::std::os::raw::c_int,
+    );
+}
+#[pg_guard]
+extern "C" {
+    pub fn mic2latin(
+        mic: *const ::std::os::raw::c_uchar,
+        p: *mut ::std::os::raw::c_uchar,
+        len: ::std::os::raw::c_int,
+        lc: ::std::os::raw::c_int,
+        encoding: ::std::os::raw::c_int,
+    );
+}
+#[pg_guard]
+extern "C" {
+    pub fn latin2mic_with_table(
+        l: *const ::std::os::raw::c_uchar,
+        p: *mut ::std::os::raw::c_uchar,
+        len: ::std::os::raw::c_int,
+        lc: ::std::os::raw::c_int,
+        encoding: ::std::os::raw::c_int,
+        tab: *const ::std::os::raw::c_uchar,
+    );
+}
+#[pg_guard]
+extern "C" {
+    pub fn mic2latin_with_table(
+        mic: *const ::std::os::raw::c_uchar,
+        p: *mut ::std::os::raw::c_uchar,
+        len: ::std::os::raw::c_int,
+        lc: ::std::os::raw::c_int,
+        encoding: ::std::os::raw::c_int,
+        tab: *const ::std::os::raw::c_uchar,
+    );
+}
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct ExtensibleNode {
@@ -37863,7 +43098,11 @@ pub struct ExtensibleNode {
 }
 impl Default for ExtensibleNode {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37884,7 +43123,11 @@ pub struct ExtensibleNodeMethods {
 }
 impl Default for ExtensibleNodeMethods {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -37922,7 +43165,11 @@ pub struct CustomPathMethods {
 }
 impl Default for CustomPathMethods {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37934,7 +43181,11 @@ pub struct CustomScanMethods {
 }
 impl Default for CustomScanMethods {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -37990,7 +43241,11 @@ pub struct CustomExecMethods {
 }
 impl Default for CustomExecMethods {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -38452,7 +43707,11 @@ pub struct IdentifySystemCmd {
 }
 impl Default for IdentifySystemCmd {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -38463,7 +43722,11 @@ pub struct BaseBackupCmd {
 }
 impl Default for BaseBackupCmd {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -38478,7 +43741,11 @@ pub struct CreateReplicationSlotCmd {
 }
 impl Default for CreateReplicationSlotCmd {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -38490,7 +43757,11 @@ pub struct DropReplicationSlotCmd {
 }
 impl Default for DropReplicationSlotCmd {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -38505,7 +43776,11 @@ pub struct StartReplicationCmd {
 }
 impl Default for StartReplicationCmd {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -38516,7 +43791,11 @@ pub struct TimeLineHistoryCmd {
 }
 impl Default for TimeLineHistoryCmd {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -38526,7 +43805,110 @@ pub struct SQLCmd {
 }
 impl Default for SQLCmd {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct SupportRequestSimplify {
+    pub type_: NodeTag,
+    pub root: *mut PlannerInfo,
+    pub fcall: *mut FuncExpr,
+}
+impl Default for SupportRequestSimplify {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct SupportRequestSelectivity {
+    pub type_: NodeTag,
+    pub root: *mut PlannerInfo,
+    pub funcid: Oid,
+    pub args: *mut List,
+    pub inputcollid: Oid,
+    pub is_join: bool,
+    pub varRelid: ::std::os::raw::c_int,
+    pub jointype: JoinType,
+    pub sjinfo: *mut SpecialJoinInfo,
+    pub selectivity: Selectivity,
+}
+impl Default for SupportRequestSelectivity {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct SupportRequestCost {
+    pub type_: NodeTag,
+    pub root: *mut PlannerInfo,
+    pub funcid: Oid,
+    pub node: *mut Node,
+    pub startup: Cost,
+    pub per_tuple: Cost,
+}
+impl Default for SupportRequestCost {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct SupportRequestRows {
+    pub type_: NodeTag,
+    pub root: *mut PlannerInfo,
+    pub funcid: Oid,
+    pub node: *mut Node,
+    pub rows: f64,
+}
+impl Default for SupportRequestRows {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
+    }
+}
+#[repr(C)]
+#[derive(Debug, Copy, Clone)]
+pub struct SupportRequestIndexCondition {
+    pub type_: NodeTag,
+    pub root: *mut PlannerInfo,
+    pub funcid: Oid,
+    pub node: *mut Node,
+    pub indexarg: ::std::os::raw::c_int,
+    pub index: *mut IndexOptInfo,
+    pub indexcol: ::std::os::raw::c_int,
+    pub opfamily: Oid,
+    pub indexcollation: Oid,
+    pub lossy: bool,
+}
+impl Default for SupportRequestIndexCondition {
+    fn default() -> Self {
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -38538,7 +43920,11 @@ pub struct WindowFuncLists {
 }
 impl Default for WindowFuncLists {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -41365,7 +46751,11 @@ pub struct ReorderBufferTupleBuf {
 }
 impl Default for ReorderBufferTupleBuf {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const ReorderBufferChangeType_REORDER_BUFFER_CHANGE_INSERT: ReorderBufferChangeType = 0;
@@ -41383,6 +46773,8 @@ pub const ReorderBufferChangeType_REORDER_BUFFER_CHANGE_INTERNAL_SPEC_INSERT:
 pub const ReorderBufferChangeType_REORDER_BUFFER_CHANGE_INTERNAL_SPEC_CONFIRM:
     ReorderBufferChangeType = 8;
 pub const ReorderBufferChangeType_REORDER_BUFFER_CHANGE_TRUNCATE: ReorderBufferChangeType = 9;
+pub const ReorderBufferChangeType_REORDER_BUFFER_CHANGE_INTERNAL_SPEC_ABORT:
+    ReorderBufferChangeType = 10;
 pub type ReorderBufferChangeType = ::std::os::raw::c_uint;
 #[repr(C)]
 #[derive(Copy, Clone)]
@@ -41414,7 +46806,11 @@ pub struct ReorderBufferChange__bindgen_ty_1__bindgen_ty_1 {
 }
 impl Default for ReorderBufferChange__bindgen_ty_1__bindgen_ty_1 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -41427,7 +46823,11 @@ pub struct ReorderBufferChange__bindgen_ty_1__bindgen_ty_2 {
 }
 impl Default for ReorderBufferChange__bindgen_ty_1__bindgen_ty_2 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -41439,7 +46839,11 @@ pub struct ReorderBufferChange__bindgen_ty_1__bindgen_ty_3 {
 }
 impl Default for ReorderBufferChange__bindgen_ty_1__bindgen_ty_3 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -41453,12 +46857,20 @@ pub struct ReorderBufferChange__bindgen_ty_1__bindgen_ty_4 {
 }
 impl Default for ReorderBufferChange__bindgen_ty_1 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 impl Default for ReorderBufferChange {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -41493,7 +46905,11 @@ pub struct ReorderBufferTXN {
 }
 impl Default for ReorderBufferTXN {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type ReorderBufferApplyChangeCB = ::std::option::Option<
@@ -41559,7 +46975,11 @@ pub struct ReorderBuffer {
 }
 impl Default for ReorderBuffer {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -41775,7 +47195,11 @@ pub struct OutputPluginOptions {
 }
 impl Default for OutputPluginOptions {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type LogicalOutputPluginInit =
@@ -42548,7 +47972,11 @@ pub struct xl_invalidations {
 }
 impl Default for xl_invalidations {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -42640,7 +48068,11 @@ pub struct RunningTransactionsData {
 }
 impl Default for RunningTransactionsData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type RunningTransactions = *mut RunningTransactionsData;
@@ -43072,7 +48504,11 @@ pub struct AlterTableUtilityContext {
 }
 impl Default for AlterTableUtilityContext {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type ProcessUtility_hook_type = ::std::option::Option<
@@ -54226,7 +59662,11 @@ pub struct JsonbValue__bindgen_ty_1__bindgen_ty_1 {
 }
 impl Default for JsonbValue__bindgen_ty_1__bindgen_ty_1 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -54238,7 +59678,11 @@ pub struct JsonbValue__bindgen_ty_1__bindgen_ty_2 {
 }
 impl Default for JsonbValue__bindgen_ty_1__bindgen_ty_2 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -54249,7 +59693,11 @@ pub struct JsonbValue__bindgen_ty_1__bindgen_ty_3 {
 }
 impl Default for JsonbValue__bindgen_ty_1__bindgen_ty_3 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -54260,7 +59708,11 @@ pub struct JsonbValue__bindgen_ty_1__bindgen_ty_4 {
 }
 impl Default for JsonbValue__bindgen_ty_1__bindgen_ty_4 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -54273,12 +59725,20 @@ pub struct JsonbValue__bindgen_ty_1__bindgen_ty_5 {
 }
 impl Default for JsonbValue__bindgen_ty_1 {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 impl Default for JsonbValue {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -54290,7 +59750,11 @@ pub struct JsonbPair {
 }
 impl Default for JsonbPair {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -54302,7 +59766,11 @@ pub struct JsonbParseState {
 }
 impl Default for JsonbParseState {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub const JsonbIterState_JBI_ARRAY_START: JsonbIterState = 0;
@@ -54327,7 +59795,11 @@ pub struct JsonbIterator {
 }
 impl Default for JsonbIterator {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[pg_guard]
@@ -54464,7 +59936,11 @@ pub struct AttStatsSlot {
 }
 impl Default for AttStatsSlot {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 pub type get_attavgwidth_hook_type =
@@ -55026,7 +60502,11 @@ pub struct VariableStatData {
 }
 impl Default for VariableStatData {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -55593,7 +61073,11 @@ pub struct TypeCacheEntry {
 }
 impl Default for TypeCacheEntry {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -55608,7 +61092,11 @@ pub struct DomainConstraintRef {
 }
 impl Default for DomainConstraintRef {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -55697,7 +61185,11 @@ pub struct __va_list {
 }
 impl Default for __va_list {
     fn default() -> Self {
-        unsafe { ::std::mem::zeroed() }
+        let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
+        unsafe {
+            ::std::ptr::write_bytes(s.as_mut_ptr(), 0, 1);
+            s.assume_init()
+        }
     }
 }
 #[repr(C)]
@@ -60081,6 +65573,66 @@ impl pg_sys::PgNode for SubscriptingRef {
     type NodeType = SubscriptingRef;
 }
 impl std::fmt::Display for SubscriptingRef {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(
+            f,
+            "{}",
+            crate::node_to_string_for_display(self.as_node_ptr() as *mut crate::Node)
+        )
+    }
+}
+impl pg_sys::PgNode for SupportRequestCost {
+    type NodeType = SupportRequestCost;
+}
+impl std::fmt::Display for SupportRequestCost {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(
+            f,
+            "{}",
+            crate::node_to_string_for_display(self.as_node_ptr() as *mut crate::Node)
+        )
+    }
+}
+impl pg_sys::PgNode for SupportRequestIndexCondition {
+    type NodeType = SupportRequestIndexCondition;
+}
+impl std::fmt::Display for SupportRequestIndexCondition {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(
+            f,
+            "{}",
+            crate::node_to_string_for_display(self.as_node_ptr() as *mut crate::Node)
+        )
+    }
+}
+impl pg_sys::PgNode for SupportRequestRows {
+    type NodeType = SupportRequestRows;
+}
+impl std::fmt::Display for SupportRequestRows {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(
+            f,
+            "{}",
+            crate::node_to_string_for_display(self.as_node_ptr() as *mut crate::Node)
+        )
+    }
+}
+impl pg_sys::PgNode for SupportRequestSelectivity {
+    type NodeType = SupportRequestSelectivity;
+}
+impl std::fmt::Display for SupportRequestSelectivity {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(
+            f,
+            "{}",
+            crate::node_to_string_for_display(self.as_node_ptr() as *mut crate::Node)
+        )
+    }
+}
+impl pg_sys::PgNode for SupportRequestSimplify {
+    type NodeType = SupportRequestSimplify;
+}
+impl std::fmt::Display for SupportRequestSimplify {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(
             f,

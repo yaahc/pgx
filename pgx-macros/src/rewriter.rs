@@ -5,7 +5,7 @@ extern crate proc_macro;
 
 use pgx_utils::{categorize_return_type, CategorizedType};
 use proc_macro2::{Ident, Span};
-use quote::{quote, quote_spanned, ToTokens};
+use quote::{quote, quote_spanned};
 use std::ops::Deref;
 use std::str::FromStr;
 use syn::spanned::Spanned;
@@ -34,20 +34,25 @@ impl PgGuardRewriter {
     pub fn item_fn(
         &self,
         func: ItemFn,
+        entity_submission: Option<&pgx_utils::sql_entity_graph::PgExtern>,
         rewrite_args: bool,
         is_raw: bool,
         no_guard: bool,
     ) -> (proc_macro2::TokenStream, bool) {
         if rewrite_args {
-            self.item_fn_with_rewrite(func, is_raw, no_guard)
+            self.item_fn_with_rewrite(func, entity_submission, is_raw, no_guard)
         } else {
-            (self.item_fn_without_rewrite(func, no_guard), true)
+            (
+                self.item_fn_without_rewrite(func, entity_submission, no_guard),
+                true,
+            )
         }
     }
 
     fn item_fn_with_rewrite(
         &self,
         mut func: ItemFn,
+        entity_submission: Option<&pgx_utils::sql_entity_graph::PgExtern>,
         is_raw: bool,
         no_guard: bool,
     ) -> (proc_macro2::TokenStream, bool) {
@@ -102,12 +107,16 @@ impl PgGuardRewriter {
                     generics,
                     func_call,
                     rewritten_return_type,
+                    entity_submission,
                     no_guard,
                 ),
                 true,
             ),
 
-            CategorizedType::Tuple(_types) => (PgGuardRewriter::impl_tuple_udf(func), false),
+            CategorizedType::Tuple(_types) => (
+                PgGuardRewriter::impl_tuple_udf(func, entity_submission.clone()),
+                false,
+            ),
 
             CategorizedType::Iterator(types) if types.len() == 1 => (
                 PgGuardRewriter::impl_setof_srf(
@@ -118,6 +127,7 @@ impl PgGuardRewriter {
                     func_name_wrapper,
                     generics,
                     func_call,
+                    entity_submission,
                     false,
                 ),
                 true,
@@ -132,6 +142,7 @@ impl PgGuardRewriter {
                     func_name_wrapper,
                     generics,
                     func_call,
+                    entity_submission,
                     true,
                 ),
                 true,
@@ -146,6 +157,7 @@ impl PgGuardRewriter {
                     func_name_wrapper,
                     generics,
                     func_call,
+                    entity_submission,
                     false,
                 ),
                 true,
@@ -160,6 +172,7 @@ impl PgGuardRewriter {
                     func_name_wrapper,
                     generics,
                     func_call,
+                    entity_submission,
                     true,
                 ),
                 true,
@@ -175,6 +188,7 @@ impl PgGuardRewriter {
         generics: &Generics,
         func_call: proc_macro2::TokenStream,
         rewritten_return_type: proc_macro2::TokenStream,
+        sql_graph_entity_submission: Option<&pgx_utils::sql_entity_graph::PgExtern>,
         no_guard: bool,
     ) -> proc_macro2::TokenStream {
         let guard = if no_guard {
@@ -182,34 +196,47 @@ impl PgGuardRewriter {
         } else {
             quote! {#[pg_guard]}
         };
+        let sql_graph_entity_submission = sql_graph_entity_submission.cloned().into_iter();
         quote_spanned! {func_span=>
             #prolog
 
             #[allow(clippy::missing_safety_doc)]
             #[allow(clippy::redundant_closure)]
             #guard
-            #vis unsafe fn #func_name_wrapper #generics(fcinfo: pg_sys::FunctionCallInfo) -> pg_sys::Datum {
+            #vis unsafe extern "C" fn #func_name_wrapper #generics(fcinfo: pg_sys::FunctionCallInfo) -> pg_sys::Datum {
 
                 #func_call
 
                 #rewritten_return_type
             }
+
+            #(#sql_graph_entity_submission)*
         }
     }
 
-    fn impl_tuple_udf(mut func: ItemFn) -> proc_macro2::TokenStream {
+    fn impl_tuple_udf(
+        mut func: ItemFn,
+        entity_submission: Option<&pgx_utils::sql_entity_graph::PgExtern>,
+    ) -> proc_macro2::TokenStream {
         let func_span = func.span();
         let return_type = func.sig.output;
         let return_type = format!("{}", quote! {#return_type});
         let return_type =
             proc_macro2::TokenStream::from_str(return_type.trim_start_matches("->")).unwrap();
         let return_type = quote! {impl std::iter::Iterator<Item = #return_type>};
+        let attrs = entity_submission.unwrap().extern_attr_tokens();
 
         func.sig.output = ReturnType::Default;
         let sig = func.sig;
         let body = func.block;
+
+        // We do **not** put an entity submission here as there still exists a `pg_extern` attribute.
+        //
+        // This is because we quietely rewrite the function signature to `Iterator<Item = T>` and
+        // rely on #[pg_extern] being called again during compilation.  It is important that we
+        // include the original #[pg_extern(<attributes>)] in the generated code.
         quote_spanned! {func_span=>
-            #[pg_extern]
+            #[pg_extern(#attrs)]
             #sig -> #return_type {
                 Some(#body).into_iter()
             }
@@ -224,9 +251,12 @@ impl PgGuardRewriter {
         func_name_wrapper: Ident,
         generics: &Generics,
         func_call: proc_macro2::TokenStream,
+        sql_graph_entity_submission: Option<&pgx_utils::sql_entity_graph::PgExtern>,
         optional: bool,
     ) -> proc_macro2::TokenStream {
         let generic_type = proc_macro2::TokenStream::from_str(types.first().unwrap()).unwrap();
+        let mut generic_type = syn::parse2::<syn::Type>(generic_type).unwrap();
+        pgx_utils::anonymonize_lifetimes(&mut generic_type);
 
         let result_handler = if optional {
             quote! {
@@ -244,10 +274,12 @@ impl PgGuardRewriter {
             }
         };
 
+        let sql_graph_entity_submission = sql_graph_entity_submission.cloned().into_iter();
+
         quote_spanned! {func_span=>
             #prolog
             #[pg_guard]
-            #vis fn #func_name_wrapper #generics(fcinfo: pg_sys::FunctionCallInfo) -> pg_sys::Datum {
+            #vis unsafe extern "C" fn #func_name_wrapper #generics(fcinfo: pg_sys::FunctionCallInfo) -> pg_sys::Datum {
 
                 struct IteratorHolder<T> {
                     iter: *mut dyn Iterator<Item=T>,
@@ -270,7 +302,7 @@ impl PgGuardRewriter {
                 funcctx = pgx::srf_per_call_setup(fcinfo);
                 iterator_holder = pgx::PgBox::from_pg(funcctx.user_fctx as *mut IteratorHolder<#generic_type>);
 
-                let mut iter = unsafe { Box::from_raw(iterator_holder.iter) };
+                let mut iter = Box::from_raw(iterator_holder.iter);
                 match iter.next() {
                     Some(result) => {
                         // we need to leak the boxed iterator so that it's not freed by rust and we can
@@ -293,6 +325,8 @@ impl PgGuardRewriter {
                     },
                 }
             }
+
+            #(#sql_graph_entity_submission)*
         }
     }
 
@@ -304,6 +338,7 @@ impl PgGuardRewriter {
         func_name_wrapper: Ident,
         generics: &Generics,
         func_call: proc_macro2::TokenStream,
+        entity_submission: Option<&pgx_utils::sql_entity_graph::PgExtern>,
         optional: bool,
     ) -> proc_macro2::TokenStream {
         let numtypes = types.len();
@@ -322,11 +357,13 @@ impl PgGuardRewriter {
                 }
             )*
 
-            let heap_tuple = unsafe { pgx::pg_sys::heap_form_tuple(funcctx.tuple_desc, datums.as_mut_ptr(), nulls.as_mut_ptr()) };
+            let heap_tuple = pgx::pg_sys::heap_form_tuple(funcctx.tuple_desc, datums.as_mut_ptr(), nulls.as_mut_ptr());
         };
 
         let composite_type = format!("({})", types.join(","));
         let generic_type = proc_macro2::TokenStream::from_str(&composite_type).unwrap();
+        let mut generic_type = syn::parse2::<syn::Type>(generic_type).unwrap();
+        pgx_utils::anonymonize_lifetimes(&mut generic_type);
 
         let result_handler = if optional {
             quote! {
@@ -343,11 +380,12 @@ impl PgGuardRewriter {
                 let result = pgx::PgMemoryContexts::For(funcctx.multi_call_memory_ctx).switch_to(|_| { #func_call result });
             }
         };
+        let sql_graph_entity_submission = entity_submission.cloned().into_iter();
 
         quote_spanned! {func_span=>
             #prolog
             #[pg_guard]
-            #vis fn #func_name_wrapper #generics(fcinfo: pg_sys::FunctionCallInfo) -> pg_sys::Datum {
+            #vis unsafe extern "C" fn #func_name_wrapper #generics(fcinfo: pg_sys::FunctionCallInfo) -> pg_sys::Datum {
 
                 struct IteratorHolder<T> {
                     iter: *mut dyn Iterator<Item=T>,
@@ -362,14 +400,12 @@ impl PgGuardRewriter {
                     funcctx.tuple_desc = pgx::PgMemoryContexts::For(funcctx.multi_call_memory_ctx).switch_to(|_| {
                         let mut tupdesc: *mut pgx::pg_sys::TupleDescData = std::ptr::null_mut();
 
-                        unsafe {
-                            /* Build a tuple descriptor for our result type */
-                            if pgx::pg_sys::get_call_result_type(fcinfo, std::ptr::null_mut(), &mut tupdesc) != pgx::pg_sys::TypeFuncClass_TYPEFUNC_COMPOSITE {
-                                pgx::error!("return type must be a row type");
-                            }
-
-                            pgx::pg_sys::BlessTupleDesc(tupdesc)
+                        /* Build a tuple descriptor for our result type */
+                        if pgx::pg_sys::get_call_result_type(fcinfo, std::ptr::null_mut(), &mut tupdesc) != pgx::pg_sys::TypeFuncClass_TYPEFUNC_COMPOSITE {
+                            pgx::error!("return type must be a row type");
                         }
+
+                        pgx::pg_sys::BlessTupleDesc(tupdesc)
                     });
                     iterator_holder = pgx::PgBox::from_pg(funcctx.user_fctx as *mut IteratorHolder<#generic_type>);
 
@@ -381,7 +417,7 @@ impl PgGuardRewriter {
                 funcctx = pgx::srf_per_call_setup(fcinfo);
                 iterator_holder = pgx::PgBox::from_pg(funcctx.user_fctx as *mut IteratorHolder<#generic_type>);
 
-                let mut iter = unsafe { Box::from_raw(iterator_holder.iter) };
+                let mut iter = Box::from_raw(iterator_holder.iter);
                 match iter.next() {
                     Some(result) => {
                         // we need to leak the boxed iterator so that it's not freed by rust and we can
@@ -404,12 +440,15 @@ impl PgGuardRewriter {
                     },
                 }
             }
+
+            #(#sql_graph_entity_submission)*
         }
     }
 
     fn item_fn_without_rewrite(
         &self,
         mut func: ItemFn,
+        entity_submission: Option<&pgx_utils::sql_entity_graph::PgExtern>,
         no_guard: bool,
     ) -> proc_macro2::TokenStream {
         // remember the original visibility and signature classifications as we want
@@ -417,20 +456,6 @@ impl PgGuardRewriter {
         let input_func_name = func.sig.ident.to_string();
         let sig = func.sig.clone();
         let vis = func.vis.clone();
-        let is_extern_c = if let Some(abi) = func.sig.abi.as_ref() {
-            if let Some(name) = abi.name.as_ref() {
-                name.value() == "C"
-            } else {
-                false
-            }
-        } else {
-            false
-        };
-        let is_no_mangle = func
-            .attrs
-            .iter()
-            .find(|attr| (attr.path.clone().into_token_stream().to_string() == "no_mangle"))
-            .is_some();
 
         // but for the inner function (the one we're wrapping) we don't need any kind of
         // abi classification
@@ -453,25 +478,21 @@ impl PgGuardRewriter {
             quote! { pg_sys::guard::guard( || #func_name(#arg_list) ) }
         };
 
-        let prolog = if input_func_name == "_PG_init" || input_func_name == "_PG_fini" {
+        let prolog = if input_func_name == "__pgx_private_shmem_hook" {
+            // we do not want "no_mangle" on this function
+            quote! {}
+        } else if input_func_name == "_PG_init" || input_func_name == "_PG_fini" {
             quote! {
                 #[allow(non_snake_case)]
                 #[no_mangle]
             }
-        } else if is_extern_c {
-            if is_no_mangle {
-                quote! {
-                    #[no_mangle]
-                }
-            } else {
-                quote! {}
-            }
         } else {
-            // I feel like this is a) incorrect and b) never going to happen
             quote! {
                 #[no_mangle]
             }
         };
+
+        let sql_graph_entity_submission = entity_submission.cloned().into_iter();
 
         quote_spanned! {func.span()=>
             #prolog
@@ -480,6 +501,8 @@ impl PgGuardRewriter {
                 #func
                 #func_call
             }
+
+            #(#sql_graph_entity_submission)*
         }
     }
 
@@ -505,6 +528,7 @@ impl PgGuardRewriter {
         quote! {
             #[allow(clippy::missing_safety_doc)]
             #[allow(clippy::redundant_closure)]
+            #[allow(improper_ctypes_definitions)] /* for i128 */
             pub unsafe fn #func_name ( #arg_list_with_types ) #return_type {
                 // as the panic message says, we can't call Postgres functions from threads
                 // the value of IS_MAIN_THREAD gets set through the pg_module_magic!() macro
@@ -699,19 +723,22 @@ impl FunctionSignatureRewriter {
                 FnArg::Typed(ty) => match ty.pat.deref() {
                     Pat::Ident(ident) => {
                         let name = Ident::new(&format!("{}_", ident.ident), ident.span());
-                        let type_ = &ty.ty;
-                        let is_option = type_matches(type_, "Option");
+                        let mut type_ = ty.ty.clone();
+                        let is_option = type_matches(&type_, "Option");
 
                         if have_fcinfo {
                             panic!("When using `pg_sys::FunctionCallInfo` as an argument it must be the last argument")
                         }
 
                         let ts = if is_option {
-                            let option_type = extract_option_type(type_);
+                            let option_type = extract_option_type(&type_);
+                            let mut option_type = syn::parse2::<syn::Type>(option_type).unwrap();
+                            pgx_utils::anonymonize_lifetimes(&mut option_type);
+
                             quote_spanned! {ident.span()=>
                                 let #name = pgx::pg_getarg::<#option_type>(fcinfo, #i);
                             }
-                        } else if type_matches(type_, "pg_sys :: FunctionCallInfo") {
+                        } else if type_matches(&type_, "pg_sys :: FunctionCallInfo") {
                             have_fcinfo = true;
                             quote_spanned! {ident.span()=>
                                 let #name = fcinfo;
@@ -721,6 +748,7 @@ impl FunctionSignatureRewriter {
                                 let #name = pgx::pg_getarg_datum_raw(fcinfo, #i) as #type_;
                             }
                         } else {
+                            pgx_utils::anonymonize_lifetimes(&mut type_);
                             quote_spanned! {ident.span()=>
                                 let #name = pgx::pg_getarg::<#type_>(fcinfo, #i).unwrap_or_else(|| panic!("{} is null", stringify!{#ident}));
                             }

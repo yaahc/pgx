@@ -38,10 +38,10 @@ impl<'a, T: FromDatum + serde::Serialize> serde::Serialize for ArrayTypedIterato
 }
 
 impl<'a, T: FromDatum> Array<'a, T> {
-    /// Create an [`Array`] over an array of [pg_sys::Datum] values and a corresponding array
+    /// Create an [`Array`](crate::datum::Array) over an array of [`pg_sys::Datum`](pg_sys::Datum) values and a corresponding array
     /// of "is_null" indicators
     ///
-    /// [`T`] can be [pg_sys::Datum] if the elements are not all of the same type
+    /// `T` can be [`pg_sys::Datum`](pg_sys::Datum) if the elements are not all of the same type
     ///
     /// # Safety
     ///
@@ -65,7 +65,7 @@ impl<'a, T: FromDatum> Array<'a, T> {
         }
     }
 
-    fn from_pg(
+    unsafe fn from_pg(
         ptr: *mut pg_sys::varlena,
         array_type: *mut pg_sys::ArrayType,
         elements: *mut pg_sys::Datum,
@@ -80,8 +80,8 @@ impl<'a, T: FromDatum> Array<'a, T> {
             nulls,
             typoid,
             nelems,
-            elem_slice: unsafe { std::slice::from_raw_parts(elements, nelems) },
-            null_slice: unsafe { std::slice::from_raw_parts(nulls, nelems) },
+            elem_slice: std::slice::from_raw_parts(elements, nelems),
+            null_slice: std::slice::from_raw_parts(nulls, nelems),
             _marker: PhantomData,
         }
     }
@@ -371,6 +371,48 @@ impl<T: FromDatum> FromDatum for Vec<Option<T>> {
 impl<T> IntoDatum for Vec<T>
 where
     T: IntoDatum,
+{
+    fn into_datum(self) -> Option<pg_sys::Datum> {
+        let mut state = unsafe {
+            pg_sys::initArrayResult(
+                T::type_oid(),
+                PgMemoryContexts::CurrentMemoryContext.value(),
+                false,
+            )
+        };
+        for s in self {
+            let datum = s.into_datum();
+            let isnull = datum.is_none();
+
+            unsafe {
+                state = pg_sys::accumArrayResult(
+                    state,
+                    datum.unwrap_or(0usize),
+                    isnull,
+                    T::type_oid(),
+                    PgMemoryContexts::CurrentMemoryContext.value(),
+                );
+            }
+        }
+
+        if state.is_null() {
+            // shoudln't happen
+            None
+        } else {
+            Some(unsafe {
+                pg_sys::makeArrayResult(state, PgMemoryContexts::CurrentMemoryContext.value())
+            })
+        }
+    }
+
+    fn type_oid() -> u32 {
+        unsafe { pg_sys::get_array_type(T::type_oid()) }
+    }
+}
+
+impl<'a, T> IntoDatum for &'a [T]
+where
+    T: IntoDatum + Copy,
 {
     fn into_datum(self) -> Option<pg_sys::Datum> {
         let mut state = unsafe {

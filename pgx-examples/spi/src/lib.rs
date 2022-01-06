@@ -15,7 +15,8 @@ INSERT INTO spi_example (title) VALUES ('Hello There!');
 INSERT INTO spi_example (title) VALUES ('I like pudding');
 
 
-"#
+"#,
+    name = "create_sqi_example_table",
 );
 
 #[pg_extern]
@@ -30,6 +31,8 @@ fn spi_return_query(
     let query = "SELECT oid, relname::text || '-pg12' FROM pg_class";
     #[cfg(feature = "pg13")]
     let query = "SELECT oid, relname::text || '-pg13' FROM pg_class";
+    #[cfg(feature = "pg14")]
+    let query = "SELECT oid, relname::text || '-pg14' FROM pg_class";
 
     let mut results = Vec::new();
     Spi::connect(|client| {
@@ -105,10 +108,12 @@ extension_sql!(
 CREATE TABLE foo ();
 
 
-"#
+"#,
+    name = "create_foo_table"
 );
 
 #[cfg(any(test, feature = "pg_test"))]
+#[pg_schema]
 mod tests {
     use crate::spi_query_by_id;
     use pgx::*;

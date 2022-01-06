@@ -9,11 +9,11 @@ mod commands;
 use crate::commands::connect::connect_psql;
 use crate::commands::get::get_property;
 use crate::commands::init::init_pgx;
-use crate::commands::install::{install_extension, write_full_schema_file};
+use crate::commands::install::install_extension;
 use crate::commands::new::create_crate_template;
 use crate::commands::package::package_extension;
 use crate::commands::run::run_psql;
-use crate::commands::schema::generate_schema;
+use crate::commands::schema;
 use crate::commands::start::start_postgres;
 use crate::commands::status::status_postgres;
 use crate::commands::stop::stop_postgres;
@@ -27,7 +27,7 @@ use std::collections::HashMap;
 use std::path::PathBuf;
 use std::str::FromStr;
 
-const SUPPORTED_MAJOR_VERSIONS: &[u16] = &[10, 11, 12, 13];
+const SUPPORTED_MAJOR_VERSIONS: &[u16] = &[10, 11, 12, 13, 14];
 
 fn main() -> std::result::Result<(), std::io::Error> {
     handle_result!(do_it(), "");
@@ -132,6 +132,7 @@ fn do_it() -> std::result::Result<(), std::io::Error> {
             }
             ("install", Some(install)) => {
                 let is_release = install.is_present("release");
+                let no_schema = install.is_present("no-schema");
                 let features = install
                     .values_of("features")
                     .map(|v| v.collect())
@@ -154,7 +155,7 @@ fn do_it() -> std::result::Result<(), std::io::Error> {
                     },
                 };
 
-                install_extension(&pg_config, is_release, None, features)
+                install_extension(&pg_config, is_release, no_schema, None, features)
             }
             ("package", Some(package)) => {
                 let is_debug = package.is_present("debug");
@@ -181,10 +182,12 @@ fn do_it() -> std::result::Result<(), std::io::Error> {
                     .map(|v| v.collect())
                     .unwrap_or(vec![]);
                 let is_release = run.is_present("release");
+                let no_schema = run.is_present("no-schema");
                 run_psql(
                     Pgx::from_config()?.get(pgver)?,
                     &dbname,
                     is_release,
+                    no_schema,
                     features,
                 )
             }
@@ -200,36 +203,89 @@ fn do_it() -> std::result::Result<(), std::io::Error> {
             }
             ("test", Some(test)) => {
                 let is_release = test.is_present("release");
+                let no_schema = test.is_present("no-schema");
                 let pgver = test.value_of("pg_version").unwrap_or("all");
+                let test_workspace = test.is_present("workspace");
                 let features = test
                     .values_of("features")
                     .map(|v| v.collect())
                     .unwrap_or(vec![]);
+                let testname = test.value_of("testname");
                 let pgx = Pgx::from_config()?;
                 for pg_config in pgx.iter(PgConfigSelector::new(pgver)) {
-                    test_extension(pg_config?, is_release, features.clone())?
+                    test_extension(
+                        pg_config?,
+                        is_release,
+                        no_schema,
+                        test_workspace,
+                        features.clone(),
+                        testname,
+                    )?
                 }
                 Ok(())
             }
             ("schema", Some(schema)) => {
+                let (_, extname) = crate::commands::get::find_control_file();
+                let out = schema
+                    .value_of("out")
+                    .map(|x| x.to_string())
+                    .unwrap_or_else(|| {
+                        format!(
+                            "sql/{}-{}.sql",
+                            extname,
+                            crate::commands::install::get_version()
+                        )
+                    });
+                let dot = if schema.occurrences_of("dot") == 1 {
+                    schema.value_of("dot").map(|x| x.to_string())
+                } else {
+                    None
+                };
+                let is_release = schema.is_present("release");
+
+                let log_level = if let Ok(log_level) = std::env::var("RUST_LOG") {
+                    Some(log_level)
+                } else {
+                    match schema.occurrences_of("verbose") {
+                        0 => None,
+                        1 => Some("debug".to_string()),
+                        _ => Some("trace".to_string()),
+                    }
+                };
+
                 let features = schema
                     .values_of("features")
                     .map(|v| v.collect())
                     .unwrap_or(vec![]);
-                generate_schema(&*features)
-            }
-            ("dump-schema", Some(dump_schema)) => {
-                let dir = dump_schema
-                    .value_of("directory")
-                    .expect("the directory argument is required")
-                    .into();
-                let features = dump_schema
-                    .values_of("features")
-                    .map(|v| v.collect())
-                    .unwrap_or(vec![]);
-                generate_schema(&*features)?;
-                write_full_schema_file(&dir, None);
-                Ok(())
+                let pg_config = match std::env::var("PGX_TEST_MODE_VERSION") {
+                    // for test mode, we want the pg_config specified in PGX_TEST_MODE_VERSION
+                    Ok(pgver) => match Pgx::from_config()?.get(&pgver) {
+                        Ok(pg_config) => pg_config.clone(),
+                        Err(_) => {
+                            return Err(std::io::Error::new(std::io::ErrorKind::InvalidInput,
+                                                           "PGX_TEST_MODE_VERSION does not contain a valid postgres version number"
+                            ));
+                        }
+                    },
+
+                    // otherwise, the user just ran "cargo pgx install", and we use whatever "pg_config" is configured
+                    Err(_) => match schema.value_of("pg_config") {
+                        None => match schema.value_of("pg_version") {
+                            None => PgConfig::from_path(),
+                            Some(pgver) => Pgx::from_config()?.get(pgver)?.clone(),
+                        },
+                        Some(config) => PgConfig::new(PathBuf::from(config)),
+                    },
+                };
+
+                let default = schema.is_present("force-default");
+                let manual = schema.is_present("manual");
+                let skip_build = schema.is_present("skip-build");
+
+                schema::generate_schema(
+                    &pg_config, is_release, &features, &out, dot, log_level, default, manual,
+                    skip_build,
+                )
             }
             ("get", Some(get)) => {
                 let name = get.value_of("name").expect("no property name specified");

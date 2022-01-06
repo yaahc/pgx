@@ -1,6 +1,6 @@
 [package]
 name = "pgx-macros"
-version = "0.1.21"
+version = "0.2.6"
 authors = ["ZomboDB, LLC <zombodb@gmail.com>"]
 edition = "2018"
 license = "MIT"
@@ -13,9 +13,17 @@ readme = "README.md"
 [lib]
 proc-macro = true
 
+[package.metadata.docs.rs]
+# Enable `#[cfg(docsrs)]` (https://docs.rs/about/builds#cross-compiling)
+rustc-args = ["--cfg", "docsrs"]
+
 [dependencies]
-pgx-utils = { path = "../pgx-utils", version = "0.1.21"}
-proc-macro2 = "1.0.26"
-quote = "1.0.9"
-syn = { version = "1.0.71", features = [ "extra-traits", "full", "fold", "parsing" ] }
+pgx-utils = { path = "../pgx-utils", version = "0.2.6" }
+proc-macro2 = "1.0.34"
+quote = "1.0.10"
+syn = { version = "1.0.82", features = [ "extra-traits", "full", "fold", "parsing" ] }
 unescape = "0.1.0"
+proc-macro-crate = "1.1.0"
+
+[dev-dependencies]
+serde = { version = "1.0.132", features = ["derive"] }

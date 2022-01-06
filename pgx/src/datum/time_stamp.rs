@@ -4,7 +4,7 @@
 use crate::datum::time::USECS_PER_SEC;
 use crate::{direct_function_call_as_datum, pg_sys, FromDatum, IntoDatum, TimestampWithTimeZone};
 use std::ops::{Deref, DerefMut};
-use time::PrimitiveDateTime;
+use time::{format_description::FormatItem, PrimitiveDateTime};
 
 #[derive(Debug)]
 pub struct Timestamp(time::PrimitiveDateTime);
@@ -34,17 +34,19 @@ impl IntoDatum for Timestamp {
         let minute = self.minute() as i32;
         let second = self.second() as f64 + (self.microsecond() as f64 / USECS_PER_SEC as f64);
 
-        direct_function_call_as_datum(
-            pg_sys::make_timestamp,
-            vec![
-                year.into_datum(),
-                month.into_datum(),
-                mday.into_datum(),
-                hour.into_datum(),
-                minute.into_datum(),
-                second.into_datum(),
-            ],
-        )
+        unsafe {
+            direct_function_call_as_datum(
+                pg_sys::make_timestamp,
+                vec![
+                    year.into_datum(),
+                    month.into_datum(),
+                    mday.into_datum(),
+                    hour.into_datum(),
+                    minute.into_datum(),
+                    second.into_datum(),
+                ],
+            )
+        }
     }
 
     fn type_oid() -> u32 {
@@ -80,10 +82,30 @@ impl serde::Serialize for Timestamp {
     {
         if self.millisecond() > 0 {
             serializer.serialize_str(
-                &self.format(&format!("%Y-%m-%dT%H:%M:%S.{}-00", self.millisecond())),
+                &self
+                    .format(
+                        &time::format_description::parse(&format!(
+                            "[year]-[month]-[day]T[hour]:[minute]:[second].{}-00",
+                            self.millisecond()
+                        ))
+                        .map_err(|e| {
+                            serde::ser::Error::custom(format!(
+                                "Timestamp invalid format problem: {:?}",
+                                e
+                            ))
+                        })?,
+                    )
+                    .map_err(|e| {
+                        serde::ser::Error::custom(format!("Timestamp formatting problem: {:?}", e))
+                    })?,
             )
         } else {
-            serializer.serialize_str(&self.format("%Y-%m-%dT%H:%M:%S-00"))
+            serializer.serialize_str(&self.format(&DEFAULT_TIMESTAMP_FORMAT).map_err(|e| {
+                serde::ser::Error::custom(format!("Timestamp formatting problem: {:?}", e))
+            })?)
         }
     }
 }
+
+static DEFAULT_TIMESTAMP_FORMAT: &[FormatItem<'static>] =
+    time::macros::format_description!("[year]-[month]-[day]T[hour]:[minute]:[second]-00");

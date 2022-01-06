@@ -29,7 +29,7 @@ impl<T> PgList<T> {
         }
     }
 
-    pub fn from_pg(list: *mut pg_sys::List) -> Self {
+    pub unsafe fn from_pg(list: *mut pg_sys::List) -> Self {
         PgList {
             list,
             allocated_by_pg: true,
@@ -80,7 +80,9 @@ impl<T> PgList<T> {
 
     #[inline]
     pub fn get_ptr(&self, i: usize) -> Option<*mut T> {
-        if !self.is_empty() && !is_a(self.list as *mut pg_sys::Node, pg_sys::NodeTag_T_List) {
+        if !self.is_empty()
+            && unsafe { !is_a(self.list as *mut pg_sys::Node, pg_sys::NodeTag_T_List) }
+        {
             panic!("PgList does not contain pointers")
         }
         if self.list.is_null() || i >= self.len() {
@@ -92,7 +94,9 @@ impl<T> PgList<T> {
 
     #[inline]
     pub fn get_int(&self, i: usize) -> Option<i32> {
-        if !self.is_empty() && !is_a(self.list as *mut pg_sys::Node, pg_sys::NodeTag_T_IntList) {
+        if !self.is_empty()
+            && unsafe { !is_a(self.list as *mut pg_sys::Node, pg_sys::NodeTag_T_IntList) }
+        {
             panic!("PgList does not contain ints")
         }
 
@@ -105,7 +109,9 @@ impl<T> PgList<T> {
 
     #[inline]
     pub fn get_oid(&self, i: usize) -> Option<pg_sys::Oid> {
-        if !self.is_empty() && !is_a(self.list as *mut pg_sys::Node, pg_sys::NodeTag_T_OidList) {
+        if !self.is_empty()
+            && unsafe { !is_a(self.list as *mut pg_sys::Node, pg_sys::NodeTag_T_OidList) }
+        {
             panic!("PgList does not contain oids")
         }
 
@@ -116,27 +122,21 @@ impl<T> PgList<T> {
         }
     }
 
-    #[cfg(not(feature = "pg13"))]
+    #[cfg(any(feature = "pg10", feature = "pg11", feature = "pg12"))]
     #[inline]
-    pub fn replace_ptr(&mut self, i: usize, with: *mut T) {
-        unsafe {
-            let cell = pg_sys::pgx_list_nth_cell(self.list, i as i32);
-
-            cell.as_mut().expect("cell is null").data.ptr_value = with as void_mut_ptr;
-        }
+    pub unsafe fn replace_ptr(&mut self, i: usize, with: *mut T) {
+        let cell = pg_sys::pgx_list_nth_cell(self.list, i as i32);
+        cell.as_mut().expect("cell is null").data.ptr_value = with as void_mut_ptr;
     }
 
-    #[cfg(feature = "pg13")]
+    #[cfg(any(feature = "pg13", feature = "pg14"))]
     #[inline]
-    pub fn replace_ptr(&mut self, i: usize, with: *mut T) {
-        unsafe {
-            let cell = pg_sys::pgx_list_nth_cell(self.list, i as i32);
-
-            cell.as_mut().expect("cell is null").ptr_value = with as void_mut_ptr;
-        }
+    pub unsafe fn replace_ptr(&mut self, i: usize, with: *mut T) {
+        let cell = pg_sys::pgx_list_nth_cell(self.list, i as i32);
+        cell.as_mut().expect("cell is null").ptr_value = with as void_mut_ptr;
     }
 
-    #[cfg(not(feature = "pg13"))]
+    #[cfg(any(feature = "pg10", feature = "pg11", feature = "pg12"))]
     #[inline]
     pub fn replace_int(&mut self, i: usize, with: i32) {
         unsafe {
@@ -145,7 +145,7 @@ impl<T> PgList<T> {
         }
     }
 
-    #[cfg(feature = "pg13")]
+    #[cfg(any(feature = "pg13", feature = "pg14"))]
     #[inline]
     pub fn replace_int(&mut self, i: usize, with: i32) {
         unsafe {
@@ -154,7 +154,7 @@ impl<T> PgList<T> {
         }
     }
 
-    #[cfg(not(feature = "pg13"))]
+    #[cfg(any(feature = "pg10", feature = "pg11", feature = "pg12"))]
     #[inline]
     pub fn replace_oid(&mut self, i: usize, with: pg_sys::Oid) {
         unsafe {
@@ -163,7 +163,7 @@ impl<T> PgList<T> {
         }
     }
 
-    #[cfg(feature = "pg13")]
+    #[cfg(any(feature = "pg13", feature = "pg14"))]
     #[inline]
     pub fn replace_oid(&mut self, i: usize, with: pg_sys::Oid) {
         unsafe {
@@ -196,6 +196,12 @@ impl<T> PgList<T> {
         }
     }
 
+    /// Add a pointer value to the end of this list
+    ///
+    /// ## Safety
+    ///
+    /// We cannot guarantee the specified pointer is valid, but we assume it is as we only store it,
+    /// we don't dereference it
     #[inline]
     pub fn push(&mut self, ptr: *mut T) {
         self.list = unsafe { pg_sys::lappend(self.list, ptr as void_mut_ptr) };

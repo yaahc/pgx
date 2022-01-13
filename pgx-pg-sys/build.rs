@@ -1,5 +1,68 @@
 // Copyright 2020 ZomboDB, LLC <zombodb@gmail.com>. All rights reserved. Use of this source code is
 // governed by the MIT license that can be found in the LICENSE file.
+#![feature(thin_box)]
+#![feature(try_trait_v2)]
+#![feature(termination_trait_lib)]
+
+use std::ops::Try;
+use std::convert::Infallible;
+
+#[derive(Debug)]
+enum DynResult<T> {
+    Ok(T),
+    Err(ThinBox<dyn Error + Send + Sync + 'static>),
+}
+
+impl<T> Try for DynResult<T> {
+    type Output = T;
+    type Residual = DynResult<Infallible>;
+
+    #[inline]
+    fn from_output(output: Self::Output) -> Self {
+        DynResult::Ok(output)
+    }
+
+    #[inline]
+    fn branch(self) -> ControlFlow<Self::Residual, Self::Output> {
+        match self {
+            DynResult::Ok(v) => ControlFlow::Continue(v),
+            DynResult::Err(e) => ControlFlow::Break(DynResult::Err(e)),
+        }
+    }
+}
+
+impl<T, E: Error + Send + Sync + 'static> FromResidual<Result<Infallible, E>> for DynResult<T> {
+    fn from_residual(residual: Result<Infallible, E>) -> Self {
+        match residual {
+            Ok(_) => unreachable!(),
+            Err(e) => DynResult::Err(ThinBox::new_unsize(e)),
+        }
+    }
+}
+
+impl<T> FromResidual for DynResult<T> {
+    fn from_residual(residual: DynResult<Infallible>) -> Self {
+        match residual {
+            DynResult::Ok(_) => unreachable!(),
+            DynResult::Err(e) => DynResult::Err(e),
+        }
+    }
+}
+
+impl<T> From<DynResult<T>> for Result<T, ThinBox<dyn Error + Send + Sync + 'static>> {
+    fn from(this: DynResult<T>) -> Self {
+        match this {
+            DynResult::Ok(t) => Ok(t),
+            DynResult::Err(e) => Err(e),
+        }
+    }
+}
+
+impl std::process::Termination for DynResult<()> {
+    fn report(self) -> i32 {
+        Result::from(self).report()
+    }
+}
 
 extern crate build_deps;
 
@@ -10,9 +73,11 @@ use quote::quote;
 use rayon::prelude::*;
 use std::collections::{HashMap, HashSet};
 use std::error::Error;
+use std::ops::{FromResidual, ControlFlow};
 use std::path::PathBuf;
 use std::process::{Command, Output};
 use syn::Item;
+use std::boxed::ThinBox;
 
 #[derive(Debug)]
 struct IgnoredMacros(HashSet<String>);
@@ -46,9 +111,9 @@ impl bindgen::callbacks::ParseCallbacks for IgnoredMacros {
     }
 }
 
-fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
+fn main() -> DynResult<()> {
     if std::env::var("DOCS_RS").unwrap_or("false".into()) == "1" {
-        return Ok(());
+        return DynResult::Ok(());
     }
 
     // dump the environment for debugging if asked
@@ -94,17 +159,17 @@ fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
         include_h.push(format!("pg{}.h", major_version));
 
         let bindgen_output = handle_result!(
-            run_bindgen(&pg_config, &include_h),
+            run_bindgen(&pg_config, &include_h).into(),
             format!("bindgen failed for pg{}", major_version)
         );
 
         let rewritten_items = handle_result!(
-            rewrite_items(&bindgen_output),
+            rewrite_items(&bindgen_output).into(),
             format!("failed to rewrite items for pg{}", major_version)
         );
 
         let oids = handle_result!(
-            extract_oids(&bindgen_output),
+            extract_oids(&bindgen_output).into(),
             format!("unable to generate oids for pg{}", major_version)
         );
 
@@ -152,7 +217,7 @@ fn main() -> Result<(), Box<dyn Error + Send + Sync>> {
         build_shim(&shim_src, &shim_dst, &pg_config)?;
     }
 
-    Ok(())
+    DynResult::Ok(())
 }
 
 fn write_rs_file(
@@ -173,7 +238,7 @@ fn write_rs_file(
 /// the bindgen generated code with some postgres specific enhancements
 fn rewrite_items(
     file: &syn::File,
-) -> Result<proc_macro2::TokenStream, Box<dyn Error + Send + Sync>> {
+) -> DynResult<proc_macro2::TokenStream> {
     let items = apply_pg_guard(&file.items)?;
     let pgnode_impls = impl_pg_node(&items)?;
 
@@ -182,13 +247,13 @@ fn rewrite_items(
         stream.extend(quote! { #item });
     }
 
-    Ok(stream)
+    DynResult::Ok(stream)
 }
 
 /// Find all the constants that represent Postgres type OID values.
 ///
 /// These are constants of type `u32` whose name ends in the string "OID"
-fn extract_oids(code: &syn::File) -> Result<proc_macro2::TokenStream, Box<dyn Error>> {
+fn extract_oids(code: &syn::File) -> DynResult<proc_macro2::TokenStream> {
     let mut enum_variants = proc_macro2::TokenStream::new();
     let mut from_impl = proc_macro2::TokenStream::new();
     for item in &code.items {
@@ -208,7 +273,7 @@ fn extract_oids(code: &syn::File) -> Result<proc_macro2::TokenStream, Box<dyn Er
         }
     }
 
-    Ok(quote! {
+    DynResult::Ok(quote! {
         #[derive(Copy, Clone, Eq, PartialEq, Hash, Ord, PartialOrd, Debug)]
         pub enum PgBuiltInOids {
             #enum_variants
@@ -226,7 +291,7 @@ fn extract_oids(code: &syn::File) -> Result<proc_macro2::TokenStream, Box<dyn Er
 }
 
 /// Implement our `PgNode` marker trait for `pg_sys::Node` and its "subclasses"
-fn impl_pg_node(items: &Vec<syn::Item>) -> Result<Vec<syn::Item>, Box<dyn Error + Send + Sync>> {
+fn impl_pg_node(items: &Vec<syn::Item>) -> DynResult<Vec<syn::Item>> {
     let mut pgnode_impls = Vec::new();
 
     // we scope must of the computation so we can borrow `items` and then
@@ -312,7 +377,7 @@ fn impl_pg_node(items: &Vec<syn::Item>) -> Result<Vec<syn::Item>, Box<dyn Error 
     pgnode_impls.sort_by(|(a_name, _), (b_name, _)| a_name.cmp(b_name));
 
     // pluck out the syn::Item field and return as a Vec
-    Ok(pgnode_impls.into_iter().map(|(_, item)| item).collect())
+    DynResult::Ok(pgnode_impls.into_iter().map(|(_, item)| item).collect())
 }
 
 /// Given a root node, dfs_find_nodes adds all its children nodes to `node_set`.
@@ -469,7 +534,7 @@ struct StructDescriptor<'a> {
 fn run_bindgen(
     pg_config: &PgConfig,
     include_h: &PathBuf,
-) -> Result<syn::File, Box<dyn Error + Send + Sync>> {
+) -> DynResult<syn::File> {
     let major_version = pg_config.major_version()?;
     eprintln!("Generating bindings for pg{}", major_version);
     let includedir_server = pg_config.includedir_server()?;
@@ -502,7 +567,8 @@ fn run_bindgen(
             )
         });
 
-    syn::parse_file(bindings.to_string().as_str()).map_err(|e| From::from(e))
+    let file = syn::parse_file(bindings.to_string().as_str())?;
+    DynResult::Ok(file)
 }
 
 fn build_shim(
@@ -622,7 +688,7 @@ fn run_command(mut command: &mut Command, version: &str) -> Result<Output, std::
     Ok(rc)
 }
 
-fn apply_pg_guard(items: &Vec<syn::Item>) -> Result<Vec<syn::Item>, Box<dyn Error + Send + Sync>> {
+fn apply_pg_guard(items: &Vec<syn::Item>) -> DynResult<Vec<syn::Item>> {
     let mut out = Vec::with_capacity(items.len());
     for item in items.into_iter() {
         match item {
@@ -638,7 +704,7 @@ fn apply_pg_guard(items: &Vec<syn::Item>) -> Result<Vec<syn::Item>, Box<dyn Erro
         }
     }
 
-    Ok(out)
+    DynResult::Ok(out)
 }
 
 fn rust_fmt(path: &PathBuf) -> Result<(), std::io::Error> {
